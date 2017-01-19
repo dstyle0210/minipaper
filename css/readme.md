@@ -10,3 +10,4 @@ CSS는 "Cascading Style Sheets" 의 약자로, 마크업언어(MarkUp Language)�
 CSS의 기초 - [상속성(Cascading)](./step1/01_Cascading.md)
 CSS의 기초 - [우선순위(Priority Rules)](./step1/02_Priority.md)
 CSS의 기초 - [오버라이딩(Overriding)](./step1/03_Overriding.md)
+CSS의 기초 - [작성법(Syntax)](./step1/04_Syntax.md)
