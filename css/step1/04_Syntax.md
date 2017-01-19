@@ -2,24 +2,23 @@
 
 CSS는 4가지의 부분으로 이루어져 있습니다.
 
-셀렉터 (selector)
-선언( declaration )
-속성( property )
-값(value)
+- 셀렉터 (selector)
+- 선언( declaration )
+- 속성( property )
+- 값(value)
 
-![CSS작성법](https://www.evernote.com/shard/s62/res/0a7ab70f-4bbc-46f9-9a33-78ff2e7b40d1)
-(출처 - w3schools.com)
+![CSS작성법](http://www.w3schools.com/css/selector.gif)
+(출처 - www.w3schools.com)
 
 
 ### 셀렉터 (selector)
-
 셀렉터는 스타일시트를 입힐 HTML엘리먼트 또는 클래스 또는 아이디를 지칭합니다.
 피도클래스 라는것으로 일정조건에 맞는 클래스나 엘리먼트를 찾을수도 있습니다.
 셀렉터는 해당 선언부가 적용될 적용순위에 영향을 미칩니다.
 
 ### 선언( declaration )
 중괄호({})로 시작되며, 하나의 선언블럭은 "속성:값;" 형식을 가지게 됩니다.
-선언을 할때 중복속성이 있는경우, "가장 마지막에 선언된" 값이 적용됩니다.
+선언을 할때 중복 속성이 있는경우, "가장 마지막에 선언된" 값이 적용됩니다.
 
 ### 속성( property )
 CSS을 설명드릴때 대부분은 이 속성에 대해서 설명하게 될텐데,
