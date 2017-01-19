@@ -1,94 +1,152 @@
 ##CSS의 기초 - 셀렉터(Selector) - Pseudo Class
 
-### 선택자 셀렉터
+Pseudo Class(피도 클래스) 라는것은 엘리먼트가 특정한 상태일때을 지칭합니다.
+단독으로 사용할수는 있으나, 추천하지는 않으므로, 언제나 셀렉터에 연결하여 선언됩니다.
 
-#### Universal Selector (*)
+셀렉터의 시작은 : 로 시작합니다.
 
+### 주로쓰는 피도 클래스
+
+#### Selector:active
 ```css
-*{color:red;}
+a:active{color:red;}
 ```
+선택된 엘리먼트가 활성화 상태일때 적용됩니다. 대표적으로 포커스가 들어간 a엘리먼트 같은 상태입니다.
 
-해당 셀렉터는 모든 엘리먼트를 선택합니다. 모든 엘리먼트의 글자는 빨간색으로 지정하겠다 라는 말이 됩니다.
+#### Selector:link
+```css
+a:link{}
+```
+선택된 엘리먼트가 링크가능 상태일때 적용됩니다. 대표적으로 a 엘리먼트를 지칭합니다.
+
+#### Selector:visited
+```css
+a:link{}
+```
+엘리먼트에 선언된 링크에 방문한적이 있다면 적용 됩니다.
+
+#### Selector:hover
+```css
+a:hover{}
+```
+선택된 엘리먼트에 마우스을 올리면(mouseover) 적용됩니다.
+
+#### Selector:checked
+```css
+input[class=checkbox]:checked{}
+```
+선택된 엘리먼트가 체크상태(checked)일경우 적용됩니다.
+
+#### Selector:disabled
+```css
+input[class=checkbox]:disabled{}
+```
+선택된 엘리먼트가 선택불가 상태(disabled) 일경우 적용됩니다.
+
+#### Selector:focus
+```css
+input:focus{color:red;}
+```
+선택된 엘리먼트에 포커스가 들어간 상태로, 입력을 기다리는 상태면 적용됩니다.
+
+#### Selector:first-child
+```css
+div p:first-child{}
+```
+선택된 엘리먼트가 부모 엘리먼트의 자식중 가장 처음에 있다면 적용됩니다.
+
+#### Selector:last-child
+```css
+div p:last-child{}
+```
+선택된 엘리먼트가 부모 엘리먼트의 자식중 가장 마지막에 있다면 적용됩니다.
+
+#### Selector:not(Selector)
+```css
+input:not(:checked){}
+```
+선택된 엘리먼트가 지정된 셀렉터의 조건에 맞지 않는 다면 적용됩니다.
+
+#### Selector:nth-child(number | odd | even | n)
+```css
+div p:nth-child(2){}
+```
+선택된 엘리먼트가 부모 엘리먼트 중 지정된 순서에 맞는 엘리먼트에 적용됩니다. (1 부터 시작)
+
+#### Selector:nth-last-child(number | odd | even | n)
+```css
+div p:nth-last-child(2){}
+```
+선택된 엘리먼트가 부모 엘리먼트 중 마지막 부터 지정된 순서에 맞는 엘리먼트에 적용됩니다. (1 부터 시작)
+
+#### Selector:read-only
+```css
+input:read-only{}
+```
+선택된 엘리먼트에 "readonly" 속성이 있으면 적용됩니다.
+
+
+
+
+
+
+
+
+
 
 ㅡㅡㅡ
 
-#### Element Selector
+### 존재는 하나 주로쓰지는 않음.
 
-```css
-E{color:red;}
-```
-본 구문은 h1엘리먼트을 선택(셀렉트)해서 글자색상을 빨간색으로 적용하겠다는 선언부입니다.
-HTML에 포함된 어떤 엘리먼트든 가져올수 있으며, 커스텀된 즉 HTML이 아닌 엘리먼트여도(test라던가) HTML내에 있다면 적용됩니다.
+#### Selector:empty // IE 불가
+선택된 엘리먼트안에 아무런 컨덴츠가 없는 경우 적용됩니다.
 
-ㅡㅡㅡ
+#### Selector:first-of-type(number)
+선택된 엘리먼트가 부모엘리먼트에서 동일한 엘리먼트들 중 첫번째에 있다면 적용됩니다.
 
-#### id Selector(#)
+#### Selector:last-of-type(number)
+선택된 엘리먼트가 부모엘리먼트에서 동일한 엘리먼트들 중 마지막에 있다면 적용됩니다.
 
-```css
-#id{border:2px solid orange; }
-```
+#### Selector:nth-of-type(number)
+선택된 엘리먼트가 부모엘리먼트에서 동일한 엘리먼트들 중 순서에 맞다면 적용됩니다.
 
-본 구문은 엘리먼트와 무관하게, id가 "test"인 엘리먼트에 적용하겠다는 선언부 입니다.
-물론 이것도 커스텀엘리먼트여도, id가 선언되어있다면 적용됩니다.
+#### Selector:in-range // IE불가
+input에 min 및 max 어트리뷰트가 존재하고, value가 그 안의 값이라면 적용됩니다.
 
-ㅡㅡㅡ
-#### Class Selector(.)
+#### Selector:out-of-range // IE불가
+input에 min 및 max 어트리뷰트가 존재하고, value가 그 밖의 값이라면 적용됩니다.
 
-```css
-.class{background-color:gray;}
-```
+#### Selector:valid
+input의 값이 지정된 형식(type)에 맞다면 적용됩니다. 형식은 pattern 및 type , min , max 을 모두 포괄합니다.
 
-본 구문은 엘리먼트와 무관하게 class가 "test"인 엘리먼트에 적용됩니다.
+#### Selector:invalid
+input의 값이 지정된 형식(type)에 맞지 않다면 적용됩니다. 형식은 pattern 및 type , min , max 을 모두 포괄합니다.
 
-ㅡㅡㅡ
+#### Selector:lang(languagecode)
+선택된 엘리먼트에 선언된 언어형식이 맞다면 적용됩니다.
 
-####  group Selector(,)
-```css
-h1 , #id , .class{color:red; }
-```
+#### Selector:only-of-type
+선택된 엘리먼트가 부모의 엘리먼트의 자식엘리먼트 중에 유일하게 있으면 적용됩니다.
 
-눈치가 빠르신 분들은 아시겠지만, "," 로 나뉘어진 모든 샐랙터에 속성을 적용하겠다는 선언입니다.
-CSS는 그룹화 하여 선언하게 되면, 중복선언을 어느정도 줄일수 있습니다.
+#### Selector:only-child
+선택된 엘리먼트만 부모의 엘리먼트의 유일하게 있으면 적용됩니다.
+
+#### Selector:required
+input에 "required" 속성이 있으면 적용됩니다.
+
+#### Selector:optional
+input에 "required" 속성이 없으면 적용됩니다.
+
+#### Selector:read-write
+input에 "readonly" 속성이 없으면 적용됩니다.
+
+#### Selector:root
+document에서 가장 최상위에 있는 엘리먼트를 선택합니다. , HTML입장에선 <html>엘리먼트 만 해당됩니다.
+
+#### Selector:target
+URL상으로 현재 선택되어진 엘리먼트에 적용됩니다.
 
 
 
-### 기초 검색 선택자
 
-#### inside Selector ( ) // 빈칸
 
-```css
-h1 span{border:1px solid #000;}
-```
-
-inside 라는 말처럼 h1엘리먼트 안에 있는 span엘리먼트에 적용하겠다는 말입니다.
-
-ㅡㅡㅡ
-
-#### Child Selector(>)
-
-```css
-h1>span{background-color:gray}
-```
-
-h1엘리먼트의 하위 자식에게 적용되는 셀렉터 입니다.
-
-ㅡㅡㅡㅡ
-
-#### After Selector(+)
-
-```css
-h1+span{width:500px;}
-```
-
-h1엘리먼트에 다음순서에 나오는 엘리먼트가 span이라면 적용됩니다.
-
-ㅡㅡㅡㅡ
-
-#### Preceded Selector(~)
-
-```css
-h1~span{width:300px}
-```
-
-after 셀렉터와 반대개념입니다.
-즉 h1엘리먼트 이전에 span이 있으면 적용됩니다.
