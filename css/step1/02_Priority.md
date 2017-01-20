@@ -3,9 +3,9 @@
 
 CSS 우선순위는 일정 점수라는 개념으로 생각하면 쉽습니다.
 
-점수기준
+#### 점수기준
 1. "!important" 구문
-2. inline style 선언 ( <E style=""></E> )
+2. inline style 선언 ( &lt;E style="">&lt;/E> )
 3. id (#) 로 선언
 4. class (.) 로 선언
 5. 엘리먼트로 선언
