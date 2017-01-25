@@ -18,3 +18,11 @@ CSS 중 레이아웃관련 속성을 설명합니다.
 
 
 
+### FLOAT 레이아웃
+
+### FLEX 레이아웃
+새롭게 나온 FLEX 레이아웃 이라는 것이 있습니다.
+
+https://developer.mozilla.org/files/3739/flex_terms.png
+
+

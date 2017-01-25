@@ -21,7 +21,7 @@ a:link{}
 
 #### Selector:visited
 ```css
-a:link{}
+a:visited{}
 ```
 엘리먼트에 선언된 링크에 방문한적이 있다면 적용 됩니다.
 

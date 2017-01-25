@@ -35,3 +35,14 @@ run-it | 엘리먼트의 크기만큼 inline엘리먼트의 영역을 밀어냅�
 - 기본값 : 엘리먼트 형태 상속
 - 자식상속 : 상속됨.
 - 작성방법 : `visibility: visible|hidden|collapse|initial|inherit;`
+
+#### 주로쓰이는 비지빌리티 값
+값 | 설명
+---| ----
+visible | 화면상 보여지도록 합니다.
+hidden | 화면상 보여지지 않도록 합니다.
+
+#### 거의 안쓰이는 비지빌리티 값
+값 | 설명
+---| ----
+collapse | "table" 엘리먼트만 적용으로, 화면상에 "완전히" 사라지게 됩니다.(display:none)과 동일. 
