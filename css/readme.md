@@ -6,25 +6,37 @@ CSS는 "Cascading Style Sheets" 의 약자로, 마크업언어(MarkUp Language)�
 그리고 캐스케이딩(Cascading)의 의미는 폭포에서 흘러내리는 이라는 뜻인데, CSS는 우선순위라는 개념으로, 자신의 부모 엘리먼트의 속성을 상속받는 개념이 있어서
 흘러내린다 라는 비유적 표현입니다. (CSS을 작성하면, 코드가 우선순위에 따라 작성되게 되는데, 흘러내리는 물 처럼 생기게되기도 합니다.)
 
-### STEP1
+### STEP1 - CSS소개
 - [특징,작성법,적용방법](./step1/readme.md#특징--작성법--적용방법)
 - [셀렉터](./step1/readme.md#셀렉터)
 - [공통 값 정의](./step1/readme.md#공통-값-정의)
 
+### STEP2 - 블럭요소
+- [박스모델(Box Model)](./step2/01_boxmodel.md)
+- [블럭요소 속성](./step2/readme.md)
+- [박스 사이징(Box Sizing)](./step2/07_boxsizing.md)
 
-### STEP2
+### STEP3 - 레이아웃 방식
+- 플로트 레이아웃
+- 포지션 레이아웃
+- 플랙스 레이아웃
+- 테이블 레이아웃
 
+### FINAL - 클릭가능한 바둑판 만들기
 
-### STEP3
+---
 
+### STEP4 - 인라인요소
 
-### STEP4
+### STEP5 - 그외, 배경, 변형 , 애니메이션
 
+### STEP6 - 네이버 요소 실습
 
-### STEP5
-
-
-### STEP6
+### STEP6 - CSS 관련 전처리기 및 라이브러리
+- 에릭마이어 리셋CSS
+- 부트스트랩(bootstrap)
+- SASS
+- LESS
 
 
 ### STEP7
