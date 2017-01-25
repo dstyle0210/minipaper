@@ -1,19 +1,13 @@
 ### CSS 기초 - STEP2
 
-CSS 에서 사용되는 속성중, 블럭요소 관련 속성 들을 정리합니다.
+- [박스모델(Box Model)](./01_boxmodel.md)
+- [디스플레이(display)](./02_display.md)
+- [박스사이징(box-sizing)](./03_boxsizing.md)
+- [가로값,세로값(width,height)](./04_width_height.md)
+- [패딩(padding),마진(margin)](./05_padding_margin.md)
+- [보더(border),아웃라인(outline)](./06_border_outline.md)
+- [오버플로우(overflow)](07_overflow.md)
 
-
-박스모델
-
-디스플레이
-박스사이징
-가로값
-세로값
-CSS의 기초 - [마진(Margin)](./01_Margin.md)
-CSS의 기초 - [패딩(Padding)](./02_Padding.md)
-보더
-아웃라인
-리사이즈
 
 
 
