@@ -32,12 +32,13 @@ CSS는 "Cascading Style Sheets" 의 약자로, 마크업언어(MarkUp Language)�
 
 ### STEP6 - 네이버 요소 실습
 
+---
+
 ### STEP6 - CSS 관련 전처리기 및 라이브러리
 - 에릭마이어 리셋CSS
 - 부트스트랩(bootstrap)
 - SASS
 - LESS
-
 
 ### STEP7
 템플릿 컴포넌트 만들기.
