@@ -22,6 +22,7 @@ gulp.task
 
 gulp.watch
 
+.pipe()
 
 ### STEP3 - plugin
 gulp-babel
