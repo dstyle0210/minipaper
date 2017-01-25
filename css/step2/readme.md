@@ -1,7 +1,7 @@
 ### CSS 기초 - STEP2
 
 - [박스모델(Box Model)](./01_boxmodel.md)
-- [디스플레이(display)](./02_display.md)
+- [디스플레이(display),비지빌리티(visibility)](./02_display_visibility.md)
 - [박스사이징(box-sizing)](./03_boxsizing.md)
 - [가로값,세로값(width,height)](./04_width_height.md)
 - [패딩(padding),마진(margin)](./05_padding_margin.md)
