@@ -16,21 +16,32 @@ CSS는 "Cascading Style Sheets" 의 약자로, 마크업언어(MarkUp Language)�
 - [블럭요소 속성](./step2/readme.md)
 - [박스 사이징(Box Sizing)](./step2/07_boxsizing.md)
 
-### STEP3 - 레이아웃 방식
+### FINAL - 클릭가능한 바둑판 만들기
+
+### STEP3 - 인라인요소
+- [인라인 박스모델(Inline Box Model)](./step3/01_inline_boxmodel.md)
+- [색상(Color)](./step3/02_color.md)
+- [폰트(Font)](./step3/03_font.md) family , weight , size , style , indent 
+- [자간(letter-spacing), 행간(line-height)](./step3/03_font.md)
+- [들여쓰기(text-indent)](./step3/04_indent.md)
+- [정렬(text-align)](./step3/05_align.md)
+
+### 실무 팁
+- 블럭요소 가운데 정렬하기
+- 아이콘 이미지 넣기 
+
+### STEP6 - 썸네일 1item 만들기
+
+----
+
+### STEP4 - 레이아웃 방식
 - 플로트 레이아웃
 - 포지션 레이아웃
 - 플랙스 레이아웃
-- 테이블 레이아웃
 
-### FINAL - 클릭가능한 바둑판 만들기
+### STEP6 - 썸네일 리스트 만들기
 
----
 
-### STEP4 - 인라인요소
-
-### STEP5 - 그외, 배경, 변형 , 애니메이션
-
-### STEP6 - 네이버 요소 실습
 
 ---
 
@@ -39,6 +50,13 @@ CSS는 "Cascading Style Sheets" 의 약자로, 마크업언어(MarkUp Language)�
 - 부트스트랩(bootstrap)
 - SASS
 - LESS
+
+### STEP5 - 배경 , 변형 , 애니메이션
+- 배경
+- 변형
+- 애니메이션
+
+### STEP6 - 썸네일 리스트 움직임주기
 
 ### STEP7
 템플릿 컴포넌트 만들기.

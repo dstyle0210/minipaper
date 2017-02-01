@@ -1,26 +1,19 @@
 ### CSS 기초 - STEP3
 
-CSS 중 레이아웃관련 속성을 설명합니다.
-
-플로트 - 클리어
-포지션 - 포지션 , 탑  등등
-제트인덱스
-플랙스 - 플랙스 ,
-클립
-오퍼서티
-
-
-
-
-
-
-
-
-### FLOAT 레이아웃
-
-### FLEX 레이아웃
-새롭게 나온 FLEX 레이아웃 이라는 것이 있습니다.
-
-https://developer.mozilla.org/files/3739/flex_terms.png
-
+### STEP3 - 인라인요소(텍스트)
+- [인라인 박스모델(Inline Box Model)](./step3/01_inline_boxmodel.md)
+- [폰트(Font Family)](./step3/02_family.md)
+- [색상(Color)](./step3/03_color.md)
+- [굵기(Weight)](./step3/04_weight.md)
+- [좌우 정렬(text-align)](./step3/05_text_align.md)
+- [상하 정렬(vertical-align)](./step3/06_vertical_align.md)
+- [행간(line-height)](./step3/07_lineheight.md)
+- [자간(letter-spacing)](./step3/08_letterspacing.md)
+- [텍스트 줄바꿈 방식(white-space)](./step3/09_whitespace.md)
+- [단어 간격(word-spacing)](./step3/10_wordspacing.md)
+- [단어 줄바꿈 방식(word-break)](./step3/11_wordbreak.md)
+- [들여쓰기(text-indent)](./step3/12_indent.md)
+- [데코레이션(Decoration)](./step3/13_decoration.md)
+- [변형(Transform)](./step3/14_transform)
+- [그림자(text-shadow)](./step3/15_shadow.md)
 
