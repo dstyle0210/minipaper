@@ -1,25 +1,26 @@
-##CSS의 기초 - 색상(Color) , 
+##CSS의 기초 - 색상(Color) , 크기(size)
 
-[색상을 지정하는 방법](./step1/10_Color.md)으로 텍스트의 컬러를 지정합니다.
+[색상을 지정하는 방법](../step1/10_Color.md)으로 텍스트의 컬러를 지정합니다.
 RGBA을 이용하면 투명도 까지도 조절이 가능합니다.
 
 ### color
-- 기본값 : 부모의 컬러값 상속
-- 자식상속 : 상속됨
-- 작성방법 : `color: HEX(#RRGGBB) | String | RGBA;`
+- 기본값 : 브라우저 기본컬러
+- 상속성 : 있음
+- 작성방법 : `color: HEX(#RRGGBB) | String | RGBA | initial | inherit;`
 
 #### 실무 포인트
 - 컬러는 대부분 HEX코드를 이용하여 지정합니다.
 
+---
 
 ##CSS의 기초 - 크기(size)
 
 텍스트의 크기를 지정합니다.
 
 ### font-size
-- 기본값 : 부모상속
-- 자식상속 : 상속됨
-- 작성방법 : `font-size:medium|xx-small|x-small|small|large|x-large|xx-large|smaller|larger|length;`
+- 기본값 : medium
+- 상속성 : 있음
+- 작성방법 : `font-size:medium|xx-small|x-small|small|large|x-large|xx-large|smaller|larger|length|initial|inherit;`
 
 #### 주로 쓰이는 값 
 값 | 설명
