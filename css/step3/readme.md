@@ -14,6 +14,6 @@
 - [단어 줄바꿈 방식(word-break)](./step3/11_wordbreak.md)
 - [들여쓰기(text-indent)](./step3/12_indent.md)
 - [데코레이션(Decoration)](./step3/13_decoration.md)
-- [변형(Transform)](./step3/14_transform)
+- [변형(Transform)](./step3/14_transform.md)
 - [그림자(text-shadow)](./step3/15_shadow.md)
 

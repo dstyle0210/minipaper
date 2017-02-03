@@ -1,8 +1,8 @@
-##CSS의 기초 - 굵기(weight)
+##CSS의 기초 - 상하정렬(vertical-align)
 
-텍스트의 굵기를 지정합니다. 굵기는 [폰트명]()이 가진 굵기를 디폴트로 설정됩니다.
+텍스트의 상하정렬을 정의합니다.
 
-### font-weight
+### vertical-align
 - 기본값 : "baseline"
 - 자식상속 : 안됨
 - 작성방법 : `vertical-align: baseline|length|sub|super|top|text-top|middle|bottom|text-bottom;`

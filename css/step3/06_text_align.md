@@ -3,7 +3,7 @@
 공간(box)안에서 글자를 어떻게 정렬할것인가를 적용합니다.
 
 ### text-align
-- 기본값 : 부모 상속됨
+- 기본값 : 부모상속됨
 - 자식상속 : 상속됨
 - 작성방법 : `text-align: left|right|center|justify;`
 
