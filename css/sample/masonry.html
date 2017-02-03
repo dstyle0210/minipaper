@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 기초 : 벽돌쌓기 만들기</title>
+    <style>
+        /* CSS 기초 : 벽돌쌓기 만들기
+        0. 셀렉터 공부하기
+        1. 벽돌 사이즈와 색상, 외곽선 넣기
+        2. 벽돌에 마우스 올리면 색상 변하기
+        3. 벽돌을 클릭하면 색상 변하기
+        4. 벽돌에 이름을 이쁘게 바꾸기
+        5. 벽돌 쌓기
+         */
+        .wall{width:1200px;background-color: #f5f5f5;overflow:hidden;}
+        div[class^=st]{box-sizing:border-box;border:1px solid #fff;list-style:none;width:120px;float:left;height:100px;text-align:center;}
+        div[class^=st] a{color:#fff;text-decoration:none;font-size:24px;}
+        .st1,.st3,.st5,.st7,.st9{background-color:#000;}
+        .st1:hover{background-color:#ccc;}
+        .st1 a{display:inline-block;width:100%;height:100px;background-color: #fff;}
+        .st1 a:visited{background-color:red;}
+        .st2,.st4,.st6,.st8,.st10{background-color:#ff6600;}
+
+    </style>
+</head>
+<body>
+<div class="wall">
+    <div class="st1"><a href="#st1">네모<span>벽돌1</span></a></div>
+
+    <div class="st2"><a href="#st2">네모<span>벽돌2</span></a></div>
+    <div class="st3"><a href="#st3">네모<span>벽돌3</span></a></div>
+
+    <div class="st4"><a href="#st4">네모<span>벽돌4</span></a></div>
+    <div class="st5"><a href="#st5">네모<span>벽돌5</span></a></div>
+    <div class="st6"><a href="#st6">네모<span>벽돌6</span></a></div>
+
+    <div class="st7"><a href="#st7">네모<span>벽돌7</span></a></div>
+    <div class="st8"><a href="#st8">네모<span>벽돌8</span></a></div>
+    <div class="st9"><a href="#st9">네모<span>벽돌9</span></a></div>
+    <div class="st10"><a href="#st10">네모<span>벽돌9</span></a></div>
+</div>
+</body>
+</html>

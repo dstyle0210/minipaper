@@ -17,8 +17,8 @@ CSS는 "Cascading Style Sheets" 의 약자로, 마크업언어(MarkUp Language)�
 - [박스 사이징(Box Sizing)](./step2/07_boxsizing.md)
 
 #### 실습 
-- 계단형 블럭 9개 쌓아놓기 (stairs.html)
-- 계단형 블럭에 마우스 오버 및 클릭시 색상변환하기 (stairs.html)
+- 계단형 블럭 10개 쌓아놓기 (masonry.html)
+- 계단형 블럭에 마우스 오버 및 클릭시 색상변환하기 (masonry.html)
 - 썸네일 화면 만들기 (thumbnail.html)
 
 ### STEP3 - 인라인요소
@@ -34,6 +34,7 @@ CSS는 "Cascading Style Sheets" 의 약자로, 마크업언어(MarkUp Language)�
 - 썸네일 에 제목 및 내용 넣기
 
 ### 실무 팁
+- 링크 백그라운드 버그
 - 블럭요소 가운데 정렬하기
 
 ----
@@ -41,6 +42,7 @@ CSS는 "Cascading Style Sheets" 의 약자로, 마크업언어(MarkUp Language)�
 ### STEP4 - 고정형 레이아웃 방식
 - 미디어
 - 플로트 레이아웃
+- 플로트 레이아웃 - hasLayout
 - 포지션 레이아웃
 - 플랙스 레이아웃
 
