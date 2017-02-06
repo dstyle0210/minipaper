@@ -40,11 +40,12 @@ CSS는 "Cascading Style Sheets" 의 약자로, 마크업언어(MarkUp Language)�
 ----
 
 ### STEP4 - 고정형 레이아웃 방식
-- 미디어
-- 플로트 레이아웃
-- 플로트 레이아웃 - hasLayout
-- 포지션 레이아웃
-- 플랙스 레이아웃
+- [미디어의 종류(Media)](./step4/01_media.md)
+- [레이아웃 방법(Layout Type)](./step4/02_type.md)
+- [플로트(float) , 클리어(clear)](./step4/03_float_clear.md)
+- [포지션(position) , 제트인덱스(z-index)](./step4/04_position.md)
+- [플랙스(flax)](./step4/05_flax.md)
+
 
 #### 실습 
 - 계단형 블럭 9개 고정형으로 만들기
@@ -59,6 +60,8 @@ CSS는 "Cascading Style Sheets" 의 약자로, 마크업언어(MarkUp Language)�
 #### 실습 
 - 계단형 블럭 9개 반응형으로 만들기
 - 썸네일 배치 변경하여 반응형 리스트로 만들기
+
+- Quiz : 마방진만들기(masonry.html)
 
 ---
 
