@@ -30,3 +30,8 @@ margin의 각각 방향에 대한 값을 개별로 설정합니다.
 - 기본값 : 0
 - 자식상속 : 안함
 - 작성방법 : `margin-top: length;`
+
+
+
+#### padding과 margin 의 단축속성 순서
+

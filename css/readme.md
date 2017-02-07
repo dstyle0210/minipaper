@@ -6,12 +6,14 @@ CSS는 "Cascading Style Sheets" 의 약자로, 마크업언어(MarkUp Language)�
 그리고 캐스케이딩(Cascading)의 의미는 폭포에서 흘러내리는 이라는 뜻인데, CSS는 우선순위라는 개념으로, 자신의 부모 엘리먼트의 속성을 상속받는 개념이 있어서
 흘러내린다 라는 비유적 표현입니다. (CSS을 작성하면, 코드가 우선순위에 따라 작성되게 되는데, 흘러내리는 물 처럼 생기게되기도 합니다.)
 
-### STEP1 - CSS소개
+### 커리큘럼
+
+#### STEP1 - CSS 소개
 - [특징,작성법,적용방법](./step1/readme.md#특징--작성법--적용방법)
 - [셀렉터](./step1/readme.md#셀렉터)
 - [공통 값 정의](./step1/readme.md#공통-값-정의)
 
-### STEP2 - 블럭요소
+#### STEP2 - 블럭요소
 - [박스모델(Box Model)](./step2/01_boxmodel.md)
 - [블럭요소 속성](./step2/readme.md)
 - [박스 사이징(Box Sizing)](./step2/07_boxsizing.md)
@@ -23,22 +25,7 @@ CSS는 "Cascading Style Sheets" 의 약자로, 마크업언어(MarkUp Language)�
 
 ### STEP3 - 인라인요소
 - [인라인 박스모델(Inline Box Model)](../step3/01_inline_boxmodel.md)
-- [폰트(Font Family)](../step3/02_family.md)
-- [색상(Color), 크기(size)](../step3/03_color_size.md)
-- [굵기(Weight)](../step3/04_weight.md)
-- [행간(line-height)](../step3/05_lineheight.md)
-- [좌우 정렬(text-align)](../step3/06_text_align.md)
-- [상하 정렬(vertical-align)](../step3/07_vertical_align.md)
-- [자간(letter-spacing)](../step3/08_letterspacing.md)
-- [텍스트 줄바꿈 방식(white-space)](../step3/09_whitespace.md)
-- [단어 간격(word-spacing)](../step3/10_wordspacing.md)
-- [단어 줄바꿈 방식(word-break)](../step3/11_wordbreak.md)
-- [들여쓰기(text-indent)](../step3/12_indent.md)
-- [데코레이션(Decoration)](../step3/13_decoration.md)
-- [변형(Transform)](../step3/14_transform.md)
-- [그림자(text-shadow)](../step3/15_shadow.md)
-
-
+- [인라인요소 속성](./step2/readme.md)
 
 #### 실습 
 - 계단에 이름을 배치시키기(좌,좌상,상) 등

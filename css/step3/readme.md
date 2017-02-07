@@ -1,7 +1,12 @@
-### CSS 기초 - STEP3
+### CSS 기초 - STEP3 - 인라인요소(텍스트)
 
-### STEP3 - 인라인요소(텍스트)
+CSS의 인라인요소는 웹페이지의 정보를 담는 텍스트를 꾸며줍니다.  
+텍스트를 꾸미기 위한 다양하고, 의미있는 표현하는 방법을 제시합니다.   
+
+#### 인라인 박스모델
 - [인라인 박스모델(Inline Box Model)](../step3/01_inline_boxmodel.md)
+
+#### 인라인 요소 속성
 - [폰트(Font Family)](../step3/02_family.md)
 - [색상(Color), 크기(size)](../step3/03_color_size.md)
 - [굵기(Weight)](../step3/04_weight.md)
