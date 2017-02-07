@@ -1,17 +1,8 @@
 
 ### CSS 기초 - STEP5
 
-그외 속성
-
-
-- [클립(clip)](./04_clip.md)
-오퍼서티
-
-
-
-
-애니메이션
-트랜스폼
-
-미디어쿼리
-
+- [반응형 레이아웃](../step5/01_.md)
+- [미디어쿼리](../step5/01_.md)
+- [플로트(float) 레이아웃](../step4/03_float.md)
+- [포지션(position) 레이아웃](../step4/03_float.md)
+- [플랙스(float) 레이아웃](../step4/03_float.md)

@@ -22,12 +22,23 @@ CSS는 "Cascading Style Sheets" 의 약자로, 마크업언어(MarkUp Language)�
 - 썸네일 화면 만들기 (thumbnail.html)
 
 ### STEP3 - 인라인요소
-- [인라인 박스모델(Inline Box Model)](./step3/01_inline_boxmodel.md)
-- [색상(Color)](./step3/02_color.md)
-- [폰트(Font)](./step3/03_font.md) family , weight , size , style , indent 
-- [자간(letter-spacing), 행간(line-height)](./step3/03_font.md)
-- [들여쓰기(text-indent)](./step3/04_indent.md)
-- [정렬(text-align)](./step3/05_align.md)
+- [인라인 박스모델(Inline Box Model)](../step3/01_inline_boxmodel.md)
+- [폰트(Font Family)](../step3/02_family.md)
+- [색상(Color), 크기(size)](../step3/03_color_size.md)
+- [굵기(Weight)](../step3/04_weight.md)
+- [행간(line-height)](../step3/05_lineheight.md)
+- [좌우 정렬(text-align)](../step3/06_text_align.md)
+- [상하 정렬(vertical-align)](../step3/07_vertical_align.md)
+- [자간(letter-spacing)](../step3/08_letterspacing.md)
+- [텍스트 줄바꿈 방식(white-space)](../step3/09_whitespace.md)
+- [단어 간격(word-spacing)](../step3/10_wordspacing.md)
+- [단어 줄바꿈 방식(word-break)](../step3/11_wordbreak.md)
+- [들여쓰기(text-indent)](../step3/12_indent.md)
+- [데코레이션(Decoration)](../step3/13_decoration.md)
+- [변형(Transform)](../step3/14_transform.md)
+- [그림자(text-shadow)](../step3/15_shadow.md)
+
+
 
 #### 실습 
 - 계단에 이름을 배치시키기(좌,좌상,상) 등
@@ -42,9 +53,9 @@ CSS는 "Cascading Style Sheets" 의 약자로, 마크업언어(MarkUp Language)�
 ### STEP4 - 고정형 레이아웃 방식
 - [미디어의 종류(Media)](./step4/01_media.md)
 - [레이아웃 방법(Layout Type)](./step4/02_type.md)
-- [플로트(float) , 클리어(clear)](./step4/03_float_clear.md)
-- [포지션(position) , 제트인덱스(z-index)](./step4/04_position.md)
-- [플랙스(flax)](./step4/05_flax.md)
+- [플로트(float) 레이아웃](./step4/03_float_clear.md)
+- [포지션(position) 레이아웃](./step4/04_position.md)
+- [플랙스(flex) 레이아웃](./step4/05_flax.md)
 
 
 #### 실습 
@@ -64,8 +75,13 @@ CSS는 "Cascading Style Sheets" 의 약자로, 마크업언어(MarkUp Language)�
 - Quiz : 마방진만들기(masonry.html)
 
 ---
+### STEP6 - 배경 , 변형 , 애니메이션
+- 배경
+- 변형
+- 애니메이션
 
-### STEP6 - CSS 관련 전처리기 및 라이브러리
+
+### STEP7 - CSS 관련 전처리기 및 라이브러리
 - 에릭마이어 리셋CSS
 - 부트스트랩(bootstrap)
 - 폰트어썸(Font Awesome)
@@ -77,12 +93,7 @@ CSS는 "Cascading Style Sheets" 의 약자로, 마크업언어(MarkUp Language)�
 - 썸네일 배치을 부트스트랩으로 적용해보기
 
 
-### STEP5 - 배경 , 변형 , 애니메이션
-- 배경
-- 변형
-- 애니메이션
-
-### STEP6 - 썸네일 리스트 움직임주기
+### STEP8 - 썸네일 리스트 움직임주기
 
 ### STEP7
 템플릿 컴포넌트 만들기.
