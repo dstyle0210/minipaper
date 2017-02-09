@@ -18,36 +18,16 @@ CSS는 "Cascading Style Sheets" 의 약자로, 마크업언어(MarkUp Language)�
 - [블럭요소 속성](./step2/readme.md)
 - [박스 사이징(Box Sizing)](./step2/07_boxsizing.md)
 
-#### 실습 
-- 계단형 블럭 10개 쌓아놓기 (masonry.html)
-- 계단형 블럭에 마우스 오버 및 클릭시 색상변환하기 (masonry.html)
-- 썸네일 화면 만들기 (thumbnail.html)
-
 ### STEP3 - 인라인요소
 - [인라인 박스모델(Inline Box Model)](../step3/01_inline_boxmodel.md)
 - [인라인요소 속성](./step2/readme.md)
 
-#### 실습 
-- 계단에 이름을 배치시키기(좌,좌상,상) 등
-- 썸네일 에 제목 및 내용 넣기
-
-### 실무 팁
-- 링크 백그라운드 버그
-- 블럭요소 가운데 정렬하기
-
-----
-
-### STEP4 - 고정형 레이아웃 방식
+### STEP4 - 레이아웃 방식
 - [미디어의 종류(Media)](./step4/01_media.md)
 - [레이아웃 방법(Layout Type)](./step4/02_type.md)
 - [플로트(float) 레이아웃](./step4/03_float_clear.md)
 - [포지션(position) 레이아웃](./step4/04_position.md)
 - [플랙스(flex) 레이아웃](./step4/05_flax.md)
-
-
-#### 실습 
-- 계단형 블럭 9개 고정형으로 만들기
-- 썸네일 배치 변경하여 리스트로 만들기
 
 ### STEP5 - 반응형 레이아웃 방식
 - 미디어 쿼리
@@ -55,13 +35,8 @@ CSS는 "Cascading Style Sheets" 의 약자로, 마크업언어(MarkUp Language)�
 - 포지션 레이아웃
 - 플랙스 레이아웃
 
-#### 실습 
-- 계단형 블럭 9개 반응형으로 만들기
-- 썸네일 배치 변경하여 반응형 리스트로 만들기
-
-- Quiz : 마방진만들기(masonry.html)
-
 ---
+
 ### STEP6 - 배경 , 변형 , 애니메이션
 - 배경
 - 변형
@@ -74,47 +49,3 @@ CSS는 "Cascading Style Sheets" 의 약자로, 마크업언어(MarkUp Language)�
 - 폰트어썸(Font Awesome)
 - SASS
 - LESS
-
-#### 실습 
-- 계단형 블럭에 아이콘 삽입하기.
-- 썸네일 배치을 부트스트랩으로 적용해보기
-
-
-### STEP8 - 썸네일 리스트 움직임주기
-
-### STEP7
-템플릿 컴포넌트 만들기.
-
-헤더
-
-버튼
-
-입력요소
-
-리스트
-
-페이징
-
-쓰기
-
-보기 
-
-
-### STEP8
-
-반응형으로 바꾸기
-
-
-헤더
-
-버튼
-
-입력요소
-
-리스트
-
-페이징
-
-쓰기
-
-보기 
