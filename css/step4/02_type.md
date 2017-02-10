@@ -19,5 +19,6 @@
 
 ### 플랙스(flex) 레이아웃
 가장 최근에 나온 레이아웃 기법이고, 모바일 프로젝트를 하게되면 아마 가장 많이 보게되실 코드일겁니다.
-플랙스 레이아웃을 할때는 디렉션(direction, 방향) 과 정렬(align) 그리고 아이템(items) 이라는 개념이 가장 우선됩니다.  
+플랙스 레이아웃을 할때는 디렉션(direction, 방향) 과 아이템(items) 그리고 가상 박스모델(anonymous Box Model) 이라는 개념이 가장 우선됩니다.
+
 샘플 : http://codepen.io/enxaneta/pen/adLPwv

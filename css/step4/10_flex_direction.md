@@ -21,4 +21,5 @@ column-reverse | 아이템을 하->상 으로 배치합니다.
 
 
 #### 꼭 기억하세요.
-- [플랙스 줄바꿈방법(flex-wrap)](../step4/11_flex_wrap.md)이 없다면, 모든 아이템은 한줄로 표시됩니다.  
+- [플랙스 줄바꿈방법(flex-wrap)](../step4/11_flex_wrap.md)이 없다면, 모든 아이템은 한줄로 표시됩니다.
+- 디렉션의 설정에 따라 각 속성들의 "flex-start" 와 "flex-end" , "center"의 기준이 변경됩니다.
