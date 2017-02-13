@@ -1,5 +1,5 @@
-## CSS의 기초-상속성(Cascading)
-
+# CSS 소개
+## 상속성(Cascading)
 ### 상속성 개념
 캐스캐이딩(Cascading)의 의미는 폭포에서 흘러내니다. 라는 의미로 종속,상속의 의미를 가집니다.
 CSS의 대표적인 특징이라면, 상속성을 말할수 있습니다. 캐스캐이딩의 의미처럼 흘러내리듯이 속성이 상위엘리먼트로 부터, 상속되는것을 의미합니다.
@@ -29,6 +29,6 @@ h1{margin:0;padding:0;}
 실제로는 상속되지 않습니다. 어떤 속성들이 상속되는지는 , 속성들 설명에서 확인하세요.
 
 <div class="btnSec">
-[CSS란?](../readme.md)    
+[CSS란?](../readme.md)
 [우선순위(Priority Rules)](./02_Priority.md)
 </div>

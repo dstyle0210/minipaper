@@ -1,5 +1,7 @@
 ##CSS의 기초 - 셀렉터(Selector) - Basic
 
+연습: [codepen](http://codepen.io/dstyle0210/pen/GrPydq?editors=1100#0)
+
 ### 선택자 셀렉터
 
 #### Universal Selector (*)
