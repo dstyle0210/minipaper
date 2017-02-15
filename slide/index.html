@@ -1,0 +1,103 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>CSS 3D Slideshow</title>
+		
+		<link rel="stylesheet" href="main.css">
+	</head>
+	
+	<body>
+		
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div id="main">
+			
+			<section>
+                <article class="index">
+                    <h1>개발자를 위한 CSS</h1>
+                    <h3 class="inverted">떠듦 by 마봉아빠 </h3>
+                </article>
+			</section>
+			
+			<section>
+                <section>
+                    <h2>상속성(Cascading)</h2>
+                    <p>물처럼 흘러내려서 CSS?</p>
+                    <img src="https://s-media-cache-ak0.pinimg.com/564x/4a/85/1f/4a851ffca371d5a504581537f3080b6a.jpg" alt="" />
+                </section>
+                <section>
+                    <h2>상속성 제외</h2>
+                    <p>텍스트 관련 속성(text-align, font-size 등)은 상속</p>
+                    <p>박스모델 관련 속성(width,height)는 영향은 줄수 있지만 상속안됨</p>
+                </section>
+			</section>
+
+			<section>
+                <h2>우선순위(Priority Rules)</h2>
+                <ol>
+                    <li>"!important" 구문</li>
+                    <li>inline style 선언 (&lt;E style="">&lt;/E>)</li>
+                    <li>id (#) 로 선언</li>
+                    <li>class (.) 로 선언</li>
+                    <li>엘리먼트로 선언</li>
+                    <li>유니버셜 (*) 선언</li>
+                    <li>작성순서에 따른 오버라이딩</li>
+                    <li>native style sheet (네이티브 스타일 시트) | 상속성에 따라 상속된 선언</li>
+                </ol>
+			</section>
+
+			<!-- Example of nested vertical slides -->
+			<section>
+				<section>
+					<h2>수직 슬라이드</h2>
+					<p>
+						&lt;section&gt;안에 &lt;section&gt;을 만들면<br/>
+                        해당&lt;section&gt;들을 수직 슬라이드로 쓸수 있다.
+                        <br><a href="#/2/1">방향키↓</a>를 눌러보아라.
+					</p>
+				</section>
+				<section>
+					<h2>지하 1층</h2>
+					<p>방향키↓를 눌러보아라</p>
+				</section>
+				<section>
+					<h2>지하2층</h2>
+					<p>이런식으로 수평말고 수직으로도 얼마든지 가능하다</p>
+				
+				</section>
+				<section>
+					<h2>지하3층</h2>
+					<p>일단은 3개정도만 만들어 보았다.
+                    <br>수직슬라이드 상태에서도 좌우 방향키를 누르면
+                    <br>다음페이지로 넘어간다.</p>
+					</section>
+			</section>
+				
+			<section>
+            	<section>
+                    <h2>li태그를 이용</h2>
+                    <ul>
+                        <li>리스트 목록</li>
+                        <li>리스트1</li>
+                        <li>리스트2</li>
+                        <li>리스트3</li>
+                    </ul>
+                </section>
+                <section>
+                	<h2>이정도면 대충</h2>
+                	<p>활용하는 법은 다 설명했다고 생각한다.</p>
+                </section>
+			</section>
+			
+			<section>
+				<h1>끝</h1>
+				<h3 class="inverted">제작 Hakim El Hattab / hakim.se</h3>
+			</section>
+			
+		</div>
+        <script src="slideshow.js"></script> 
+		
+	</body>
+</html>

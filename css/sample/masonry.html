@@ -14,33 +14,32 @@
         4. 벽돌에 이름을 이쁘게 바꾸기
         5. 벽돌 쌓기
          */
-        .wall{display:flex;width:600px;height:400px;align-items:flex-end;flex-wrap:wrap;}
-        .wall>div{box-sizing:border-box;width:100px;height:100px;border:1px solid #000;}
+        body{font-size:40px;}
+        html{font-size:50px;}
+        .wall{display:flex;width:600px;height:400px;align-items:flex-end;align-content:flex-start;flex-wrap:wrap;}
+        .wall>div{flex:1;box-sizing:border-box;width:100px;height:100px;border:1px solid #000;}
+        .wall>div:nth-child(2){flex:2;}
     </style>
 </head>
-<body>
+<body style="font-size:30px;">
+
+<style>
+    .ttt{font-size:16px;}
+    p{font-size:2em;}
+    p > span{font-size:4em;}
+</style>
+<div class="ttt">
+    <p>
+        <span>텍스트</span>
+    </p>
+</div>
+
 <div class="wall">
     <div class="st1"><a href="#st1">네모<span>벽돌1</span></a></div>
 
     <div class="st2"><a href="#st2">네모<span>벽돌2</span></a></div>
     <div class="st3"><a href="#st3">네모<span>벽돌3</span></a></div>
 
-    <div class="st4"><a href="#st4">네모<span>벽돌4</span></a></div>
-    <div class="st5"><a href="#st5">네모<span>벽돌5</span></a></div>
-    <div class="st6"><a href="#st6">네모<span>벽돌6</span></a></div>
-
-    <div class="st7"><a href="#st7">네모<span>벽돌7</span></a></div>
-    <div class="st8"><a href="#st8">네모<span>벽돌8</span></a></div>
-    <div class="st9"><a href="#st9">네모<span>벽돌9</span></a></div>
-    <div class="st10"><a href="#st10">네모<span>벽돌10</span></a></div>
-
-    <div class="st7"><a href="#st7">네모<span>벽돌7</span></a></div>
-    <div class="st8"><a href="#st8">네모<span>벽돌8</span></a></div>
-    <div class="st9"><a href="#st9">네모<span>벽돌9</span></a></div>
-    <div class="st10"><a href="#st10">네모<span>벽돌10</span></a></div>
-
-    <div class="st7"><a href="#st7">네모<span>벽돌7</span></a></div>
-    <div class="st8"><a href="#st8">네모<span>벽돌8</span></a></div>
 </div>
 
 <style>

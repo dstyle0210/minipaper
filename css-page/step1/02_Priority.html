@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>마봉아빠의 개발자를 위한 CSS 초급강의</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../template/style.css">
 </head>
 <body>
-<p>##CSS의 기초 - 우선순위(Priority Rules)</p>
-<h3 id="-">우선순위 산정 기준</h3>
+<h1 id="-priority-rules-">우선순위(Priority Rules)</h1>
+<h2 id="-">우선순위 산정 기준</h2>
 <p>CSS 우선순위는 일정 점수라는 개념으로 생각하면 쉽습니다.</p>
-<h4 id="-">점수기준</h4>
+<h2 id="-">우선순위 점수기준</h2>
 <ol>
 <li>&quot;!important&quot; 구문</li>
 <li>inline style 선언 ( &lt;E style=&quot;&quot;&gt;&lt;/E&gt; )</li>
@@ -28,7 +32,7 @@
 </code></pre>
 <p>위와 같은 코드라면 두 코드 모두 h1엘리먼트를 지칭하지만, class로 선언(.)이 우선순위가 높기 때문에,
 본 글자는 모두 오렌지 색으로 보이게 됩니다.</p>
-<h3 id="-">상속성에 따라 상속된 선언 처리</h3>
+<h2 id="-">상속성에 따라 상속된 선언 처리</h2>
 <p>아까의 예제에서 span엘리먼트는 아무런 속성이 지정되지 않았지만, 오렌지색으로 보이게 됩니다.
 이는 7번항목인 &quot;상속성에 따라 상속된 선언&quot; 에 해당하기 떄문인데, 만약 &quot;테스트&quot;라는 글자만 빨간색으로 보여주고 싶다라면?</p>
 <p>아래와 같이 수정해주면 적용됩니다.</p>
