@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<p>##CSS의 기초 - 상하정렬(vertical-align)</p>
+<p>텍스트의 상하정렬을 정의합니다. 중요한것은 텍스트들 끼리의 정렬을 지정하며,
+블럭 안의 상하정렬을 이야기 하는것은 아닙니다.  </p>
+<p>단, table-cell(td)일 경우에는 전체적인 상하를 이야기 합니다.</p>
+<h3 id="vertical-align">vertical-align</h3>
+<ul>
+<li>기본값 : &quot;baseline&quot;</li>
+<li>자식상속 : 안됨</li>
+<li>작성방법 : <code>vertical-align: baseline|length|sub|super|top|text-top|middle|bottom|text-bottom;</code></li>
+</ul>
+<h4 id="-">주로 쓰이는 값</h4>
+<table>
+<thead>
+<tr>
+<th>값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>top</td>
+<td>모든 inline or inline-block 요소를 자평을 기준하여 상단 정렬합니다.</td>
+</tr>
+<tr>
+<td>middle</td>
+<td>모든 inline or inline-block 요소를 자평을 기준하여 중단 정렬합니다.</td>
+</tr>
+<tr>
+<td>bottom</td>
+<td>모든 inline or inline-block 요소를 자평을 기준하여 하단 정렬합니다.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-">거의 안쓰이는 값</h4>
+<table>
+<thead>
+<tr>
+<th>값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>baseline</td>
+<td>영문의 하단꼬리 부분을 뺀 라인(이것이 베이스라인)을 기준합니다.</td>
+</tr>
+<tr>
+<td>length</td>
+<td>부모요소의 베이스라인의 위치에서 양수라면 위로, 음수라면 아래로 베이스라인을 적용합니다.</td>
+</tr>
+<tr>
+<td>sub</td>
+<td>부모요소의 영문 아랫첨자 라인에 자신의 베이스라인을 맞춥니다.</td>
+</tr>
+<tr>
+<td>super</td>
+<td>부모요소의 영문 윗첨자 라인에 자신의 베이스라인을 맞춥니다.</td>
+</tr>
+<tr>
+<td>text-top</td>
+<td>부모요소의 맨윗라인에 자신의 글자 상단 라인을 맞춥니다.</td>
+</tr>
+<tr>
+<td>text-bottom</td>
+<td>부모요소의 맨 하단라인에 자신의 글자 하단 라인을 맞춥니다.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-">실무 포인트</h4>
+<ul>
+<li>자평을 기준해서 적용되는것이 수훨하기 떄문에, top , middle , bottom 이 주로 쓰입니다.</li>
+</ul>
+
+
+</body>
+</html>

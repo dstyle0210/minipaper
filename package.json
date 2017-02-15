@@ -1,0 +1,26 @@
+{
+  "name": "minipaper",
+  "version": "1.0.0",
+  "description": "Front-End에 필요한 언어를 간단하게 설명하는 사이트",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dstyle0210/minipaper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dstyle0210/minipaper/issues"
+  },
+  "homepage": "https://github.com/dstyle0210/minipaper#readme",
+  "devDependencies": {
+    "gulp-add-src": "^0.2.0",
+    "gulp-file-include": "^1.0.0",
+    "gulp-insert": "^0.5.0",
+    "gulp-markdown": "^1.2.0",
+    "gulp-replace": "^0.5.4"
+  }
+}

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<p>##CSS의 기초 - 오버라이딩(Overriding)</p>
+<p>CSS의 우선순위에서도 나온 개념인데, CSS는 오버라이딩에 따른 상속이 존재 합니다.
+오버라이딩의 기준은 &quot;같은 엘리먼트에 같은 우선순위를 가질경우, 마지막에 선언된 속성이 적용된다.&quot; 입니다.
+이 오버라이딩은 독이 되기도 하고, 약이 되기도 합니다.</p>
+<pre><code class="lang-css">h1{color:red}
+h1{color:orange}
+</code></pre>
+<pre><code class="lang-html">&lt;h1 class=&quot;test&quot;&gt;&lt;span&gt;테스트&lt;/span&gt; 헤딩요소&lt;/h1&gt;
+</code></pre>
+<p>위와 같은 상황일경우, CSS구문만 본다면, 둘 다 우선순위는 00001000 으로 같지만, 오렌지색상의 속성이 마지막 이므로,
+실제로는 00001001 이 됩니다. 그러므로, h1엘리먼트 글자의 색상은 오렌지색 입니다.</p>
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<p>##CSS의 기초 - 해즈레이아웃(haslayout)의 개념</p>
+<p>clear는 DOM의 흐름상 플로트된 요소의 아래에 있을수 밖에 없습니다.
+하지만, 실무에서는 플로트된 요소를 클리어 하는것보다는 영역을 지정하는 <code>.clearfix</code> 라는 CSS 클래스를 미리 만들어 선언합니다.</p>
+<pre><code class="lang-css">.clearfix{*zoom:1}
+.clearfix:after,.clearfix:before{display:table;content:&quot;&quot;;line-height:0}
+.clearfix:after{clear:both}
+</code></pre>
+<h3 id="has-layout">Has Layout</h3>
+<p>IE에서 공식적으로 나온 개념으로 , 요소에 대하여 배치의 한계 및 배치의 영역을 지정하는 것.</p>
+<p>플로트는 공중에 약간 붕 뜬 개념으로 접근해야 하는데, 이유는 인라인요소에 대해 영향을 주기 떄문에,
+&#39;플로트요소는 인라인요소의 영역를 밀어낸다&#39; 라는 개념과, &#39;공간에 대한 개념&#39;이 겹치면서 발생했다.</p>
+<h3 id="-">해즈레이아웃 적용 범위</h3>
+<ul>
+<li>float요소 배치영역 한정</li>
+<li>margin영역 한정 (IE 더블마진버그)</li>
+<li>타 브라우져와 layout 범위 동기화</li>
+</ul>
+<h3 id="-">해즈레이아웃이 적용되는 속성</h3>
+<ul>
+<li>position:absolute;</li>
+<li>float:left|right</li>
+<li>display:inline-block</li>
+<li>width:&#39;auto&#39;외의 값</li>
+<li>height:&#39;auto&#39;외의 값</li>
+<li>zoom:&#39;normal&#39;외의 값</li>
+<li>writing-mode:tb-rl(ie전용)</li>
+<li>overflow:hidden | scroll | auto(ie7만 적용)</li>
+<li>overflow-x,overflow-y:hidden | scroll | auto(ie7만 적용)</li>
+</ul>
+
+
+</body>
+</html>

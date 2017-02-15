@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<p>##CSS의 기초 - 디스플레이 레이아웃(Display Layout)</p>
+<p><img src="https://i.stack.imgur.com/mGTYI.png" alt="레이아웃"><br>(출처 - <a href="http://stackoverflow.com/">http://stackoverflow.com/</a>)</p>
+<h3 id="-">레이아웃의 종류</h3>
+<ul>
+<li>block : 가로 및 세로영역을 가질수 있는 블럭 요소. 서로 붙어 있을경우 줄바꿈이 됩니다.</li>
+<li>inline : 글자 영역, 가로 및 세로 영역을 가질수 없고, 서로 붙어 있는 경우 연결 됩니다.</li>
+<li>inline-block : 가로 및 세로영역을 가질수 있으면서도, inline 요소 처럼 서로 붙어 있는 경우 연결됩니다.  한줄 안에서 하나의 inline-block의 높이가 인접한 inline의 허용 범위가 됩니다.</li>
+<li>none : 영역 자체를 없는 것으로 취급한다.</li>
+</ul>
+<h4 id="block">block</h4>
+<p>네모난 블럭을 생각하시면 됩니다. CSS의 레이아웃은 이런 네모 형태의 가상의 선을 그어서 생각해 보면 쉽습니다.
+블럭 요소는 width 및 height 와 함께 나중에 배울 <a href="../step2/01_boxmodel.html">박스모델</a>의 기본형태 입니다.</p>
+<h4 id="inline">inline</h4>
+<p>글자들을 생각해보면 됩니다. 글자는 어떤 글자가 들어올지 모르기 때문에 가로를 가질수가 없지요. 그리고 글자의 크기에 따라 높이가 달라지기 때문에
+높이도 가질수 없습니다. 심지어는 줄바꿈이 될수도 있기 때문에 전체 적인 영역을 지정할수가 없습니다. 박스모델 처럼 <a href="../step3/01_inline_boxmodel.html">텍스트 박스모델</a> 도 있습니다.</p>
+<p>글자 들이기 떄문에 당연히 인접한 inline 들 끼리는 서로 연결되어 나타납니다.</p>
+<h4 id="inline-block">inline-block</h4>
+<p>글자의 영역을 지정하고 싶다면, inline-block을 사용하게 됩니다. 글자가 들어갈 부분에 대해서 영역을 지정하고,
+그 안에서만 글자를 인정해 주는 것입니다. block 및 inline 을 특징을 모두 가지고 있어서 많이 쓰이지만,
+불과 몇년전까지만 해도, IE6 및 7에서 미호환 해서 사용할수 없었습니다.</p>
+<h4 id="none">none</h4>
+<p>선택된 엘리먼트를 완전히 보이지 않고, 영역도 인정하지 않도록 처리 합니다. CSS 입장에서는 없는 엘리먼트로 취급하여, 레이아웃에 영향을 미치지 않습니다.</p>
+<h3 id="table-cell">table-cell</h3>
+<p>디스플레이의 방식중에는 테이블의 td형태 속성을 적용하는 &quot;table-cell&quot;이라는 값이 있습니다.</p>
+
+
+</body>
+</html>

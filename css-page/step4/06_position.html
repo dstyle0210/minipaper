@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<p>##CSS의 기초 - 포지션(position)</p>
+<p>요소의 절대적 또는 상대적 위치를 지정하여 배치합니다. 절대적이면 공중에 붕뜨게 되고, 상대적이면 공중에 뜨진 않지만, 배치가 가능해집니다.
+포지션은 자신의 부모중, position값이 &quot;static&quot; 가 아닌 요소를 기준하여 배치가 적용됩니다.</p>
+<h3 id="position">position</h3>
+<ul>
+<li>기본값 : static</li>
+<li>상속성 : 없음</li>
+<li>작성방법 : <code>position: static|absolute|fixed|relative|initial|inherit;</code></li>
+</ul>
+<h4 id="-">주로쓰이는 값</h4>
+<table>
+<thead>
+<tr>
+<th>값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>absolute</td>
+<td>절대적 위치로 요소를 배치합니다. 주변 요소에 영향을 주지 않습니다.</td>
+</tr>
+<tr>
+<td>relative</td>
+<td>상대적 위치로 요소를 배치합니다. 주변 요소에 영향을 줍니다.</td>
+</tr>
+<tr>
+<td>fixed</td>
+<td>절대적이면서 윈도우창을 기준하여 배치됩니다. 주변요소에 영향을 주지 않습니다.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-">거의 안쓰이는 값</h4>
+<table>
+<thead>
+<tr>
+<th>값</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>static</td>
+<td>문서의 흐름대로 배치됩니다.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="-">꼭 기억하세요.</h4>
+<ul>
+<li>absolute 와 fixed의 차이는 자신의 상위요소의 영향을 받는가 안받는가 입니다.</li>
+<li>부모요소의 overflow 속성에 따라서 보이고 안보이고가 적용됩니다.</li>
+</ul>
+
+
+</body>
+</html>

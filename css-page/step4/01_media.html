@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<p>##CSS의 기초 - 미디어의 종류(Media)</p>
+<h3 id="css-media-rule-">CSS의 미디어 ( @media Rule )</h3>
+<p>CSS는 다양한 미디어를 대상으로 하고 있고, 다양함 이라는 것은 스크린에만 국한하지 않습니다.
+PC의 모니터, 핸드폰의 디스플레이 뿐만 아니라, TV 및 인쇄물까지도 포함하며, 과거에는 2G폰이라고 부르는 
+16비트 화면(WML)에도 쓰였습니다.</p>
+<p>하지만 이제는 대표적으로 사용하는 분야는 &quot;screen&quot; 과 &quot;print&quot; &quot;speech&quot; 3가지만 남았고,
+대부분의 레이아웃 방식은 3가지에 맞추어 진행하게 됩니다.</p>
+<h4 id="-">호환</h4>
+<ul>
+<li>all : 전체 선택</li>
+<li>screen : 브라우저를 통한 디스플레이</li>
+<li>print : 프린터를 통한 디스플레이</li>
+<li>speech : 스크린리더을 통한 디스플레이</li>
+</ul>
+<h4 id="-">사용법</h4>
+<pre><code class="lang-css">@media not|only mediatype and (media feature) {
+    CSS-Code;
+}
+</code></pre>
+<p>또는</p>
+<pre><code class="lang-html">&lt;link rel=&quot;stylesheet&quot; media=&quot;mediatype and|not|only (media feature)&quot; href=&quot;mystylesheet.css&quot;&gt;
+</code></pre>
+
+
+</body>
+</html>

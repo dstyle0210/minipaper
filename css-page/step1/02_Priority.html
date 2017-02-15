@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<p>##CSS의 기초 - 우선순위(Priority Rules)</p>
+<h3 id="-">우선순위 산정 기준</h3>
+<p>CSS 우선순위는 일정 점수라는 개념으로 생각하면 쉽습니다.</p>
+<h4 id="-">점수기준</h4>
+<ol>
+<li>&quot;!important&quot; 구문</li>
+<li>inline style 선언 ( &lt;E style=&quot;&quot;&gt;&lt;/E&gt; )</li>
+<li>id (#) 로 선언</li>
+<li>class (.) 로 선언</li>
+<li>엘리먼트로 선언</li>
+<li>유니버셜 (*) 선언</li>
+<li>작성순서에 따른 오버라이딩</li>
+<li>native style sheet (네이티브 스타일 시트) | 상속성에 따라 상속된 선언</li>
+</ol>
+<p>1~8번 항목을 8자리 숫자표기로 환산하면 생각하기 편합니다.
+편의를 위해, 실제로 무조건 적용인 8번 네이티브스타일시트는 제외합니다.</p>
+<pre><code class="lang-css">h1{color:red} /* 5번항목이므로, 00001000 가 되고 즉 우선순위가 1000 입니다. */
+.test{color:orange} /* 4번항목이므로, 00010000 가 되고 즉 우선순위가 10000 입니다. */
+</code></pre>
+<pre><code class="lang-html">&lt;h1 class=&quot;test&quot;&gt;&lt;span&gt;테스트&lt;/span&gt; 헤딩요소&lt;/h1&gt;
+</code></pre>
+<p>위와 같은 코드라면 두 코드 모두 h1엘리먼트를 지칭하지만, class로 선언(.)이 우선순위가 높기 때문에,
+본 글자는 모두 오렌지 색으로 보이게 됩니다.</p>
+<h3 id="-">상속성에 따라 상속된 선언 처리</h3>
+<p>아까의 예제에서 span엘리먼트는 아무런 속성이 지정되지 않았지만, 오렌지색으로 보이게 됩니다.
+이는 7번항목인 &quot;상속성에 따라 상속된 선언&quot; 에 해당하기 떄문인데, 만약 &quot;테스트&quot;라는 글자만 빨간색으로 보여주고 싶다라면?</p>
+<p>아래와 같이 수정해주면 적용됩니다.</p>
+<pre><code class="lang-css">h1{color:red} /* 5번항목이므로, 00001000 가 되고 즉 우선순위가 1000 입니다. */
+.test{color:orange} /* 4번항목이므로, 00010000 가 되고 즉 우선순위가 10000 입니다. */
+span{color:red;} /* span은 8번항목에 따라 오렌지색 (00000001) 이지만, 자신의 선언 (00001000) 에 따라 빨간색으로 변경됩니다. */
+</code></pre>
+
+
+</body>
+</html>
