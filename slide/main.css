@@ -38,7 +38,14 @@ h1{font-size:30px;}
 h2{font-size:36px;color:#000;}
 section>article{display:table-cell;width:100%;height:700px;vertical-align:middle;text-align:center;color:#333;}
 section>article>h2{padding-bottom:40px;}
+section>article>table{font-size:16px;}
+section>article>table td{text-align:left;}
 .codepen{margin:0 auto;width:60%;}
 .flex{display:flex;flex-wrap:wrap;}
 .flex>li{width:50%;}
 .point{color:red;}
+.thumb{width:100%;}
+.thumb>img{width:90%;height:auto;}
+.thumb>span{display:inline-block;padding-top:15px;}
+.childProperty{margin-top:20px;border-top:1px solid #ccc;}
+.comment{font-size:0.75em;color:#666;}
