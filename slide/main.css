@@ -43,7 +43,8 @@ section>article>table td{text-align:left;}
 .codepen{margin:0 auto;width:60%;}
 .flex{display:flex;flex-wrap:wrap;}
 .flex>li{width:50%;}
-.point{color:red;}
+.point{color:#b81e38;}
+.dark-gray{color:#000;}
 .thumb{width:100%;}
 .thumb>img{width:90%;height:auto;}
 .thumb>span{display:inline-block;padding-top:15px;}

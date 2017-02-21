@@ -53,10 +53,10 @@
 				<section>
 					<article>
 						<h2>마봉아빠의 개발자를 위한 CSS 초급 전체 커리큘럼</h2>
-						<ul>
-							<li>1. CSS란?</li>
-							<li>2. 블럭 요소</li>
-							<li>3. 인라인(텍스트)요소</li>
+						<ul style="color:#666;">
+							<li class="dark-gray">1. CSS란?</li>
+							<li class="dark-gray">2. 블럭 요소</li>
+							<li class="dark-gray">3. 인라인(텍스트)요소</li>
 							<li>4. 레이아웃 이란?</li>
 							<li>5. 미디어(Media)</li>
 							<li>6. 플로트 레이아웃(Float)</li>
@@ -65,7 +65,7 @@
 							<li>9. 미디어쿼리(Mediaquires)</li>
 							<li>10. 반응형 레이아웃(Responsive)</li>
 							<li>11. 그외 주로쓰는 속성</li>
-							<li>12. CSS 라이브러리(CSS Libliry)</li>
+							<li>12. CSS 라이브러리(CSS Library)</li>
 							<li>13. 전처리기(Pre-processor)</li>
 							<li>14. 실무에 쓰이는 팁</li>
 						</ul>
@@ -125,26 +125,26 @@
 				<section>
 					<article>
 						<h2>작성법</h2>
-						<ul>
-							<li>셀렉터 (selector)</li>
-							<li>선언( declaration )</li>
-							<li>속성( property )</li>
-							<li>값(value)</li>
-						</ul>
 						<div class="image"><img src="http://www.w3schools.com/css/selector.gif" alt=""></div>
 					</article>
 				</section>
 				<section>
 					<article>
 						<h2>적용방법</h2>
-						<ul>
-							<li>"link" 엘리먼트</li>
-							<li>"style" 엘리먼트</li>
-							<li>inline 직접선언</li>
-						</ul>
-						<div class="codepen">
-							<p data-height="265" data-theme-id="0" data-slug-hash="KaYpOG" data-default-tab="html,result" data-user="dstyle0210" data-embed-version="2" data-pen-title="[CSS] 스타일시트 적용방법" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/dstyle0210/pen/KaYpOG/">[CSS] 스타일시트 적용방법</a> by 원용봉 (<a href="http://codepen.io/dstyle0210">@dstyle0210</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-						</div>
+                        <ul>
+                            <li>
+                                <h2>"link"엘리먼트</h2>
+                                <p><code>&lt;link rel="stylesheets" href="CSS경로" /></code></p>
+                            </li>
+                            <li>
+                                <h2>"style"엘리먼트</h2>
+                                <p><code>&lt;style><br /><span class="comment">/* CSS 코드 */</span><br />&lt;/style></code></p>
+                            </li>
+                            <li>
+                                <h2>inline 직접선언</h2>
+                                <p><code>&lt;span style="스타일코드">&lt;/span></code></p>
+                            </li>
+                        </ul>
 					</article>
 				</section>
 				<section>
@@ -160,7 +160,7 @@
 						<h2>셀렉터(Selector)</h2>
 						<div class="desc">
 							<h3>지금 접속하세요.</h3>
-							<p><span class="point">https://goo.gl/Avc7PZ</span></p>
+							<p><a href="https://goo.gl/Avc7PZ" target="_blank">https://goo.gl/Avc7PZ</a></p>
 						</div>
 					</article>
 				</section>
@@ -277,6 +277,10 @@
 						<p>Pseudo Class(피도 클래스)라는것은 <span class="point">엘리먼트가 특정한 상태</span>일때 을 지칭합니다.</p>
 						<p>Pseudo Element(피도 엘리먼트)는 <span class="point">가상의 엘리먼트를 생성</span>해서 속성을 지정합니다.</p>
 						<p>단독으로 사용할수는 있으나, 추천하지는 않으므로, 언제나 셀렉터에 연결하여 선언됩니다.</p>
+                        <div class="desc">
+                            <h3>지금 접속하세요.</h3>
+                            <p><a href="https://goo.gl/JlhjdB" target="_blank">https://goo.gl/JlhjdB</a></p>
+                        </div>
 					</article>
 				</section>
 				<section>
@@ -408,15 +412,6 @@
 				<section>
                     <article>
                         <h2>공통 값 정의</h2>
-                        <div class="desc">
-                            <h3>지금 접속하세요.</h3>
-                            <p><span class="point">https://goo.gl/Avc7PZ</span></p>
-                        </div>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>공통?</h2>
                         <ul>
                             <li>컬러(Color)</li>
                             <li>단위(Unit)</li>
@@ -427,30 +422,39 @@
                     </article>
                 </section>
                 <section>
-                    <h2>컬러(Color)</h2>
-                    <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/AdditiveColor.svg/220px-AdditiveColor.svg.png" alt=""></p>
-                    <ul>
-                        <li>컬러이름.(red , blue 등)</li>
-                        <li>RGB 또는 <strong class="point">RGBA</strong>방식 == rgb(0,0,0,0)</li>
-                        <li>HEX(Hexadecimal)값 방식 == <strong class="point">#RRGGBB</strong> (RR == 00~FF)</li>
-                    </ul>
+                    <article>
+                        <h2>컬러(Color)</h2>
+                        <p>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/AdditiveColor.svg/220px-AdditiveColor.svg.png"
+                                 alt=""></p>
+                        <ul>
+                            <li>컬러이름.(red , blue 등)</li>
+                            <li>RGB 또는 <strong class="point">RGBA</strong>방식 == rgb(0,0,0,0)</li>
+                            <li>HEX(Hexadecimal)값 방식 == <strong class="point">#RRGGBB</strong> (RR == 00~FF)</li>
+                        </ul>
+                    </article>
                 </section>
                 <section>
-                    <h2>단위(Unit)</h2>
-                    <p><img src="http://media02.hongkiat.com/css-units/post-cover.jpg" alt=""></p>
+                    <article>
+                        <h2>단위(Unit)</h2>
+                        <p><img src="http://media02.hongkiat.com/css-units/post-cover.jpg" alt=""></p>
+                    </article>
                 </section>
                 <section>
-                    <h2>단위(Unit) : 절대적인 단위</h2>
-                    <ul>
-                        <li><strong class="point">px</strong> : 픽셀(가장 기본적인 사용)</li>
-                        <li>pc : 파이카(1pc == 12pt == 1/6in)</li>
-                        <li>pt : 포인트(1/72in)</li>
-                        <li>cm : 센티미터</li>
-                        <li>mm : 밀리미터</li>
-                        <li>in : 인치</li>
-                    </ul>
+                    <article>
+                        <h2>단위(Unit) : 절대적인 단위</h2>
+                        <ul>
+                            <li><strong class="point">px</strong> : 픽셀(가장 기본적인 사용)</li>
+                            <li>pc : 파이카(1pc == 12pt == 1/6in)</li>
+                            <li>pt : 포인트(1/72in)</li>
+                            <li>cm : 센티미터</li>
+                            <li>mm : 밀리미터</li>
+                            <li>in : 인치</li>
+                        </ul>
+                    </article>
                 </section>
                 <section>
+                    <article>
                     <h2>단위(Unit) : 상대적인 단위</h2>
                     <ul>
                         <li><strong class="point">em</strong> : 부모의 font-size을 1em 으로 적용하며, 부모의 폰트사이즈가 늘어나면 함께 들어난다.</li>
@@ -463,13 +467,14 @@
                         <li>vmin : window의 width 또는 height 중 작은 사이즈의 1/100</li>
                         <li>vmax : window의 width 또는 height 중 큰 사이즈의 1/100</li>
                     </ul>
+                    </article>
                 </section>
                 <section>
                     <article>
                         <h2>디스플레이(Display)</h2>
                         <div class="desc">
                             <h3>지금 접속하세요.</h3>
-                            <p><span class="point">https://goo.gl/Avc7PZ</span></p>
+                            <p><a href="https://goo.gl/6Dhs0v" target="_blank">https://goo.gl/6Dhs0v</a></p>
                         </div>
                     </article>
                 </section>
@@ -509,7 +514,7 @@
                         <h2>레이아웃(Layout)</h2>
                         <div class="desc">
                             <h3>지금 접속하세요.</h3>
-                            <p><span class="point">https://goo.gl/UirXy2</span></p>
+                            <p><a href="https://goo.gl/UirXy2" target="_blank">https://goo.gl/UirXy2</a></p>
                         </div>
                     </article>
                 </section>
@@ -591,7 +596,7 @@
                         <ul>
                             <li>기본값 : 엘리먼트형태 상속</li>
                             <li>자식상속 : 안함</li>
-                            <li>작성방법 : <code>display: value;</code></li>
+                            <li>작성방법 : <code>display: inline | block | inline-block | none | flex | table | table-cell;</code></li>
                         </ul>
                         <table class="table table-hover table-bordered">
                             <colgroup>
@@ -664,6 +669,10 @@
                             <tr>
                                 <td>hidden</td>
                                 <td>화면상 보여지지 않도록 합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>collapse</td>
+                                <td>(진짜안쓰지만) table의 cell의 내,외곽선을 합치도록 합니다.</td>
                             </tr>
                             </tbody>
                         </table>
@@ -890,7 +899,7 @@
                         <h2>10분 동안 실습 및 Q&A , 바람쐬기</h2>
                         <div class="desc">
                             <h3>지금 접속하세요.</h3>
-                            <p><span class="point">https://goo.gl/Avc7PZ</span></p>
+                            <p><a href="https://goo.gl/NTnOEk" target="_blank">https://goo.gl/NTnOEk</a></p>
                         </div>
                     </article>
                 </section>
@@ -979,17 +988,77 @@
                         </ul>
                     </article>
                 </section>
+                <section>
+                    <article>
+                        <h2>글자간격, 자간(letter-spacing)</h2>
+                        <ul>
+                            <li>기본값 : 부모상속</li>
+                            <li>자식상속 : 상속</li>
+                            <li>작성방법 : <code>letter-spacing: normal|length;</code></li>
+                        </ul>
+                    </article>
+                </section>
+                <section>
+                    <article>
+                        <h2>들여쓰기(text-indent)</h2>
+                        <ul>
+                            <li>기본값 : 0</li>
+                            <li>자식상속 : 안됨</li>
+                            <li>작성방법 : <code>text-indent: length;</code></li>
+                        </ul>
+                    </article>
+                </section>
+                <section>
+                    <article>
+                        <h2>데코레이션(Decoration)</h2>
+                        <ul>
+                            <li>기본값 : 부모상속됨</li>
+                            <li>자식상속 : 상속됨</li>
+                            <li>작성방법 : <code>text-decoration: none|underline|overline|line-through;</code></li>
+                        </ul>
+                    </article>
+                </section>
+                <section>
+                    <article>
+                        <h2>텍스트 변형(text-transform)</h2>
+                        <ul>
+                            <li>기본값 : 부모상속됨</li>
+                            <li>자식상속 : 상속됨</li>
+                            <li>작성방법 : <code>text-transform: none|capitalize|uppercase|lowercase;</code></li>
+                        </ul>
+                    </article>
+                </section>
+                <section>
+                    <article>
+                        <h2>그림자(text-shadow)</h2>
+                        <ul>
+                            <li>기본값 : none</li>
+                            <li>상속성 : 있음</li>
+                            <li>작성방법 : text-shadow: h-shadow v-shadow blur-radius color|none;</li>
+                        </ul>
+                    </article>
+                </section>
 				<section>
                     <article>
                         <h2>10분 동안 실습 및 Q&A , 바람쐬기</h2>
                         <div class="desc">
                             <h3>지금 접속하세요.</h3>
-                            <p><span class="point">https://goo.gl/Avc7PZ</span></p>
+                            <p><a href="https://goo.gl/XUovPW" target="_blank">https://goo.gl/XUovPW</a></p>
                         </div>
                     </article>
                 </section>
 			</section>
 			<section>
+                <section>
+                    <article>
+                        <h2>줄바꿈 방식(white-space)</h2>
+                        <ul>
+                            <li>기본값 : 부모상속됨</li>
+                            <li>자식상속 : 상속됨</li>
+                            <li>작성방법 : <code>white-space: normal|nowrap|pre|pre-line|pre-wrap;</code></li>
+                        </ul>
+                    </article>
+                </section>
 				<section>
                     <article>
                         <h2>인라인높이, 자평(line-height)</h2>
@@ -997,16 +1066,6 @@
                             <li>기본값 : 부모상속</li>
                             <li>자식상속 : 상속</li>
                             <li>작성방법 : <code>line-height: normal|number|length;</code></li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>글자간격, 자간(letter-spacing)</h2>
-                        <ul>
-                            <li>기본값 : 부모상속</li>
-                            <li>자식상속 : 상속</li>
-                            <li>작성방법 : <code>letter-spacing: normal|length;</code></li>
                         </ul>
                     </article>
                 </section>
@@ -1022,16 +1081,6 @@
                 </section>
 				<section>
                     <article>
-                        <h2>줄바꿈 방식(white-space)</h2>
-                        <ul>
-                            <li>기본값 : 부모상속됨</li>
-                            <li>자식상속 : 상속됨</li>
-                            <li>작성방법 : <code>white-space: normal|nowrap|pre|pre-line|pre-wrap;</code></li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
                         <h2>단어 줄바꿈 방식(word-break)</h2>
                         <p>CJK(중국어,일본어,한국어)가 <span class="point">"아닌"</span> 언어을 기준하여 줄바꿈 기준을 적용</p>
                         <ul>
@@ -1041,52 +1090,13 @@
                         </ul>
                     </article>
                 </section>
-				<section>
-                    <article>
-                        <h2>들여쓰기(text-indent)</h2>
-                        <ul>
-                            <li>기본값 : 0</li>
-                            <li>자식상속 : 안됨</li>
-                            <li>작성방법 : <code>text-indent: length;</code></li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>데코레이션(Decoration)</h2>
-                        <ul>
-                            <li>기본값 : 부모상속됨</li>
-                            <li>자식상속 : 상속됨</li>
-                            <li>작성방법 : <code>text-decoration: none|underline|overline|line-through;</code></li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>텍스트 변형(text-transform)</h2>
-                        <ul>
-                            <li>기본값 : 부모상속됨</li>
-                            <li>자식상속 : 상속됨</li>
-                            <li>작성방법 : <code>text-transform: none|capitalize|uppercase|lowercase;</code></li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>그림자(text-shadow)</h2>
-                        <ul>
-                            <li>기본값 : none</li>
-                            <li>상속성 : 있음</li>
-                            <li>작성방법 : text-shadow: h-shadow v-shadow blur-radius color|none;</li>
-                        </ul>
-                    </article>
-                </section>
+
 				<section>
                     <article>
                         <h2>10분 동안 실습 및 Q&A , 바람쐬기</h2>
                         <div class="desc">
                             <h3>지금 접속하세요.</h3>
-                            <p><span class="point">https://goo.gl/Avc7PZ</span></p>
+                            <p><a href="https://goo.gl/aNvjWb" target="_blank">https://goo.gl/aNvjWb</a></p>
                         </div>
                     </article>
                 </section>
@@ -1130,9 +1140,18 @@
                         <div class="image"><img src="http://www.w3schools.com/css/selector.gif" alt=""></div>
                         <h2>적용방법</h2>
                         <ul>
-                            <li>"link" 엘리먼트</li>
-                            <li>"style" 엘리먼트</li>
-                            <li>inline 직접선언</li>
+                            <li>
+                                <h3>"link"엘리먼트</h3>
+                                <p><code>&lt;link rel="stylesheets" href="CSS경로" /></code></p>
+                            </li>
+                            <li>
+                                <h3>"style"엘리먼트</h3>
+                                <p><code>&lt;style><br /><span class="comment">/* CSS 코드 */</span><br />&lt;/style></code></p>
+                            </li>
+                            <li>
+                                <h3>inline 직접선언</h3>
+                                <p><code>&lt;span style="스타일코드">&lt;/span></code></p>
+                            </li>
                         </ul>
                     </article>
                 </section>
@@ -1236,8 +1255,8 @@
                     <article>
                         <h2>컬러(color)와 단위(unit)</h2>
                         <ul>
-                            <li>컬러는 RGBA 방식과 HEX(#RRGGBB)이 주로 쓰인다.</li>
-                            <li>단위는 "px" , "%" , "em" , "rem" 이 주로쓰인다.</li>
+                            <li>컬러는 <span class="point">RGBA</span> 방식과 <span class="point">HEX(#RRGGBB)</span>이 주로 쓰인다.</li>
+                            <li>단위는 <span class="point">"px" , "%" , "em" , "rem"</span> 이 주로쓰인다.</li>
                         </ul>
                     </article>
                 </section>
@@ -1268,22 +1287,139 @@
                 </section>
 				<section>
                     <article>
-                        <h2>디스플레이(Display) , 비지빌리티(visibility)</h2>
+                        <ul class="flex">
+                            <li>
+                                <h2>디스플레이(Display)</h2>
+                                <h3>디스플레이는 <span class="point">요소의 특성을 바꾼다.</span></h3>
+                                <p>주속성 : none , block , inline , inline-block , flex</p>
+                            </li>
+                            <li>
+                                <h2>비지빌리티(visibility)</h2>
+                                <h3>비지빌리티는 요소가 <span class="point">보이는가 안보이는가만 바꾼다.</span></h3>
+                                <p>주속성 : hidden , visible</p>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+				<section>
+                    <article>
+                        <h2>가로값(width) , 세로값(height)</h2>
+                        <ul>
+                            <li>대부분은 "px","%","em","rem"을 쓴다.</li>
+                            <li>앞에 "min-" 이나 "max-"을 붙일수 있다.</li>
+                            <li><span class="point">"box-sizing" 여부에 따라 범위가 틀려진다.</span></li>
+                        </ul>
+                    </article>
+                </section>
+				<section>
+                    <article>
+                        <ul class="flex">
+                            <li>
+                                <h2>패딩(padding)</h2>
+                                <h3>배경을 영향을 받는 border-edge 내부 영역.</h3>
+                                <p><span class="point">요소들 끼리 겹치는 경우는 없다.</span></p>
+                            </li>
+                            <li>
+                                <h2>마진(margin)</h2>
+                                <h3>배경의 영향을 안받는 border-edge 외부 영역</h3>
+                                <p><span class="point">요소들 끼리 겹치는 경우가 있다.</span></p>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+				<section>
+                    <article>
+                        <ul class="flex">
+                            <li>
+                                <h2>보더(border)</h2>
+                                <h3>컨덴츠와, 패딩 이후의 내곽선</h3>
+                                <p>border-radius라는 속성으로 둥글게 만들수도 있다.</p>
+                                <p><span class="point">width값에 영향을 준다.</span></p>
+                                <p>요소들 끼리 겹치는 경우는 없다.</p>
+                            </li>
+                            <li>
+                                <h2>아웃라인(outline)</h2>
+                                <h3>보더 밖으로 선언되는 외곽선</h3>
+                                <p>outline-offset 이라는 속성으로 더 멀리 보낼수 있다.</p>
+                                <p><span class="point">width값에 영향을 안준다.</span></p>
+                                <p>요소들 끼리 겹치는 경우가 있다.</p>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+				<section>
+                    <article>
+                        <h2>오버플로우(Overflow)</h2>
+                        <p>컨덴츠가 보이는 영역에서 벗어날때 처리</p>
+                        <p>scoll-x , scroll-y 같은 식으로 가로,세로도 별도 가능.</p>
+                    </article>
+                </section>
+                <section>
+                    <article>
+                        <h2>폰트 속성들</h2>
+                        <ul>
+                            <li>폰트명(font-family) : 사용될 폰트명 또는 제너릭명으로 적용합니다.</li>
+                            <li>색상(Color) : 글자의 색상을 지정합니다.</li>
+                            <li>크기(size) : 글자의 크기를 지정합니다.</li>
+                            <li>굵기(weight) : 글자의 굵기를 지정합니다. (bold == 700)</li>
+                        </ul>
+                    </article>
+                </section>
+                <section>
+                    <article>
+                        <ul class="flex">
+                            <li>
+                                <h2>자평,텍스트높이(line-height)</h2>
+                                <p>인라인 요소 중 한줄에 대한 높이를 지정한다.</p>
+                            </li>
+                            <li>
+                                <h2>자간(letter-spacing)</h2>
+                                <p>글자와 글자사이의 간격에 영향을 준다.</p>
+                            </li>
+                        </ul>
 
                     </article>
                 </section>
-				<section>가로값(width), 세로값(height)</section>
-				<section>패딩(padding) , 마진(margin)</section>
-				<section>보더(border) , 아웃라인(outline)</section>
-				<section>오버플로우(Overflow)</section>
-				<section>폰트명(font-family) , 색상(Color)</section>
-				<section>크기(size) , 굵기(weight), 자평,텍스트높이(line-height)</section>
-				<section>뽀나스 : 폰트축약선언(font)</section>
-				<section>좌우정렬(text-align) , 상하정렬(vertical-align)</section>
-				<section>자평(line-height) , 자간(letter-spacing)</section>
-				<section>줄바꿈 방식(white-space), 단어 줄바꿈 방식(word-break)</section>
-				<section>들여쓰기(text-indent)</section>
-				<section>수고하셨습니다.</section>
+				<section>
+                    <article>
+                        <ul class="flex">
+                            <li>
+                                <h2>좌우정렬(text-align)</h2>
+                                <p>인라인에만 적용된다.</p>
+                                <p>요소의 내부 컨덴츠에 적용된다.</p>
+                                <p><span class="point">상속되며, 절대적이다.</span></p>
+                            </li>
+                            <li>
+                                <h2>상하정렬(vertical-align)</h2>
+                                <p>인라인에만 적용된다.</p>
+                                <p>요소 자체의 정렬에 적용된다.</p>
+                                <p><span class="point">상속안되고, 상대적이다.</span></p>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+				<section>
+                    <article>
+                        <ul class="flex">
+                            <li>
+                                <h2>줄바꿈 방식(white-space)</h2>
+                                <p>줄바꿈에 대한 처리를 기준한다.</p>
+                                <p>요소 내의 컨덴츠가 요소의 영역을 넘어갈때만<br />쓰는건 아니다.</p>
+                            </li>
+                            <li>
+                                <h2>단어 줄바꿈 방식(word-break)</h2>
+                                <p>CJK언어가 아닌 언어에만 적용된다.</p>
+                                <p>단어를 기준하여 줄바꿈을 처리한다.</p>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+				<section>
+                    <article>
+                        <h2>수고하셨습니다<span class="comment">람쥐다람쥐다람..죄송..</span></h2>
+                        <p><img src="https://s-media-cache-ak0.pinimg.com/736x/76/3d/01/763d01148d34af83ef8ebacd91acf038.jpg" alt=""></p>
+                    </article>
+                </section>
 			</section>
 
 		</div>
