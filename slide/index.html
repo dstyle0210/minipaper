@@ -3,7 +3,7 @@
 	
 	<head>
 		<meta charset="utf-8">
-		<title>마봉아빠의 개발자를 위한 CSS초급</title>
+		<title>마봉아빠의 개발자를 위한 CSS초급(1)</title>
 		<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="main.css">
@@ -16,7 +16,7 @@
 			
 			<section>
                 <article class="index">
-                    <h1>개발자를 위한 CSS</h1>
+                    <h1>개발자를 위한 CSS - 1주차</h1>
                     <h3 class="inverted">떠듦 by 마봉아빠 </h3>
                 </article>
 			</section>
@@ -31,10 +31,10 @@
 					<article>
 						<h2>수업 순서, 방식</h2>
 						<ul>
-							<li>강의 중간중간 10분 동안 실습 및 Q&A , 바람쐬기 합니다.</li>
+							<li>강의 중간중간 실습 및 Q&A , 바람쐬기 합니다.</li>
 							<li>마지막엔 강의한걸 정리하는 과정 및 최종Q&A 을 할거예요.</li>
 							<li>2주차 부터는 1주에 수업내용 정리하고 시작할꺼예요.</li>
-							<li>강의 후에 궁금하신 점은 "꼭" 메일로 보내주세요.(dstyle0210@gmail.com)</li>
+							<li>강의 후에 궁금하신 점은 "꼭" 카페의 .(<span class="point">dstyle0210@gmail.com</span>)</li>
 						</ul>
 					</article>
 				</section>
@@ -108,7 +108,7 @@
 							<li>4. class (.) 로 선언</li>
 							<li>5. 엘리먼트로 선언</li>
 							<li>6. 유니버셜 (*) 선언</li>
-							<li>7. 작성순서에 따른 오버라이딩</li>
+							<li>7. 작성순서에 따른 오버라이딩 | 미디어쿼리에 따른 오버라이딩</li>
 							<li>8. native style sheet (네이티브 스타일 시트) | 상속성에 따라 상속된 선언</li>
 						</ul>
 					</article>
@@ -400,7 +400,7 @@
 				</section>
 				<section>
 					<article>
-						<h2>10분 동안 실습 및 Q&A , 바람쐬기</h2>
+						<h2>실습 및 Q&A , 바람쐬기</h2>
 					</article>
 				</section>
 			</section>
@@ -412,12 +412,17 @@
 				<section>
                     <article>
                         <h2>공통 값 정의</h2>
-                        <ul>
+						<style>
+							.tableType{display:table;width:100%;}
+							.tableType li{border-left:1px solid #ccc;padding:0 20px; display:table-cell;width:18%;text-align:center;vertical-align:middle;}
+							.tableType li:first-child{border-left:0;}
+						</style>
+                        <ul class="tableType">
                             <li>컬러(Color)</li>
                             <li>단위(Unit)</li>
                             <li>디스플레이(Display)</li>
                             <li>레이아웃(Layout)</li>
-                            <li>기본값 , 부모상속값</li>
+                            <li style="width:28%">부모상속값(inherit),<br />기본값(initial)</li>
                         </ul>
                     </article>
                 </section>
@@ -461,7 +466,7 @@
                         <li><strong class="point">%</strong> : 부모의 width을 100%로 적용하며, 부모의 width가 늘어나면 함께 늘어난다.</li>
                         <li>ch : "0" (숫자 0) 의 가로값을 기반으로 적용되는 사이즈.</li>
                         <li>ex : "x" (영문 소문자 x) 의 높이값을 기반으로 적용되는 사이즈.</li>
-                        <li><strong class="point">rem</strong> : root 즉 body의 font-size을 1rem으로 기반하여, 절대사이트로 적용.</li>
+                        <li><strong class="point">rem</strong> : root 즉 html의 font-size을 1rem으로 기반하여, 절대사이즈로 적용.</li>
                         <li>vw : window의 viewport width을 기준하여 절대 적용됩니다.(그냥 window width의 1/100)</li>
                         <li>vh : window의 viewport height 기준하여 절대 적용됩니다.(그냥 window height의 1/100)</li>
                         <li>vmin : window의 width 또는 height 중 작은 사이즈의 1/100</li>
@@ -586,8 +591,8 @@
                 </section>
                 <section>
                     <article>
-                        <h2>10분 동안 실습 및 Q&A , 바람쐬기</h2>
-                        <p>이제.. 속성(Property) 들어갈꺼예요...</p>
+                        <h2>실습 및 Q&A , 바람쐬기</h2>
+						<p>이제.. 속성(Property) 들어갈꺼예요...<span class="comment">(졸릴꺼란 이야기죠..)</span></p>
                     </article>
                 </section>
 				<section>
@@ -669,10 +674,6 @@
                             <tr>
                                 <td>hidden</td>
                                 <td>화면상 보여지지 않도록 합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>collapse</td>
-                                <td>(진짜안쓰지만) table의 cell의 내,외곽선을 합치도록 합니다.</td>
                             </tr>
                             </tbody>
                         </table>
@@ -896,7 +897,7 @@
                 </section>
 				<section>
                     <article>
-                        <h2>10분 동안 실습 및 Q&A , 바람쐬기</h2>
+                        <h2>실습 및 Q&A , 바람쐬기</h2>
                         <div class="desc">
                             <h3>지금 접속하세요.</h3>
                             <p><a href="https://goo.gl/NTnOEk" target="_blank">https://goo.gl/NTnOEk</a></p>
@@ -1040,68 +1041,65 @@
                 </section>
 				<section>
                     <article>
-                        <h2>10분 동안 실습 및 Q&A , 바람쐬기</h2>
+                        <h2>아주 잠깐 실습 및 Q&A , 바람쐬기</h2>
                         <div class="desc">
                             <h3>지금 접속하세요.</h3>
                             <p><a href="https://goo.gl/XUovPW" target="_blank">https://goo.gl/XUovPW</a></p>
                         </div>
                     </article>
                 </section>
-			</section>
-			<section>
-                <section>
-                    <article>
-                        <h2>줄바꿈 방식(white-space)</h2>
-                        <ul>
-                            <li>기본값 : 부모상속됨</li>
-                            <li>자식상속 : 상속됨</li>
-                            <li>작성방법 : <code>white-space: normal|nowrap|pre|pre-line|pre-wrap;</code></li>
-                        </ul>
-                    </article>
-                </section>
 				<section>
-                    <article>
-                        <h2>인라인높이, 자평(line-height)</h2>
-                        <ul>
-                            <li>기본값 : 부모상속</li>
-                            <li>자식상속 : 상속</li>
-                            <li>작성방법 : <code>line-height: normal|number|length;</code></li>
-                        </ul>
-                    </article>
-                </section>
+					<article>
+						<h2>줄바꿈 방식(white-space)</h2>
+						<ul>
+							<li>기본값 : 부모상속됨</li>
+							<li>자식상속 : 상속됨</li>
+							<li>작성방법 : <code>white-space: normal|nowrap|pre|pre-line|pre-wrap;</code></li>
+						</ul>
+					</article>
+				</section>
 				<section>
-                    <article>
-                        <h2>단어 간격(word-spacing)</h2>
-                        <ul>
-                            <li>기본값 : 부모상속</li>
-                            <li>자식상속 : 상속</li>
-                            <li>작성방법 : <code>word-spacing: normal|length;</code></li>
-                        </ul>
-                    </article>
-                </section>
+					<article>
+						<h2>인라인높이, 자평(line-height)</h2>
+						<ul>
+							<li>기본값 : 부모상속</li>
+							<li>자식상속 : 상속</li>
+							<li>작성방법 : <code>line-height: normal|number|length;</code></li>
+						</ul>
+					</article>
+				</section>
 				<section>
-                    <article>
-                        <h2>단어 줄바꿈 방식(word-break)</h2>
-                        <p>CJK(중국어,일본어,한국어)가 <span class="point">"아닌"</span> 언어을 기준하여 줄바꿈 기준을 적용</p>
-                        <ul>
-                            <li>기본값 : 부모상속됨</li>
-                            <li>자식상속 : 상속됨</li>
-                            <li>작성방법 : <code>word-break: normal|break-all|keep-all</code></li>
-                        </ul>
-                    </article>
-                </section>
+					<article>
+						<h2>단어 간격(word-spacing)</h2>
+						<ul>
+							<li>기본값 : 부모상속</li>
+							<li>자식상속 : 상속</li>
+							<li>작성방법 : <code>word-spacing: normal|length;</code></li>
+						</ul>
+					</article>
+				</section>
+				<section>
+					<article>
+						<h2>단어 줄바꿈 방식(word-break)</h2>
+						<p>CJK(중국어,일본어,한국어)가 <span class="point">"아닌"</span> 언어을 기준하여 줄바꿈 기준을 적용</p>
+						<ul>
+							<li>기본값 : 부모상속됨</li>
+							<li>자식상속 : 상속됨</li>
+							<li>작성방법 : <code>word-break: normal|break-all|keep-all</code></li>
+						</ul>
+					</article>
+				</section>
 
 				<section>
-                    <article>
-                        <h2>10분 동안 실습 및 Q&A , 바람쐬기</h2>
-                        <div class="desc">
-                            <h3>지금 접속하세요.</h3>
-                            <p><a href="https://goo.gl/aNvjWb" target="_blank">https://goo.gl/aNvjWb</a></p>
-                        </div>
-                    </article>
-                </section>
+					<article>
+						<h2>실습 및 Q&A , 바람쐬기</h2>
+						<div class="desc">
+							<h3>지금 접속하세요.</h3>
+							<p><a href="https://goo.gl/aNvjWb" target="_blank">https://goo.gl/aNvjWb</a></p>
+						</div>
+					</article>
+				</section>
 			</section>
-
 			<section>
 				<section>
                     <article>
