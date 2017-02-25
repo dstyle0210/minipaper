@@ -1,1429 +1,1429 @@
-<!doctype html>  
+<!doctype html>
 <html lang="en">
-	
-	<head>
-		<meta charset="utf-8">
-		<title>마봉아빠의 개발자를 위한 CSS초급(1)</title>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" href="main.css">
-	</head>
-	
-	<body>
-		
-		<!-- Any section element inside of this container is displayed as a slide -->
-		<div id="main">
-			
-			<section>
-                <article class="index">
-                    <h1>개발자를 위한 CSS - 1주차</h1>
-                    <h3 class="inverted">떠듦 by 마봉아빠 </h3>
-                </article>
-			</section>
-			<section>
-				<section>
-					<article>
-						<h2>안녕하세요. 마봉아빠 입니다.</h2>
-						<p>12년차 퍼블리셔 이구요.<br />프론트앤드개발자이기도 하고, <br />프리랜서 이기도 하고, <br />애 아빠 이기도 하고, <br /><br />뭐 그렇습니다.</p>
-					</article>
-				</section>
-				<section>
-					<article>
-						<h2>수업 순서, 방식</h2>
-						<ul>
-							<li>강의 중간중간 실습 및 Q&A , 바람쐬기 합니다.</li>
-							<li>마지막엔 강의한걸 정리하는 과정 및 최종Q&A 을 할거예요.</li>
-							<li>2주차 부터는 1주에 수업내용 정리하고 시작할꺼예요.</li>
-							<li>강의 후에 궁금하신 점은 "꼭" 카페의 "과제및질문" 게시판에 올려주세요.</li>
-						</ul>
-					</article>
-				</section>
-				<section>
-					<article>
-						<h2>1주차 수업의 목표</h2>
-						<p style="padding-bottom:30px;">CSS에 대해 이해하고, 기초적인 모델에 대해 접근합니다.</p>
-						<p style="padding-bottom:30px;">그리고..</p>
-						<ul style="font-size:16px;text-align:center;">
-							<li>퍼블리셔 꽐라되고 쓰러졌는데 CSS 수정은 해야 될 때.</li>
-							<li>CSS는 수정해야 되는데 퍼블리셔가 저 멀리 있어서 걸어가기 귀찮을때,</li>
-							<li>퍼블리셔가 맘에 안드는데 CSS는 수정해야 될때 ,</li>
-							<li>PM이 요고요고 CSS 좀 수정해야 되는데 가능하냐고 물어볼때</li>
-						</ul>
-						<p><span class="point">이럴때 당황하지 않는것</span> 입니다.</p>
-					</article>
-				</section>
-				<section>
-					<article>
-						<h2>마봉아빠의 개발자를 위한 CSS 초급 전체 커리큘럼</h2>
-						<ul style="color:#888;">
-							<li class="dark-gray">1. CSS란?</li>
-							<li class="dark-gray">2. 블럭 요소</li>
-							<li class="dark-gray">3. 인라인(텍스트)요소</li>
-							<li>4. 레이아웃 이란?</li>
-							<li>5. 미디어(Media)</li>
-							<li>6. 플로트 레이아웃(Float)</li>
-							<li>7. 포지션 레이아웃(Position)</li>
-							<li>8. 플랙스 레이아웃(Flex)</li>
-							<li>9. 미디어쿼리(Mediaquires)</li>
-							<li>10. 반응형 레이아웃(Responsive)</li>
-							<li>11. 그외 주로쓰는 속성</li>
-							<li>12. CSS 라이브러리(CSS Library)</li>
-							<li>13. 전처리기(Pre-processor)</li>
-							<li>14. 실무에 쓰이는 팁</li>
-						</ul>
-					</article>
-				</section>
-				<section>
-					<article>
-						<h2>잘 부탁드려요.</h2>
-						<p><img src="http://cfile228.uf.daum.net/image/273D4A42574D1C8A2F27B8" alt=""></p>
-					</article>
-				</section>
-			</section>
-			<section>
-				<section>
-					<article>
-						<h2>CSS("Cascading Style Sheets")란?</h2>
-					</article>
-				</section>
-                <section>
-					<article>
-						<h2>상속성(Cascading)</h2>
-						<p>물처럼 흘러내려서 CSS?</p>
-						<img src="https://s-media-cache-ak0.pinimg.com/564x/4a/85/1f/4a851ffca371d5a504581537f3080b6a.jpg" alt="" />
-					</article>
-                </section>
-                <section>
-					<article>
-						<h2>상속성 제외</h2>
-						<p><span class="point">텍스트 관련</span> 속성(text-align, font-size 등)은 <span class="point">상속</span></p>
-						<p><span class="point">박스모델 관련</span> 속성(width,height)는 영향은 줄수 있지만 <span class="point">상속안됨</span></p>
-					</article>
-                </section>
-				<section>
-					<article>
-						<h2>우선순위(Priority Rules)</h2>
-						<ul>
-							<li>1. "!important" 구문</li>
-							<li>2. inline 직접선언 ( &lt;E style="">&lt;/E> )</li>
-							<li>3. id (#) 로 선언</li>
-							<li>4. class (.) 로 선언</li>
-							<li>5. 엘리먼트로 선언</li>
-							<li>6. 유니버셜 (*) 선언</li>
-							<li>7. 작성순서에 따른 오버라이딩 | 미디어쿼리에 따른 오버라이딩</li>
-							<li>8. native style sheet (네이티브 스타일 시트) | 상속성에 따라 상속된 선언</li>
-						</ul>
-					</article>
-				</section>
-				<section>
-					<article>
-						<h2>오버라이딩</h2>
-						<p>우선순위가 같다면, <span class="point">나중에 선언된 속성</span>이 적용됩니다.</p>
-						<div class="codepen">
-							<p data-height="265" data-theme-id="0" data-slug-hash="XpQbPG" data-default-tab="css" data-user="dstyle0210" data-embed-version="2" data-pen-title="[CSS] 오버라이딩" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/dstyle0210/pen/XpQbPG/">[CSS] 오버라이딩</a> by 원용봉 (<a href="http://codepen.io/dstyle0210">@dstyle0210</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+<head>
+	<meta charset="utf-8">
+	<title>마봉아빠의 개발자를 위한 CSS초급(1)</title>
+	<link href='https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div id="main">
+
+	<section>
+		<article class="index">
+			<h1>개발자를 위한 CSS - 1주차</h1>
+			<h3 class="inverted">떠듦 by 마봉아빠 </h3>
+		</article>
+	</section>
+	<section>
+		<section>
+			<article>
+				<h2>안녕하세요. 마봉아빠 입니다.</h2>
+				<p>12년차 퍼블리셔 이구요.<br />프론트앤드개발자이기도 하고, <br />프리랜서 이기도 하고, <br />애 아빠 이기도 하고, <br /><br />뭐 그렇습니다.</p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>수업 순서, 방식</h2>
+				<ul>
+					<li>강의 중간중간 실습 및 Q&A , 바람쐬기 합니다.</li>
+					<li>마지막엔 강의한걸 정리하는 과정 및 최종Q&A 을 할거예요.</li>
+					<li>2주차 부터는 1주에 수업내용 정리하고 시작할꺼예요.</li>
+					<li>강의 후에 궁금하신 점은 "꼭" 카페의 "과제및질문" 게시판에 올려주세요.</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>1주차 수업의 목표</h2>
+				<p style="padding-bottom:30px;">CSS에 대해 이해하고, 기초적인 모델에 대해 접근합니다.</p>
+				<p style="padding-bottom:30px;">그리고..</p>
+				<ul style="font-size:16px;text-align:center;">
+					<li>퍼블리셔 꽐라되고 쓰러졌는데 CSS 수정은 해야 될 때.</li>
+					<li>CSS는 수정해야 되는데 퍼블리셔가 저 멀리 있어서 걸어가기 귀찮을때,</li>
+					<li>퍼블리셔가 맘에 안드는데 CSS는 수정해야 될때 ,</li>
+					<li>PM이 요고요고 CSS 좀 수정해야 되는데 가능하냐고 물어볼때</li>
+				</ul>
+				<p><span class="point">이럴때 당황하지 않는것</span> 입니다.</p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>마봉아빠의 개발자를 위한 CSS 초급 전체 커리큘럼</h2>
+				<ul style="color:#888;">
+					<li class="dark-gray">1. CSS란?</li>
+					<li class="dark-gray">2. 블럭 요소</li>
+					<li class="dark-gray">3. 인라인(텍스트)요소</li>
+					<li>4. 레이아웃 이란?</li>
+					<li>5. 미디어(Media)</li>
+					<li>6. 플로트 레이아웃(Float)</li>
+					<li>7. 포지션 레이아웃(Position)</li>
+					<li>8. 플랙스 레이아웃(Flex)</li>
+					<li>9. 미디어쿼리(Mediaquires)</li>
+					<li>10. 반응형 레이아웃(Responsive)</li>
+					<li>11. 그외 주로쓰는 속성</li>
+					<li>12. CSS 라이브러리(CSS Library)</li>
+					<li>13. 전처리기(Pre-processor)</li>
+					<li>14. 실무에 쓰이는 팁</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>잘 부탁드려요.</h2>
+				<p><img src="http://cfile228.uf.daum.net/image/273D4A42574D1C8A2F27B8" alt=""></p>
+			</article>
+		</section>
+	</section>
+	<section>
+		<section>
+			<article>
+				<h2>CSS("Cascading Style Sheets")란?</h2>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>상속성(Cascading)</h2>
+				<p>물처럼 흘러내려서 CSS?</p>
+				<img src="https://s-media-cache-ak0.pinimg.com/564x/4a/85/1f/4a851ffca371d5a504581537f3080b6a.jpg" alt="" />
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>상속성 제외</h2>
+				<p><span class="point">텍스트 관련</span> 속성(text-align, font-size 등)은 <span class="point">상속</span></p>
+				<p><span class="point">박스모델 관련</span> 속성(width,height)는 영향은 줄수 있지만 <span class="point">상속안됨</span></p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>우선순위(Priority Rules)</h2>
+				<ul>
+					<li>1. "!important" 구문</li>
+					<li>2. inline 직접선언 ( &lt;E style="">&lt;/E> )</li>
+					<li>3. id (#) 로 선언</li>
+					<li>4. class (.) 로 선언</li>
+					<li>5. 엘리먼트로 선언</li>
+					<li>6. 유니버셜 (*) 선언</li>
+					<li>7. 작성순서에 따른 오버라이딩 | 미디어쿼리에 따른 오버라이딩</li>
+					<li>8. native style sheet (네이티브 스타일 시트) | 상속성에 따라 상속된 선언</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>오버라이딩</h2>
+				<p>우선순위가 같다면, <span class="point">나중에 선언된 속성</span>이 적용됩니다.</p>
+				<div class="codepen">
+					<p data-height="265" data-theme-id="0" data-slug-hash="XpQbPG" data-default-tab="css" data-user="dstyle0210" data-embed-version="2" data-pen-title="[CSS] 오버라이딩" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/dstyle0210/pen/XpQbPG/">[CSS] 오버라이딩</a> by 원용봉 (<a href="http://codepen.io/dstyle0210">@dstyle0210</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+				</div>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>작성법</h2>
+				<div class="image"><img src="http://www.w3schools.com/css/selector.gif" alt=""></div>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>적용방법</h2>
+				<ul>
+					<li>
+						<h2>"link"엘리먼트</h2>
+						<p><code>&lt;link rel="stylesheets" href="CSS경로" /></code></p>
+					</li>
+					<li>
+						<h2>"style"엘리먼트</h2>
+						<p><code>&lt;style><br /><span class="comment">/* CSS 코드 */</span><br />&lt;/style></code></p>
+					</li>
+					<li>
+						<h2>inline 직접선언</h2>
+						<p><code>&lt;span style="스타일코드">&lt;/span></code></p>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<p><img src="http://cfile230.uf.daum.net/image/0114434951A49ED92CDC24" alt=""></p>
+			</article>
+		</section>
+	</section>
+
+	<section>
+		<section>
+			<article>
+				<h2>셀렉터(Selector)</h2>
+				<div class="desc">
+					<h3>지금 접속하세요.</h3>
+					<p><a href="https://goo.gl/Avc7PZ" target="_blank">https://goo.gl/Avc7PZ</a></p>
+				</div>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>셀렉터(선택자) 란?</h2>
+				<p>DOM 구조에서 스타일을 적용할 <span class="point">엘리먼트를 찾아가는 지시자.</span></p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>퀴즈퀴즈</h2>
+				<p>아래 로고는 자바스크립트 라이브러리 인데요. 어떤 라이브러리인지 아시는분?</p>
+				<div class="image"><img src="http://sizzlejs.com/i/logo-2.png" alt=""></div>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>퀴즈퀴즈 - 정답</h2>
+				<p>jQuery의 선택자(셀렉터) 프로젝트명입니다.</p>
+				<div class="image"><img src="https://image.slidesharecdn.com/jquerytcs26-05-13-140731031025-phpapp02/95/jquery-write-less-do-more-by-welaika-14-638.jpg?cb=1406776261" alt=""></div>
+				<p><a href="http://sizzlejs.com/" target="_blank">sizzlejs</a></p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>셀렉터(Selector) - Basic</h2>
+				<ul>
+					<li>
+						<h3>Universal Selector (*)</h3>
+						<code>*{color:red;}</code>
+					</li>
+					<li>
+						<h3>Element Selector (E)</h3>
+						<code>span{color:red;}</code>
+					</li>
+					<li>
+						<h3>id Selector(#)</h3>
+						<code>#id{color:red;}</code>
+					</li>
+					<li>
+						<h3>Class Selector(.)</h3>
+						<code>.class{background-color:gray;}</code>
+					</li>
+					<li>
+						<h3>Group Selector(,)</h3>
+						<code>h1 , #id , .class{color:red; }</code>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>셀렉터(Selector) - Attribute</h2>
+				<ul>
+					<li>
+						<h3><span class="point">[attribute]</span></h3>
+						<code>[class]{color:red;}</code>
+					</li>
+					<li>
+						<h3><span class="point">[attribute=value]</span></h3>
+						<code>[class="test"]{color:red;}</code>
+					</li>
+					<li>
+						<h3>[attribute|=value]</h3>
+						<code>[class|="test"]{color:red;}</code>
+					</li>
+					<li>
+						<h3><span class="point">[attribute^=value]</span></h3>
+						<code>[class^="test"]{color:red;}</code>
+					</li>
+					<li>
+						<h3>[attribute~=value]</h3>
+						<code>[class~="test"]{color:red;}</code>
+					</li>
+					<li>
+						<h3>[attribute*=value]</h3>
+						<code>[class*="test"]{color:red;}</code>
+					</li>
+					<li>
+						<h3>[attribute$=value]</h3>
+						<code>[class$="test"]{color:red;}</code>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>셀렉터(Selector) - Search</h2>
+				<ul>
+					<li>
+						<h3>inside Selector ( ) // 빈칸</h3>
+						<code>h1 span{border:1px solid #000;}</code>
+					</li>
+					<li>
+						<h3>Child Selector(>)</h3>
+						<code>h1>span{background-color:gray}</code>
+					</li>
+					<li>
+						<h3>After Selector(+)</h3>
+						<code>h1+span{width:500px;}</code>
+					</li>
+					<li>
+						<h3>Preceded Selector(~)</h3>
+						<code>h1~span{width:300px}</code>
+					</li>
+				</ul>
+			</article>
+		</section>
+
+		<section>
+			<article>
+				<h2>가상(Pseudo) 셀렉터 란?</h2>
+				<p>Pseudo Class(피도 클래스)라는것은 <span class="point">엘리먼트가 특정한 상태</span>일때 을 지칭합니다.</p>
+				<p>Pseudo Element(피도 엘리먼트)는 <span class="point">가상의 엘리먼트를 생성</span>해서 속성을 지정합니다.</p>
+				<p>단독으로 사용할수는 있으나, 추천하지는 않으므로, 언제나 셀렉터에 연결하여 선언됩니다.</p>
+				<div class="desc">
+					<h3>지금 접속하세요.</h3>
+					<p><a href="https://goo.gl/JlhjdB" target="_blank">https://goo.gl/JlhjdB</a></p>
+				</div>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>가상(Pseudo) <span class="point">진짜많이쓰는</span> 클래스</h2>
+				<ul class="flex">
+					<li>
+						<h3>Selector:checked</h3>
+						<code>input[class=checkbox]:checked{}</code>
+					</li>
+					<li>
+						<h3>Selector:disabled</h3>
+						<code>input[class=checkbox]:disabled{}</code>
+					</li>
+					<li>
+						<h3>Selector:focus</h3>
+						<code>input:focus{color:red;}</code>
+					</li>
+					<li>
+						<h3>Selector:hover</h3>
+						<code>a:hover{}</code>
+					</li>
+					<li>
+						<h3>Selector:first-child</h3>
+						<code>div p:first-child{}</code>
+					</li>
+					<li>
+						<h3>Selector:nth-child(number | odd | even | n)</h3>
+						<code>div p:nth-child(2){}</code>
+					</li>
+					<li>
+						<h3>Selector:read-only</h3>
+						<code>input:read-only{}</code>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>가상(Pseudo) 그냥 쫌 쓰는 클래스</h2>
+				<ul class="flex">
+					<li>
+						<h3>Selector:active</h3>
+						<code>a:active{color:red;}</code>
+					</li>
+					<li>
+						<h3>Selector:link</h3>
+						<code>a:active{color:red;}</code>
+					</li>
+					<li>
+						<h3>Selector:visited</h3>
+						<code>a:active{color:red;}</code>
+					</li>
+					<li>
+						<h3>Selector:last-child</h3>
+						<code>div p:last-child{}</code>
+					</li>
+					<li>
+						<h3>Selector:not(Selector)</h3>
+						<code>input:not(:checked){}</code>
+					</li>
+					<li>
+						<h3>Selector:nth-last-child(number | odd | even | n)</h3>
+						<code>div p:nth-last-child(2){}</code>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>가상(Pseudo) 거의 몰라도 되는 클래스</h2>
+				<ul class="flex">
+					<li>Selector:empty</li>
+					<li>Selector:first-of-type(number)</li>
+					<li>Selector:last-of-type(number)</li>
+					<li>Selector:nth-of-type(number)</li>
+					<li>Selector:in-range</li>
+					<li>Selector:out-of-range</li>
+					<li>Selector:valid</li>
+					<li>Selector:invalid</li>
+					<li>Selector:lang(languagecode)</li>
+					<li>Selector:only-of-type</li>
+					<li>Selector:only-child</li>
+					<li>Selector:required</li>
+					<li>Selector:optional</li>
+					<li>Selector:read-write</li>
+					<li>Selector:root</li>
+					<li>Selector:target</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>가상(Pseudo) 엘리먼트</h2>
+				<ul class="flex">
+					<li>
+						<h3>Selector::before or Selector:before</h3>
+						<code>.clearfix::before{}</code>
+					</li>
+					<li>
+						<h3>Selector::after or Selector:after</h3>
+						<code>.clearfix::after{}</code>
+					</li>
+				</ul>
+				<h2>가상(Pseudo) 몰라도 되는 엘리먼트</h2>
+				<ul class="flex">
+					<li>Selector::first-line</li>
+					<li>Selector::first-letter</li>
+					<li>Selector::selection</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<p><img src="http://cfile230.uf.daum.net/image/0114434951A49ED92CDC24" alt=""></p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>실습 및 Q&A , 바람쐬기</h2>
+			</article>
+		</section>
+	</section>
+
+
+
+
+	<section>
+		<section>
+			<article>
+				<h2>공통 값 정의</h2>
+				<style>
+					.tableType{display:table;width:100%;}
+					.tableType li{border-left:1px solid #ccc;padding:0 20px; display:table-cell;width:18%;text-align:center;vertical-align:middle;}
+					.tableType li:first-child{border-left:0;}
+				</style>
+				<ul class="tableType">
+					<li>컬러(Color)</li>
+					<li>단위(Unit)</li>
+					<li>디스플레이(Display)</li>
+					<li>레이아웃(Layout)</li>
+					<li style="width:28%">부모상속값(inherit),<br />기본값(initial)</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>컬러(Color)</h2>
+				<p>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/AdditiveColor.svg/220px-AdditiveColor.svg.png"
+						 alt=""></p>
+				<ul>
+					<li>컬러이름.(red , blue 등)</li>
+					<li>RGB 또는 <strong class="point">RGBA</strong>방식 == rgb(0,0,0,0)</li>
+					<li>HEX(Hexadecimal)값 방식 == <strong class="point">#RRGGBB</strong> (RR == 00~FF)</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>단위(Unit)</h2>
+				<p><img src="http://media02.hongkiat.com/css-units/post-cover.jpg" alt=""></p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>단위(Unit) : 절대적인 단위</h2>
+				<ul>
+					<li><strong class="point">px</strong> : 픽셀(가장 기본적인 사용)</li>
+					<li>pc : 파이카(1pc == 12pt == 1/6in)</li>
+					<li>pt : 포인트(1/72in)</li>
+					<li>cm : 센티미터</li>
+					<li>mm : 밀리미터</li>
+					<li>in : 인치</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>단위(Unit) : 상대적인 단위</h2>
+				<ul>
+					<li><strong class="point">em</strong> : 부모의 font-size을 1em 으로 적용하며, 부모의 폰트사이즈가 늘어나면 함께 들어난다.</li>
+					<li><strong class="point">%</strong> : 부모의 width을 100%로 적용하며, 부모의 width가 늘어나면 함께 늘어난다.</li>
+					<li>ch : "0" (숫자 0) 의 가로값을 기반으로 적용되는 사이즈.</li>
+					<li>ex : "x" (영문 소문자 x) 의 높이값을 기반으로 적용되는 사이즈.</li>
+					<li><strong class="point">rem</strong> : root 즉 html의 font-size을 1rem으로 기반하여, 절대사이즈로 적용.</li>
+					<li>vw : window의 viewport width을 기준하여 절대 적용됩니다.(그냥 window width의 1/100)</li>
+					<li>vh : window의 viewport height 기준하여 절대 적용됩니다.(그냥 window height의 1/100)</li>
+					<li>vmin : window의 width 또는 height 중 작은 사이즈의 1/100</li>
+					<li>vmax : window의 width 또는 height 중 큰 사이즈의 1/100</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>디스플레이(Display)</h2>
+				<div class="desc">
+					<h3>지금 접속하세요.</h3>
+					<p><a href="https://goo.gl/6Dhs0v" target="_blank">https://goo.gl/6Dhs0v</a></p>
+				</div>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>디스플레이(Display) : Model.</h2>
+				<ul class="flex">
+					<li>
+						<div class="thumb">
+							<img src="http://www.cssterm.com/uploads/images/box_model.gif" alt="">
+							<span>Box-Model</span>
 						</div>
-					</article>
-				</section>
-				<section>
-					<article>
-						<h2>작성법</h2>
-						<div class="image"><img src="http://www.w3schools.com/css/selector.gif" alt=""></div>
-					</article>
-				</section>
-				<section>
-					<article>
-						<h2>적용방법</h2>
-                        <ul>
-                            <li>
-                                <h2>"link"엘리먼트</h2>
-                                <p><code>&lt;link rel="stylesheets" href="CSS경로" /></code></p>
-                            </li>
-                            <li>
-                                <h2>"style"엘리먼트</h2>
-                                <p><code>&lt;style><br /><span class="comment">/* CSS 코드 */</span><br />&lt;/style></code></p>
-                            </li>
-                            <li>
-                                <h2>inline 직접선언</h2>
-                                <p><code>&lt;span style="스타일코드">&lt;/span></code></p>
-                            </li>
-                        </ul>
-					</article>
-				</section>
-				<section>
-					<article>
-						<p><img src="http://cfile230.uf.daum.net/image/0114434951A49ED92CDC24" alt=""></p>
-					</article>
-				</section>
-			</section>
-
-			<section>
-				<section>
-					<article>
-						<h2>셀렉터(Selector)</h2>
-						<div class="desc">
-							<h3>지금 접속하세요.</h3>
-							<p><a href="https://goo.gl/Avc7PZ" target="_blank">https://goo.gl/Avc7PZ</a></p>
+					</li>
+					<li>
+						<div class="thumb">
+							<img src="http://maxcdn.webappers.com/img/2013/04/diagram3.png" alt="">
+							<span>Inline-Model</span>
 						</div>
-					</article>
-				</section>
-				<section>
-					<article>
-						<h2>셀렉터(선택자) 란?</h2>
-						<p>DOM 구조에서 스타일을 적용할 <span class="point">엘리먼트를 찾아가는 지시자.</span></p>
-					</article>
-				</section>
-				<section>
-					<article>
-						<h2>퀴즈퀴즈</h2>
-						<p>아래 로고는 자바스크립트 라이브러리 인데요. 어떤 라이브러리인지 아시는분?</p>
-						<div class="image"><img src="http://sizzlejs.com/i/logo-2.png" alt=""></div>
-					</article>
-				</section>
-				<section>
-					<article>
-						<h2>퀴즈퀴즈 - 정답</h2>
-						<p>jQuery의 선택자(셀렉터) 프로젝트명입니다.</p>
-						<div class="image"><img src="https://image.slidesharecdn.com/jquerytcs26-05-13-140731031025-phpapp02/95/jquery-write-less-do-more-by-welaika-14-638.jpg?cb=1406776261" alt=""></div>
-						<p><a href="http://sizzlejs.com/" target="_blank">sizzlejs</a></p>
-					</article>
-				</section>
-				<section>
-					<article>
-						<h2>셀렉터(Selector) - Basic</h2>
-						<ul>
-							<li>
-								<h3>Universal Selector (*)</h3>
-								<code>*{color:red;}</code>
-							</li>
-							<li>
-								<h3>Element Selector (E)</h3>
-								<code>span{color:red;}</code>
-							</li>
-							<li>
-								<h3>id Selector(#)</h3>
-								<code>#id{color:red;}</code>
-							</li>
-							<li>
-								<h3>Class Selector(.)</h3>
-								<code>.class{background-color:gray;}</code>
-							</li>
-							<li>
-								<h3>Group Selector(,)</h3>
-								<code>h1 , #id , .class{color:red; }</code>
-							</li>
-						</ul>
-					</article>
-				</section>
-				<section>
-					<article>
-						<h2>셀렉터(Selector) - Attribute</h2>
-						<ul>
-							<li>
-								<h3><span class="point">[attribute]</span></h3>
-								<code>[class]{color:red;}</code>
-							</li>
-							<li>
-								<h3><span class="point">[attribute=value]</span></h3>
-								<code>[class="test"]{color:red;}</code>
-							</li>
-							<li>
-								<h3>[attribute|=value]</h3>
-								<code>[class|="test"]{color:red;}</code>
-							</li>
-							<li>
-								<h3><span class="point">[attribute^=value]</span></h3>
-								<code>[class^="test"]{color:red;}</code>
-							</li>
-							<li>
-								<h3>[attribute~=value]</h3>
-								<code>[class~="test"]{color:red;}</code>
-							</li>
-							<li>
-								<h3>[attribute*=value]</h3>
-								<code>[class*="test"]{color:red;}</code>
-							</li>
-							<li>
-								<h3>[attribute$=value]</h3>
-								<code>[class$="test"]{color:red;}</code>
-							</li>
-						</ul>
-					</article>
-				</section>
-				<section>
-					<article>
-						<h2>셀렉터(Selector) - Search</h2>
-						<ul>
-							<li>
-								<h3>inside Selector ( ) // 빈칸</h3>
-								<code>h1 span{border:1px solid #000;}</code>
-							</li>
-							<li>
-								<h3>Child Selector(>)</h3>
-								<code>h1>span{background-color:gray}</code>
-							</li>
-							<li>
-								<h3>After Selector(+)</h3>
-								<code>h1+span{width:500px;}</code>
-							</li>
-							<li>
-								<h3>Preceded Selector(~)</h3>
-								<code>h1~span{width:300px}</code>
-							</li>
-						</ul>
-					</article>
-				</section>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>디스플레이(Display) : Edge.</h2>
+				<p><img src="http://www.vanseodesign.com/blog/wp-content/uploads/2012/11/css-box-model.png" alt=""></p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>디스플레이(Display) : Flow.</h2>
+				<p><img src="https://i.stack.imgur.com/mGTYI.png" alt=""></p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>레이아웃(Layout)</h2>
+				<div class="desc">
+					<h3>지금 접속하세요.</h3>
+					<p><a href="https://goo.gl/UirXy2" target="_blank">https://goo.gl/UirXy2</a></p>
+				</div>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>레이아웃(Layout) : 플로트(Float)</h2>
+				<p><img src="http://tutorial.techaltum.com/images/css-float-clear.jpg" alt=""></p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>레이아웃(Layout) : 포지션(Position)</h2>
+				<p><img src="http://www.jegsworks.com/examples/DemoCSS/position.png" alt=""></p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>레이아웃(Layout) : 플렉스(Flex)</h2>
+				<p><img src="https://developer.mozilla.org/files/3739/flex_terms.png" alt=""></p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>부모상속값(inherit)</h2>
+				<p><img src="https://cdn.css-tricks.com/wp-content/uploads/2015/05/initial-diagram-inherit.jpg" alt=""></p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>기본값(initial)</h2>
+				<p><img src="https://cdn.css-tricks.com/wp-content/uploads/2015/05/initial-diagram.jpg" alt=""></p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>아...</h2>
+			</article>
+		</section>
+		<section>
+			<article>
+				<p><img src="http://cfile230.uf.daum.net/image/0114434951A49ED92CDC24" alt=""></p>
+			</article>
+		</section>
+	</section>
 
-				<section>
-					<article>
-						<h2>가상(Pseudo) 셀렉터 란?</h2>
-						<p>Pseudo Class(피도 클래스)라는것은 <span class="point">엘리먼트가 특정한 상태</span>일때 을 지칭합니다.</p>
-						<p>Pseudo Element(피도 엘리먼트)는 <span class="point">가상의 엘리먼트를 생성</span>해서 속성을 지정합니다.</p>
-						<p>단독으로 사용할수는 있으나, 추천하지는 않으므로, 언제나 셀렉터에 연결하여 선언됩니다.</p>
-                        <div class="desc">
-                            <h3>지금 접속하세요.</h3>
-                            <p><a href="https://goo.gl/JlhjdB" target="_blank">https://goo.gl/JlhjdB</a></p>
-                        </div>
-					</article>
-				</section>
-				<section>
-					<article>
-						<h2>가상(Pseudo) <span class="point">진짜많이쓰는</span> 클래스</h2>
-						<ul class="flex">
-							<li>
-								<h3>Selector:checked</h3>
-								<code>input[class=checkbox]:checked{}</code>
-							</li>
-							<li>
-								<h3>Selector:disabled</h3>
-								<code>input[class=checkbox]:disabled{}</code>
-							</li>
-							<li>
-								<h3>Selector:focus</h3>
-								<code>input:focus{color:red;}</code>
-							</li>
-							<li>
-								<h3>Selector:hover</h3>
-								<code>a:hover{}</code>
-							</li>
-							<li>
-								<h3>Selector:first-child</h3>
-								<code>div p:first-child{}</code>
-							</li>
-							<li>
-								<h3>Selector:nth-child(number | odd | even | n)</h3>
-								<code>div p:nth-child(2){}</code>
-							</li>
-							<li>
-								<h3>Selector:read-only</h3>
-								<code>input:read-only{}</code>
-							</li>
-						</ul>
-					</article>
-				</section>
-				<section>
-					<article>
-						<h2>가상(Pseudo) 그냥 쫌 쓰는 클래스</h2>
-						<ul class="flex">
-							<li>
-								<h3>Selector:active</h3>
-								<code>a:active{color:red;}</code>
-							</li>
-							<li>
-								<h3>Selector:link</h3>
-								<code>a:active{color:red;}</code>
-							</li>
-							<li>
-								<h3>Selector:visited</h3>
-								<code>a:active{color:red;}</code>
-							</li>
-							<li>
-								<h3>Selector:last-child</h3>
-								<code>div p:last-child{}</code>
-							</li>
-							<li>
-								<h3>Selector:not(Selector)</h3>
-								<code>input:not(:checked){}</code>
-							</li>
-							<li>
-								<h3>Selector:nth-last-child(number | odd | even | n)</h3>
-								<code>div p:nth-last-child(2){}</code>
-							</li>
-						</ul>
-					</article>
-				</section>
-				<section>
-					<article>
-						<h2>가상(Pseudo) 거의 몰라도 되는 클래스</h2>
-						<ul class="flex">
-							<li>Selector:empty</li>
-							<li>Selector:first-of-type(number)</li>
-							<li>Selector:last-of-type(number)</li>
-							<li>Selector:nth-of-type(number)</li>
-							<li>Selector:in-range</li>
-							<li>Selector:out-of-range</li>
-							<li>Selector:valid</li>
-							<li>Selector:invalid</li>
-							<li>Selector:lang(languagecode)</li>
-							<li>Selector:only-of-type</li>
-							<li>Selector:only-child</li>
-							<li>Selector:required</li>
-							<li>Selector:optional</li>
-							<li>Selector:read-write</li>
-							<li>Selector:root</li>
-							<li>Selector:target</li>
-						</ul>
-					</article>
-				</section>
-				<section>
-					<article>
-						<h2>가상(Pseudo) 엘리먼트</h2>
-						<ul class="flex">
-							<li>
-								<h3>Selector::before or Selector:before</h3>
-								<code>.clearfix::before{}</code>
-							</li>
-							<li>
-								<h3>Selector::after or Selector:after</h3>
-								<code>.clearfix::after{}</code>
-							</li>
-						</ul>
-						<h2>가상(Pseudo) 몰라도 되는 엘리먼트</h2>
-						<ul class="flex">
-							<li>Selector::first-line</li>
-							<li>Selector::first-letter</li>
-							<li>Selector::selection</li>
-						</ul>
-					</article>
-				</section>
-				<section>
-					<article>
-						<p><img src="http://cfile230.uf.daum.net/image/0114434951A49ED92CDC24" alt=""></p>
-					</article>
-				</section>
-				<section>
-					<article>
-						<h2>실습 및 Q&A , 바람쐬기</h2>
-					</article>
-				</section>
-			</section>
+	<section>
+		<section>
+			<article>
+				<h2>블럭요소(Block)</h2>
+				<p><img src="http://srwire.co.kr/wp/wp-content/uploads/2015/06/legos_0.jpg" alt=""></p>
+			</article>
+		</section>
+		<section>
+			<h2>박스모델(Box-Model)</h2>
+			<p><img src="http://www.cssterm.com/uploads/images/box_model.gif" alt=""></p>
+			<ul>
+				<li>Content : 내부의 내용을 말합니다. 물론 다른 엘리먼트가 들어올수도 있습니다.</li>
+				<li>Padding : 컨덴츠와 보더사이의 간격입니다. 배경의 영향을 받습니다.</li>
+				<li>border : 컨덴츠와 패딩을 포함한 영역의 내곽선입니다. 가로값의 영향을 받습니다.</li>
+				<li>Margin : 보더와 외부 엘리먼트의 간격입니다. 배경의 영향을 받지않습니다.</li>
+				<li>outline : 컨덴츠와 패딩 및 보더를 포함한 포함한 외곽선입니다. 가로값의 영향을 받지 않습니다.</li>
+			</ul>
+		</section>
+		<section>
+			<article>
+				<h2>드디어 1주차 이론이 끝났습니다.</h2>
+				<p><img src="http://danamedipia.com/data/cheditor4/1409/fd26b9132334d3232c391b49db15bead_20140911150414_iamgxrtz.jpg" alt=""></p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>실습 및 Q&A , 바람쐬기</h2>
+				<p>이제.. 속성(Property) 들어갈꺼예요...<span class="comment">(졸릴꺼란 이야기죠..)</span></p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>디스플레이(Display)</h2>
+				<ul>
+					<li>기본값 : 엘리먼트형태 상속</li>
+					<li>자식상속 : 안함</li>
+					<li>작성방법 : <code>display: inline | block | inline-block | none | flex | table | table-cell;</code></li>
+				</ul>
+				<table class="table table-hover table-bordered">
+					<colgroup>
+						<col style="width:200px">
+						<col style="width:auto;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th>값</th>
+						<th>설명</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>inline</td>
+						<td>인라인 조건을 가진 엘리먼트로 적용합니다.</td>
+					</tr>
+					<tr>
+						<td>block</td>
+						<td>블럭 조건을 가진 엘리먼트로 적용합니다.</td>
+					</tr>
+					<tr>
+						<td>inline-block</td>
+						<td>인라인-블럭 조건을 가진 엘리먼트로 적용합니다.</td>
+					</tr>
+					<tr>
+						<td>none</td>
+						<td>엘리먼트 안보이도록 처리합니다.</td>
+					</tr>
+					<tr>
+						<td>flex</td>
+						<td>CSS3의 flex 레이아웃 구조의 컨테이너로 적용합니다. (기본은 block속성을 따라갑니다.)</td>
+					</tr>
+					<tr>
+						<td>table</td>
+						<td>&quot;table&quot; 엘리먼트의 조건으로 적용합니다. (기본은 inline-block을 따라갑니다.)</td>
+					</tr>
+					<tr>
+						<td>table-cell</td>
+						<td>&quot;td&quot; 또는 &quot;th&quot; 엘리먼트의 조건으로 적용합니다. (기본은 inline-block을 따라갑니다.)</td>
+					</tr>
+					</tbody>
+				</table>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>비지빌리티(visibility)</h2>
+				<ul>
+					<li>기본값 : 엘리먼트 형태 상속</li>
+					<li>자식상속 : 안함</li>
+					<li>작성방법 : <code>visibility: visible|hidden|collapse|initial|inherit;</code></li>
+				</ul>
+				<table class="table table-hover table-bordered">
+					<colgroup>
+						<col style="width:200px">
+						<col style="width:auto;">
+					</colgroup>
+					<thead>
+					<tr>
+						<th>값</th>
+						<th>설명</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>visible</td>
+						<td>화면상 보여지도록 합니다.</td>
+					</tr>
+					<tr>
+						<td>hidden</td>
+						<td>화면상 보여지지 않도록 합니다.</td>
+					</tr>
+					</tbody>
+				</table>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>가로값(width)</h2>
+				<ul>
+					<li>기본값 : auto</li>
+					<li>자식상속 : 안함</li>
+					<li>작성방법 : <code>width: length | auto;</code></li>
+				</ul>
+				<ul class="childProperty flex">
+					<li>
+						<h3>max-width</h3>
+						<code>max-width: length | auto;</code>
+					</li>
+					<li>
+						<h3>min-width</h3>
+						<code>min-width: length | auto;</code>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>세로값(height)</h2>
+				<ul>
+					<li>기본값 : auto</li>
+					<li>자식상속 : 안함</li>
+					<li>작성방법 : <code>height: length | auto;</code></li>
+				</ul>
+				<ul class="childProperty flex">
+					<li>
+						<h3>max-height</h3>
+						<code>max-height: length | auto;</code>
+					</li>
+					<li>
+						<h3>min-height</h3>
+						<code>min-height: length | auto;</code>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>패딩(padding)</h2>
+				<ul>
+					<li>기본값 : 0</li>
+					<li>자식상속 : 안함</li>
+					<li>작성방법 : <code>padding: length | top right bottom left;</code></li>
+				</ul>
+				<ul class="childProperty flex">
+					<li>
+						<h3>padding-top</h3>
+						<code>padding-top: length;</code>
+					</li>
+					<li>
+						<h3>padding-left</h3>
+						<code>padding-left: length;</code>
+					</li>
+					<li>
+						<h3>padding-bottom</h3>
+						<code>padding-bottom: length;</code>
+					</li>
+					<li>
+						<h3>padding-right</h3>
+						<code>padding-right: length;</code>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>마진(margin)</h2>
+				<ul>
+					<li>기본값 : 0</li>
+					<li>자식상속 : 안함</li>
+					<li>작성방법 : <code>margin: length | top right bottom left;</code></li>
+				</ul>
+				<ul class="childProperty flex">
+					<li>
+						<h3>margin-top</h3>
+						<code>margin-top: length;</code>
+					</li>
+					<li>
+						<h3>margin-left</h3>
+						<code>margin-left: length;</code>
+					</li>
+					<li>
+						<h3>margin-bottom</h3>
+						<code>margin-bottom: length;</code>
+					</li>
+					<li>
+						<h3>margin-right</h3>
+						<code>margin-right: length;</code>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>보더(border)</h2>
+				<ul>
+					<li>기본값 : none</li>
+					<li>자식상속 : 안함</li>
+					<li>작성방법 : <code>border: border-width border-style border-color;</code></li>
+				</ul>
+				<ul class="childProperty flex">
+					<li>
+						<h3>border-top</h3>
+						<code>border-top: border-width border-style border-color;</code>
+					</li>
+					<li>
+						<h3>border-left</h3>
+						<code>border-left: border-width border-style border-color;</code>
+					</li>
+					<li>
+						<h3>border-bottom</h3>
+						<code>border-bottom: border-width border-style border-color;</code>
+					</li>
+					<li>
+						<h3>border-right</h3>
+						<code>border-right: border-width border-style border-color;</code>
+					</li>
+					<li>
+						<h3>border-width</h3>
+						<code>border-width: medium | thin | thick | length | initial | inherit;</code>
+					</li>
+					<li>
+						<h3>border-style</h3>
+						<code>border-style:none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset | initial | inherit;</code>
+					</li>
+					<li>
+						<h3>border-color</h3>
+						<code>border-color: color|transparent|initial|inherit;</code>
+					</li>
+					<li>
+						<h3>border-radius</h3>
+						<code>border-radius: 1-4 length | % / 1-4 length | % | initial | inherit;</code>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>아웃라인(outline)</h2>
+				<ul>
+					<li>기본값 : none</li>
+					<li>자식상속 : 안함</li>
+					<li>작성방법 : <code>outline: outline-width outline-style outline-color;</code></li>
+				</ul>
+				<ul class="childProperty flex">
+					<li>
+						<h3>outline-top</h3>
+						<code>outline-top: outline-width outline-style outline-color;</code>
+					</li>
+					<li>
+						<h3>outline-left</h3>
+						<code>outline-left: outline-width outline-style outline-color;</code>
+					</li>
+					<li>
+						<h3>outline-bottom</h3>
+						<code>outline-bottom: outline-width outline-style outline-color;</code>
+					</li>
+					<li>
+						<h3>outline-right</h3>
+						<code>outline-right: outline-width outline-style outline-color;</code>
+					</li>
+					<li>
+						<h3>outline-width</h3>
+						<code>outline-width: medium | thin | thick | length | initial | inherit;</code>
+					</li>
+					<li>
+						<h3>outline-style</h3>
+						<code>outline-style:none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset | initial | inherit;</code>
+					</li>
+					<li>
+						<h3>outline-color</h3>
+						<code>outline-color: color|transparent|initial|inherit;</code>
+					</li>
+					<li>
+						<h3>outline-offset</h3>
+						<code>outline-offset: length|initial|inherit;</code>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>오버플로우(Overflow)</h2>
+				<ul>
+					<li>기본값 : visible</li>
+					<li>자식상속 : 안함</li>
+					<li>작성방법 : <code>overflow: visible | hidden | scroll | auto;</code></li>
+				</ul>
+				<p><img src="https://i-msdn.sec.s-msft.com/dynimg/IC700918.png" alt="오버플로우"></p>
+				<ul class="childProperty flex">
+					<li>
+						<h3>overflow-x</h3>
+						<code>overflow-x: visible | hidden | scroll | auto;</code>
+					</li>
+					<li>
+						<h3>overflow-y</h3>
+						<code>overflow-y: visible | hidden | scroll | auto;</code>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>박스사이징(Box Sizing)</h2>
+				<ul>
+					<li>기본값 : content-box</li>
+					<li>자식상속 : 안함</li>
+					<li>작성방법 : <code>box-sizing: content-box|border-box|initial|inherit;</code></li>
+				</ul>
+				<p><img src="https://cssgurubd.files.wordpress.com/2015/01/box-model_css2_vs_css3.png" alt=""></p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>실습 및 Q&A , 바람쐬기</h2>
+				<div class="desc">
+					<h3>지금 접속하세요.</h3>
+					<p><a href="https://goo.gl/NTnOEk" target="_blank">https://goo.gl/NTnOEk</a></p>
+				</div>
+			</article>
+		</section>
+	</section>
 
+	<section>
+		<section>
+			<article>
+				<h2>인라인(텍스트) 요소</h2>
+				<p><img src="http://fabricjs.com/article_assets/2_7.png" alt=""></p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>인라인 박스모델</h2>
+				<p><img src="http://maxcdn.webappers.com/img/2013/04/diagram3.png" alt=""></p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>폰트명(font-family)</h2>
+				<ul>
+					<li>기본값 : 브라우저의 기본폰트</li>
+					<li>상속성 : 있음</li>
+					<li>작성방법 : <code>font-family: (generic-family | family-name)+|initial|inherit;</code></li>
+				</ul>
+				<hr>
+				<h3>제너릭명?</h3>
+				<ul style="font-size:18px;">
+					<li>Serif(쉐리프) : 곡선을 주로 사용하여 작성된 폰트 스타일들 (예 : Times New Roman , Georgia)</li>
+					<li>Sans-serif(산쉐리프) : 직선을 주로 사용하여 작성된 폰트 스타일들 (예 : Arial , Verdana)</li>
+					<li>Monospace(모노스페이스) : 곡선과 직선을 혼합하여 작성된 폰트 스타일들 (예 : Courier New , Lucida Console)</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>색상(Color)</h2>
+				<ul>
+					<li>기본값 : 브라우저 기본컬러</li>
+					<li>상속성 : 있음</li>
+					<li>작성방법 : <code>color: HEX(#RRGGBB) | String | RGBA | initial | inherit;</code></li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>크기(font-size)</h2>
+				<ul>
+					<li>기본값 : medium</li>
+					<li>상속성 : 있음</li>
+					<li>작성방법 :
+						<code>font-size:medium|xx-small|x-small|small|large|x-large|xx-large|smaller|larger|length|initial|inherit;</code>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>굵기(font-weight)</h2>
+				<ul>
+					<li>기본값 : 부모 상속됨</li>
+					<li>자식상속 : 상속됨</li>
+					<li>작성방법 : font-weight: normal|bold|bolder|lighter|number;</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>좌우정렬(text-align)</h2>
+				<ul>
+					<li>기본값 : 부모상속됨</li>
+					<li>자식상속 : 상속됨</li>
+					<li>작성방법 : text-align: left|right|center|justify;</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>상하정렬(vertical-align)</h2>
+				<ul>
+					<li>기본값 : "baseline"</li>
+					<li>자식상속 : 안됨</li>
+					<li>작성방법 : <code>vertical-align: baseline | length | sub | super | top | text-top | middle | bottom | text-bottom;</code>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>글자간격, 자간(letter-spacing)</h2>
+				<ul>
+					<li>기본값 : 부모상속</li>
+					<li>자식상속 : 상속</li>
+					<li>작성방법 : <code>letter-spacing: normal|length;</code></li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>들여쓰기(text-indent)</h2>
+				<ul>
+					<li>기본값 : 0</li>
+					<li>자식상속 : 안됨</li>
+					<li>작성방법 : <code>text-indent: length;</code></li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>데코레이션(Decoration)</h2>
+				<ul>
+					<li>기본값 : 부모상속됨</li>
+					<li>자식상속 : 상속됨</li>
+					<li>작성방법 : <code>text-decoration: none|underline|overline|line-through;</code></li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>텍스트 변형(text-transform)</h2>
+				<ul>
+					<li>기본값 : 부모상속됨</li>
+					<li>자식상속 : 상속됨</li>
+					<li>작성방법 : <code>text-transform: none|capitalize|uppercase|lowercase;</code></li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>그림자(text-shadow)</h2>
+				<ul>
+					<li>기본값 : none</li>
+					<li>상속성 : 있음</li>
+					<li>작성방법 : text-shadow: h-shadow v-shadow blur-radius color|none;</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>아주 잠깐 실습 및 Q&A , 바람쐬기</h2>
+				<div class="desc">
+					<h3>지금 접속하세요.</h3>
+					<p><a href="https://goo.gl/XUovPW" target="_blank">https://goo.gl/XUovPW</a></p>
+				</div>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>줄바꿈 방식(white-space)</h2>
+				<ul>
+					<li>기본값 : 부모상속됨</li>
+					<li>자식상속 : 상속됨</li>
+					<li>작성방법 : <code>white-space: normal|nowrap|pre|pre-line|pre-wrap;</code></li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>인라인높이, 자평(line-height)</h2>
+				<ul>
+					<li>기본값 : 부모상속</li>
+					<li>자식상속 : 상속</li>
+					<li>작성방법 : <code>line-height: normal|number|length;</code></li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>단어 간격(word-spacing)</h2>
+				<ul>
+					<li>기본값 : 부모상속</li>
+					<li>자식상속 : 상속</li>
+					<li>작성방법 : <code>word-spacing: normal|length;</code></li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>단어 줄바꿈 방식(word-break)</h2>
+				<p>CJK(중국어,일본어,한국어)가 <span class="point">"아닌"</span> 언어을 기준하여 줄바꿈 기준을 적용</p>
+				<ul>
+					<li>기본값 : 부모상속됨</li>
+					<li>자식상속 : 상속됨</li>
+					<li>작성방법 : <code>word-break: normal|break-all|keep-all</code></li>
+				</ul>
+			</article>
+		</section>
 
+		<section>
+			<article>
+				<h2>실습 및 Q&A , 바람쐬기</h2>
+				<div class="desc">
+					<h3>지금 접속하세요.</h3>
+					<p><a href="https://goo.gl/aNvjWb" target="_blank">https://goo.gl/aNvjWb</a></p>
+				</div>
+			</article>
+		</section>
+	</section>
+	<section>
+		<section>
+			<article>
+				<p>드디어...</p>
+				<h2>수업 정리</h2>
+				<p><img src="http://wgforum.kr/files/attach/images/1302799/167/086/005/70826908e724e191d94f0628065981df.jpg" alt=""></p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>CSS 란?</h2>
+				<ul>
+					<li>상속성(Cascading) : 부모 또는 루트(:root)의 속성을 상속 받는 언어.</li>
+					<li>인라인(텍스트)는 대부분 상속 , 블럭는 대부분 상속안됨</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>우선순위(Priority Rules)</h2>
+				<ul>
+					<li>1. "!important" 구문</li>
+					<li>2. inline 직접선언 ( &lt;E style="">&lt;/E> )</li>
+					<li>3. id (#) 로 선언</li>
+					<li>4. class (.) 로 선언</li>
+					<li>5. 엘리먼트로 선언</li>
+					<li>6. 유니버셜 (*) 선언</li>
+					<li>7. 작성순서에 따른 오버라이딩</li>
+					<li>8. native style sheet (네이티브 스타일 시트) | 상속성에 따라 상속된 선언</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>작성법</h2>
+				<div class="image"><img src="http://www.w3schools.com/css/selector.gif" alt=""></div>
+				<h2>적용방법</h2>
+				<ul>
+					<li>
+						<h3>"link"엘리먼트</h3>
+						<p><code>&lt;link rel="stylesheets" href="CSS경로" /></code></p>
+					</li>
+					<li>
+						<h3>"style"엘리먼트</h3>
+						<p><code>&lt;style><br /><span class="comment">/* CSS 코드 */</span><br />&lt;/style></code></p>
+					</li>
+					<li>
+						<h3>inline 직접선언</h3>
+						<p><code>&lt;span style="스타일코드">&lt;/span></code></p>
+					</li>
+				</ul>
+			</article>
+		</section>
 
+		<section>
+			<article>
+				<h2>셀렉터(Selector)</h2>
+				<ul class="flex">
+					<li>
+						<h3>Universal Selector (*) <span class="comment">: 전체선택</span></h3>
+						<code>*{color:red;}</code>
+					</li>
+					<li>
+						<h3>Element Selector (E) <span class="comment">: 엘리먼트선택</span></h3>
+						<code>span{color:red;}</code>
+					</li>
+					<li>
+						<h3>id Selector(#) <span class="comment">: id선택</span></h3>
+						<code>#id{color:red;}</code>
+					</li>
+					<li>
+						<h3>Class Selector(.) <span class="comment">: class선택</span></h3>
+						<code>.class{background-color:gray;}</code>
+					</li>
+					<li>
+						<h3>Group Selector(,) <span class="comment">: 그룹핑선택</span></h3>
+						<code>h1 , #id , .class{color:red; }</code>
+					</li>
+					<li>
+						<h3>[attribute] <span class="comment">: 어트리뷰트가 있으면 선택</span></h3>
+						<code>[class]{color:red;}</code>
+					</li>
+					<li>
+						<h3>[attribute=value] <span class="comment">: 어트리뷰트 값이 같으면 선택</span></h3>
+						<code>[class="test"]{color:red;}</code>
+					</li>
+					<li>
+						<h3>[attribute^=value] <span class="comment">: 어트리뷰트가 값으로 시작하면 선택</span></h3>
+						<code>[class^="test"]{color:red;}</code>
+					</li>
+					<li>
+						<h3>inside Selector ( ) <span class="comment">: 하위요소 검색</span></h3>
+						<code>h1 span{border:1px solid #000;}</code>
+					</li>
+					<li>
+						<h3>Child Selector(>) <span class="comment">: 자식요소 검색</span></h3>
+						<code>h1>span{background-color:gray}</code>
+					</li>
+					<li>
+						<h3>After Selector(+) <span class="comment">: 다음요소 검색</span></h3>
+						<code>h1+span{width:500px;}</code>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>가상 셀렉터(Selector)</h2>
+				<ul class="flex">
 
-			<section>
-				<section>
-                    <article>
-                        <h2>공통 값 정의</h2>
-						<style>
-							.tableType{display:table;width:100%;}
-							.tableType li{border-left:1px solid #ccc;padding:0 20px; display:table-cell;width:18%;text-align:center;vertical-align:middle;}
-							.tableType li:first-child{border-left:0;}
-						</style>
-                        <ul class="tableType">
-                            <li>컬러(Color)</li>
-                            <li>단위(Unit)</li>
-                            <li>디스플레이(Display)</li>
-                            <li>레이아웃(Layout)</li>
-                            <li style="width:28%">부모상속값(inherit),<br />기본값(initial)</li>
-                        </ul>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>컬러(Color)</h2>
-                        <p>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/AdditiveColor.svg/220px-AdditiveColor.svg.png"
-                                 alt=""></p>
-                        <ul>
-                            <li>컬러이름.(red , blue 등)</li>
-                            <li>RGB 또는 <strong class="point">RGBA</strong>방식 == rgb(0,0,0,0)</li>
-                            <li>HEX(Hexadecimal)값 방식 == <strong class="point">#RRGGBB</strong> (RR == 00~FF)</li>
-                        </ul>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>단위(Unit)</h2>
-                        <p><img src="http://media02.hongkiat.com/css-units/post-cover.jpg" alt=""></p>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>단위(Unit) : 절대적인 단위</h2>
-                        <ul>
-                            <li><strong class="point">px</strong> : 픽셀(가장 기본적인 사용)</li>
-                            <li>pc : 파이카(1pc == 12pt == 1/6in)</li>
-                            <li>pt : 포인트(1/72in)</li>
-                            <li>cm : 센티미터</li>
-                            <li>mm : 밀리미터</li>
-                            <li>in : 인치</li>
-                        </ul>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                    <h2>단위(Unit) : 상대적인 단위</h2>
-                    <ul>
-                        <li><strong class="point">em</strong> : 부모의 font-size을 1em 으로 적용하며, 부모의 폰트사이즈가 늘어나면 함께 들어난다.</li>
-                        <li><strong class="point">%</strong> : 부모의 width을 100%로 적용하며, 부모의 width가 늘어나면 함께 늘어난다.</li>
-                        <li>ch : "0" (숫자 0) 의 가로값을 기반으로 적용되는 사이즈.</li>
-                        <li>ex : "x" (영문 소문자 x) 의 높이값을 기반으로 적용되는 사이즈.</li>
-                        <li><strong class="point">rem</strong> : root 즉 html의 font-size을 1rem으로 기반하여, 절대사이즈로 적용.</li>
-                        <li>vw : window의 viewport width을 기준하여 절대 적용됩니다.(그냥 window width의 1/100)</li>
-                        <li>vh : window의 viewport height 기준하여 절대 적용됩니다.(그냥 window height의 1/100)</li>
-                        <li>vmin : window의 width 또는 height 중 작은 사이즈의 1/100</li>
-                        <li>vmax : window의 width 또는 height 중 큰 사이즈의 1/100</li>
-                    </ul>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>디스플레이(Display)</h2>
-                        <div class="desc">
-                            <h3>지금 접속하세요.</h3>
-                            <p><a href="https://goo.gl/6Dhs0v" target="_blank">https://goo.gl/6Dhs0v</a></p>
-                        </div>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>디스플레이(Display) : Model.</h2>
-                        <ul class="flex">
-                            <li>
-                                <div class="thumb">
-                                    <img src="http://www.cssterm.com/uploads/images/box_model.gif" alt="">
-                                    <span>Box-Model</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumb">
-                                    <img src="http://maxcdn.webappers.com/img/2013/04/diagram3.png" alt="">
-                                    <span>Inline-Model</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>디스플레이(Display) : Edge.</h2>
-                        <p><img src="http://www.vanseodesign.com/blog/wp-content/uploads/2012/11/css-box-model.png" alt=""></p>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>디스플레이(Display) : Flow.</h2>
-                        <p><img src="https://i.stack.imgur.com/mGTYI.png" alt=""></p>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>레이아웃(Layout)</h2>
-                        <div class="desc">
-                            <h3>지금 접속하세요.</h3>
-                            <p><a href="https://goo.gl/UirXy2" target="_blank">https://goo.gl/UirXy2</a></p>
-                        </div>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>레이아웃(Layout) : 플로트(Float)</h2>
-                        <p><img src="http://tutorial.techaltum.com/images/css-float-clear.jpg" alt=""></p>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>레이아웃(Layout) : 포지션(Position)</h2>
-                        <p><img src="http://www.jegsworks.com/examples/DemoCSS/position.png" alt=""></p>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>레이아웃(Layout) : 플렉스(Flex)</h2>
-                        <p><img src="https://developer.mozilla.org/files/3739/flex_terms.png" alt=""></p>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>부모상속값(inherit)</h2>
-                        <p><img src="https://cdn.css-tricks.com/wp-content/uploads/2015/05/initial-diagram-inherit.jpg" alt=""></p>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>기본값(initial)</h2>
-                        <p><img src="https://cdn.css-tricks.com/wp-content/uploads/2015/05/initial-diagram.jpg" alt=""></p>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>아...</h2>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <p><img src="http://cfile230.uf.daum.net/image/0114434951A49ED92CDC24" alt=""></p>
-                    </article>
-                </section>
-			</section>
+					<li>
+						<h3>Selector:checked <span class="comment">: 체크되면 선택</span></h3>
+						<code>input[class=checkbox]:checked{}</code>
+					</li>
+					<li>
+						<h3>Selector:disabled <span class="comment">: 비활성화되면 선택</span></h3>
+						<code>input[class=checkbox]:disabled{}</code>
+					</li>
+					<li>
+						<h3>Selector:focus <span class="comment">: 포커스되면 선택</span></h3>
+						<code>input:focus{color:red;}</code>
+					</li>
+					<li>
+						<h3>Selector:hover <span class="comment">: 마우스가 올라가면 선택</span></h3>
+						<code>a:hover{}</code>
+					</li>
+					<li>
+						<h3>Selector:first-child <span class="comment">: 첫번째 자식요소 선택</span></h3>
+						<code>div p:first-child{}</code>
+					</li>
+					<li>
+						<h3>Selector:nth-child(number | odd | even | n) <span class="comment">: 자식들의 순서로 선택</span></h3>
+						<code>div p:nth-child(2){}</code>
+					</li>
+					<li>
+						<h3>Selector:read-only <span class="comment">: 읽기전용일때 선택</span></h3>
+						<code>input:read-only{}</code>
+					</li>
+					<li>
+						<h3>Selector::before or Selector:before <span class="comment">: 가상요소를 앞에 생성하여 선택</span></h3>
+						<code>.clearfix::before{}</code>
+					</li>
+					<li>
+						<h3>Selector::after or Selector:after <span class="comment">: 가상요소를 뒤에 생성하여 선택</span></h3>
+						<code>.clearfix::after{}</code>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>컬러(color)와 단위(unit)</h2>
+				<ul>
+					<li>컬러는 <span class="point">RGBA</span> 방식과 <span class="point">HEX(#RRGGBB)</span>이 주로 쓰인다.</li>
+					<li>단위는 <span class="point">"px" , "%" , "em" , "rem"</span> 이 주로쓰인다.</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>박스모델 , 인라인박스모델</h2>
+				<ul class="flex">
+					<li>
+						<div class="thumb">
+							<img src="http://www.cssterm.com/uploads/images/box_model.gif" alt="">
+							<span>Box-Model</span>
+						</div>
+					</li>
+					<li>
+						<div class="thumb">
+							<img src="http://maxcdn.webappers.com/img/2013/04/diagram3.png" alt="">
+							<span>Inline-Model</span>
+						</div>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>박스사이징(Box Sizing)</h2>
+				<p><img src="https://cssgurubd.files.wordpress.com/2015/01/box-model_css2_vs_css3.png" alt=""></p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<ul class="flex">
+					<li>
+						<h2>디스플레이(Display)</h2>
+						<h3>디스플레이는 <span class="point">요소의 특성을 바꾼다.</span></h3>
+						<p>주속성 : none , block , inline , inline-block , flex</p>
+					</li>
+					<li>
+						<h2>비지빌리티(visibility)</h2>
+						<h3>비지빌리티는 요소가 <span class="point">보이는가 안보이는가만 바꾼다.</span></h3>
+						<p>주속성 : hidden , visible</p>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>가로값(width) , 세로값(height)</h2>
+				<ul>
+					<li>대부분은 "px","%","em","rem"을 쓴다.</li>
+					<li>앞에 "min-" 이나 "max-"을 붙일수 있다.</li>
+					<li><span class="point">"box-sizing" 여부에 따라 범위가 틀려진다.</span></li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<ul class="flex">
+					<li>
+						<h2>패딩(padding)</h2>
+						<h3>배경을 영향을 받는 border-edge 내부 영역.</h3>
+						<p><span class="point">요소들 끼리 겹치는 경우는 없다.</span></p>
+					</li>
+					<li>
+						<h2>마진(margin)</h2>
+						<h3>배경의 영향을 안받는 border-edge 외부 영역</h3>
+						<p><span class="point">요소들 끼리 겹치는 경우가 있다.</span></p>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<ul class="flex">
+					<li>
+						<h2>보더(border)</h2>
+						<h3>컨덴츠와, 패딩 이후의 내곽선</h3>
+						<p>border-radius라는 속성으로 둥글게 만들수도 있다.</p>
+						<p><span class="point">width값에 영향을 준다.</span></p>
+						<p>요소들 끼리 겹치는 경우는 없다.</p>
+					</li>
+					<li>
+						<h2>아웃라인(outline)</h2>
+						<h3>보더 밖으로 선언되는 외곽선</h3>
+						<p>outline-offset 이라는 속성으로 더 멀리 보낼수 있다.</p>
+						<p><span class="point">width값에 영향을 안준다.</span></p>
+						<p>요소들 끼리 겹치는 경우가 있다.</p>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>오버플로우(Overflow)</h2>
+				<p>컨덴츠가 보이는 영역에서 벗어날때 처리</p>
+				<p>scoll-x , scroll-y 같은 식으로 가로,세로도 별도 가능.</p>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>폰트 속성들</h2>
+				<ul>
+					<li>폰트명(font-family) : 사용될 폰트명 또는 제너릭명으로 적용합니다.</li>
+					<li>색상(Color) : 글자의 색상을 지정합니다.</li>
+					<li>크기(size) : 글자의 크기를 지정합니다.</li>
+					<li>굵기(weight) : 글자의 굵기를 지정합니다. (bold == 700)</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<ul class="flex">
+					<li>
+						<h2>자평,텍스트높이(line-height)</h2>
+						<p>인라인 요소 중 한줄에 대한 높이를 지정한다.</p>
+					</li>
+					<li>
+						<h2>자간(letter-spacing)</h2>
+						<p>글자와 글자사이의 간격에 영향을 준다.</p>
+					</li>
+				</ul>
 
-			<section>
-				<section>
-                    <article>
-                        <h2>블럭요소(Block)</h2>
-                        <p><img src="http://srwire.co.kr/wp/wp-content/uploads/2015/06/legos_0.jpg" alt=""></p>
-                    </article>
-                </section>
-				<section>
-                    <h2>박스모델(Box-Model)</h2>
-                    <p><img src="http://www.cssterm.com/uploads/images/box_model.gif" alt=""></p>
-                    <ul>
-                        <li>Content : 내부의 내용을 말합니다. 물론 다른 엘리먼트가 들어올수도 있습니다.</li>
-                        <li>Padding : 컨덴츠와 보더사이의 간격입니다. 배경의 영향을 받습니다.</li>
-                        <li>border : 컨덴츠와 패딩을 포함한 영역의 내곽선입니다. 가로값의 영향을 받습니다.</li>
-                        <li>Margin : 보더와 외부 엘리먼트의 간격입니다. 배경의 영향을 받지않습니다.</li>
-                        <li>outline : 컨덴츠와 패딩 및 보더를 포함한 포함한 외곽선입니다. 가로값의 영향을 받지 않습니다.</li>
-                    </ul>
-                </section>
-                <section>
-                    <article>
-                        <h2>드디어 1주차 이론이 끝났습니다.</h2>
-                        <p><img src="http://danamedipia.com/data/cheditor4/1409/fd26b9132334d3232c391b49db15bead_20140911150414_iamgxrtz.jpg" alt=""></p>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>실습 및 Q&A , 바람쐬기</h2>
-						<p>이제.. 속성(Property) 들어갈꺼예요...<span class="comment">(졸릴꺼란 이야기죠..)</span></p>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>디스플레이(Display)</h2>
-                        <ul>
-                            <li>기본값 : 엘리먼트형태 상속</li>
-                            <li>자식상속 : 안함</li>
-                            <li>작성방법 : <code>display: inline | block | inline-block | none | flex | table | table-cell;</code></li>
-                        </ul>
-                        <table class="table table-hover table-bordered">
-                            <colgroup>
-                                <col style="width:200px">
-                                <col style="width:auto;">
-                            </colgroup>
-                            <thead>
-                            <tr>
-                                <th>값</th>
-                                <th>설명</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>inline</td>
-                                <td>인라인 조건을 가진 엘리먼트로 적용합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>block</td>
-                                <td>블럭 조건을 가진 엘리먼트로 적용합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>inline-block</td>
-                                <td>인라인-블럭 조건을 가진 엘리먼트로 적용합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>none</td>
-                                <td>엘리먼트 안보이도록 처리합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>flex</td>
-                                <td>CSS3의 flex 레이아웃 구조의 컨테이너로 적용합니다. (기본은 block속성을 따라갑니다.)</td>
-                            </tr>
-                            <tr>
-                                <td>table</td>
-                                <td>&quot;table&quot; 엘리먼트의 조건으로 적용합니다. (기본은 inline-block을 따라갑니다.)</td>
-                            </tr>
-                            <tr>
-                                <td>table-cell</td>
-                                <td>&quot;td&quot; 또는 &quot;th&quot; 엘리먼트의 조건으로 적용합니다. (기본은 inline-block을 따라갑니다.)</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>비지빌리티(visibility)</h2>
-                        <ul>
-                            <li>기본값 : 엘리먼트 형태 상속</li>
-                            <li>자식상속 : 안함</li>
-                            <li>작성방법 : <code>visibility: visible|hidden|collapse|initial|inherit;</code></li>
-                        </ul>
-                        <table class="table table-hover table-bordered">
-                            <colgroup>
-                                <col style="width:200px">
-                                <col style="width:auto;">
-                            </colgroup>
-                            <thead>
-                            <tr>
-                                <th>값</th>
-                                <th>설명</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>visible</td>
-                                <td>화면상 보여지도록 합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>hidden</td>
-                                <td>화면상 보여지지 않도록 합니다.</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>가로값(width)</h2>
-                        <ul>
-                            <li>기본값 : auto</li>
-                            <li>자식상속 : 안함</li>
-                            <li>작성방법 : <code>width: length | auto;</code></li>
-                        </ul>
-                        <ul class="childProperty flex">
-                           <li>
-                               <h3>max-width</h3>
-                               <code>max-width: length | auto;</code>
-                           </li>
-                            <li>
-                                <h3>min-width</h3>
-                                <code>min-width: length | auto;</code>
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>세로값(height)</h2>
-                        <ul>
-                            <li>기본값 : auto</li>
-                            <li>자식상속 : 안함</li>
-                            <li>작성방법 : <code>height: length | auto;</code></li>
-                        </ul>
-                        <ul class="childProperty flex">
-                            <li>
-                                <h3>max-height</h3>
-                                <code>max-height: length | auto;</code>
-                            </li>
-                            <li>
-                                <h3>min-height</h3>
-                                <code>min-height: length | auto;</code>
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>패딩(padding)</h2>
-                        <ul>
-                            <li>기본값 : 0</li>
-                            <li>자식상속 : 안함</li>
-                            <li>작성방법 : <code>padding: length | top right bottom left;</code></li>
-                        </ul>
-                        <ul class="childProperty flex">
-                            <li>
-                                <h3>padding-top</h3>
-                                <code>padding-top: length;</code>
-                            </li>
-                            <li>
-                                <h3>padding-left</h3>
-                                <code>padding-left: length;</code>
-                            </li>
-                            <li>
-                                <h3>padding-bottom</h3>
-                                <code>padding-bottom: length;</code>
-                            </li>
-                            <li>
-                                <h3>padding-right</h3>
-                                <code>padding-right: length;</code>
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>마진(margin)</h2>
-                        <ul>
-                            <li>기본값 : 0</li>
-                            <li>자식상속 : 안함</li>
-                            <li>작성방법 : <code>margin: length | top right bottom left;</code></li>
-                        </ul>
-                        <ul class="childProperty flex">
-                            <li>
-                                <h3>margin-top</h3>
-                                <code>margin-top: length;</code>
-                            </li>
-                            <li>
-                                <h3>margin-left</h3>
-                                <code>margin-left: length;</code>
-                            </li>
-                            <li>
-                                <h3>margin-bottom</h3>
-                                <code>margin-bottom: length;</code>
-                            </li>
-                            <li>
-                                <h3>margin-right</h3>
-                                <code>margin-right: length;</code>
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>보더(border)</h2>
-                        <ul>
-                            <li>기본값 : none</li>
-                            <li>자식상속 : 안함</li>
-                            <li>작성방법 : <code>border: border-width border-style border-color;</code></li>
-                        </ul>
-                        <ul class="childProperty flex">
-                            <li>
-                                <h3>border-top</h3>
-                                <code>border-top: border-width border-style border-color;</code>
-                            </li>
-                            <li>
-                                <h3>border-left</h3>
-                                <code>border-left: border-width border-style border-color;</code>
-                            </li>
-                            <li>
-                                <h3>border-bottom</h3>
-                                <code>border-bottom: border-width border-style border-color;</code>
-                            </li>
-                            <li>
-                                <h3>border-right</h3>
-                                <code>border-right: border-width border-style border-color;</code>
-                            </li>
-                            <li>
-                                <h3>border-width</h3>
-                                <code>border-width: medium | thin | thick | length | initial | inherit;</code>
-                            </li>
-                            <li>
-                                <h3>border-style</h3>
-                                <code>border-style:none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset | initial | inherit;</code>
-                            </li>
-                            <li>
-                                <h3>border-color</h3>
-                                <code>border-color: color|transparent|initial|inherit;</code>
-                            </li>
-                            <li>
-                                <h3>border-radius</h3>
-                                <code>border-radius: 1-4 length | % / 1-4 length | % | initial | inherit;</code>
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>아웃라인(outline)</h2>
-                        <ul>
-                            <li>기본값 : none</li>
-                            <li>자식상속 : 안함</li>
-                            <li>작성방법 : <code>outline: outline-width outline-style outline-color;</code></li>
-                        </ul>
-                        <ul class="childProperty flex">
-                            <li>
-                                <h3>outline-top</h3>
-                                <code>outline-top: outline-width outline-style outline-color;</code>
-                            </li>
-                            <li>
-                                <h3>outline-left</h3>
-                                <code>outline-left: outline-width outline-style outline-color;</code>
-                            </li>
-                            <li>
-                                <h3>outline-bottom</h3>
-                                <code>outline-bottom: outline-width outline-style outline-color;</code>
-                            </li>
-                            <li>
-                                <h3>outline-right</h3>
-                                <code>outline-right: outline-width outline-style outline-color;</code>
-                            </li>
-                            <li>
-                                <h3>outline-width</h3>
-                                <code>outline-width: medium | thin | thick | length | initial | inherit;</code>
-                            </li>
-                            <li>
-                                <h3>outline-style</h3>
-                                <code>outline-style:none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset | initial | inherit;</code>
-                            </li>
-                            <li>
-                                <h3>outline-color</h3>
-                                <code>outline-color: color|transparent|initial|inherit;</code>
-                            </li>
-                            <li>
-                                <h3>outline-offset</h3>
-                                <code>outline-offset: length|initial|inherit;</code>
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>오버플로우(Overflow)</h2>
-                        <ul>
-                            <li>기본값 : visible</li>
-                            <li>자식상속 : 안함</li>
-                            <li>작성방법 : <code>overflow: visible | hidden | scroll | auto;</code></li>
-                        </ul>
-                        <p><img src="https://i-msdn.sec.s-msft.com/dynimg/IC700918.png" alt="오버플로우"></p>
-                        <ul class="childProperty flex">
-                            <li>
-                                <h3>overflow-x</h3>
-                                <code>overflow-x: visible | hidden | scroll | auto;</code>
-                            </li>
-                            <li>
-                                <h3>overflow-y</h3>
-                                <code>overflow-y: visible | hidden | scroll | auto;</code>
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>박스사이징(Box Sizing)</h2>
-                        <ul>
-                            <li>기본값 : content-box</li>
-                            <li>자식상속 : 안함</li>
-                            <li>작성방법 : <code>box-sizing: content-box|border-box|initial|inherit;</code></li>
-                        </ul>
-                        <p><img src="https://cssgurubd.files.wordpress.com/2015/01/box-model_css2_vs_css3.png" alt=""></p>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>실습 및 Q&A , 바람쐬기</h2>
-                        <div class="desc">
-                            <h3>지금 접속하세요.</h3>
-                            <p><a href="https://goo.gl/NTnOEk" target="_blank">https://goo.gl/NTnOEk</a></p>
-                        </div>
-                    </article>
-                </section>
-			</section>
-
-			<section>
-				<section>
-                    <article>
-                        <h2>인라인(텍스트) 요소</h2>
-                        <p><img src="http://fabricjs.com/article_assets/2_7.png" alt=""></p>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>인라인 박스모델</h2>
-                        <p><img src="http://maxcdn.webappers.com/img/2013/04/diagram3.png" alt=""></p>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>폰트명(font-family)</h2>
-                        <ul>
-                            <li>기본값 : 브라우저의 기본폰트</li>
-                            <li>상속성 : 있음</li>
-                            <li>작성방법 : <code>font-family: (generic-family | family-name)+|initial|inherit;</code></li>
-                        </ul>
-                        <hr>
-                        <h3>제너릭명?</h3>
-                        <ul style="font-size:18px;">
-                            <li>Serif(쉐리프) : 곡선을 주로 사용하여 작성된 폰트 스타일들 (예 : Times New Roman , Georgia)</li>
-                            <li>Sans-serif(산쉐리프) : 직선을 주로 사용하여 작성된 폰트 스타일들 (예 : Arial , Verdana)</li>
-                            <li>Monospace(모노스페이스) : 곡선과 직선을 혼합하여 작성된 폰트 스타일들 (예 : Courier New , Lucida Console)</li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>색상(Color)</h2>
-                        <ul>
-                            <li>기본값 : 브라우저 기본컬러</li>
-                            <li>상속성 : 있음</li>
-                            <li>작성방법 : <code>color: HEX(#RRGGBB) | String | RGBA | initial | inherit;</code></li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>크기(font-size)</h2>
-                        <ul>
-                            <li>기본값 : medium</li>
-                            <li>상속성 : 있음</li>
-                            <li>작성방법 :
-                                <code>font-size:medium|xx-small|x-small|small|large|x-large|xx-large|smaller|larger|length|initial|inherit;</code>
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>굵기(font-weight)</h2>
-                        <ul>
-                            <li>기본값 : 부모 상속됨</li>
-                            <li>자식상속 : 상속됨</li>
-                            <li>작성방법 : font-weight: normal|bold|bolder|lighter|number;</li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>좌우정렬(text-align)</h2>
-                        <ul>
-                            <li>기본값 : 부모상속됨</li>
-                            <li>자식상속 : 상속됨</li>
-                            <li>작성방법 : text-align: left|right|center|justify;</li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>상하정렬(vertical-align)</h2>
-                        <ul>
-                            <li>기본값 : "baseline"</li>
-                            <li>자식상속 : 안됨</li>
-                            <li>작성방법 : <code>vertical-align: baseline | length | sub | super | top | text-top | middle | bottom | text-bottom;</code>
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>글자간격, 자간(letter-spacing)</h2>
-                        <ul>
-                            <li>기본값 : 부모상속</li>
-                            <li>자식상속 : 상속</li>
-                            <li>작성방법 : <code>letter-spacing: normal|length;</code></li>
-                        </ul>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>들여쓰기(text-indent)</h2>
-                        <ul>
-                            <li>기본값 : 0</li>
-                            <li>자식상속 : 안됨</li>
-                            <li>작성방법 : <code>text-indent: length;</code></li>
-                        </ul>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>데코레이션(Decoration)</h2>
-                        <ul>
-                            <li>기본값 : 부모상속됨</li>
-                            <li>자식상속 : 상속됨</li>
-                            <li>작성방법 : <code>text-decoration: none|underline|overline|line-through;</code></li>
-                        </ul>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>텍스트 변형(text-transform)</h2>
-                        <ul>
-                            <li>기본값 : 부모상속됨</li>
-                            <li>자식상속 : 상속됨</li>
-                            <li>작성방법 : <code>text-transform: none|capitalize|uppercase|lowercase;</code></li>
-                        </ul>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>그림자(text-shadow)</h2>
-                        <ul>
-                            <li>기본값 : none</li>
-                            <li>상속성 : 있음</li>
-                            <li>작성방법 : text-shadow: h-shadow v-shadow blur-radius color|none;</li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>아주 잠깐 실습 및 Q&A , 바람쐬기</h2>
-                        <div class="desc">
-                            <h3>지금 접속하세요.</h3>
-                            <p><a href="https://goo.gl/XUovPW" target="_blank">https://goo.gl/XUovPW</a></p>
-                        </div>
-                    </article>
-                </section>
-				<section>
-					<article>
+			</article>
+		</section>
+		<section>
+			<article>
+				<ul class="flex">
+					<li>
+						<h2>좌우정렬(text-align)</h2>
+						<p>인라인에만 적용된다.</p>
+						<p>요소의 내부 컨덴츠에 적용된다.</p>
+						<p><span class="point">상속되며, 절대적이다.</span></p>
+					</li>
+					<li>
+						<h2>상하정렬(vertical-align)</h2>
+						<p>인라인에만 적용된다.</p>
+						<p>요소 자체의 정렬에 적용된다.</p>
+						<p><span class="point">상속안되고, 상대적이다.</span></p>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<ul class="flex">
+					<li>
 						<h2>줄바꿈 방식(white-space)</h2>
-						<ul>
-							<li>기본값 : 부모상속됨</li>
-							<li>자식상속 : 상속됨</li>
-							<li>작성방법 : <code>white-space: normal|nowrap|pre|pre-line|pre-wrap;</code></li>
-						</ul>
-					</article>
-				</section>
-				<section>
-					<article>
-						<h2>인라인높이, 자평(line-height)</h2>
-						<ul>
-							<li>기본값 : 부모상속</li>
-							<li>자식상속 : 상속</li>
-							<li>작성방법 : <code>line-height: normal|number|length;</code></li>
-						</ul>
-					</article>
-				</section>
-				<section>
-					<article>
-						<h2>단어 간격(word-spacing)</h2>
-						<ul>
-							<li>기본값 : 부모상속</li>
-							<li>자식상속 : 상속</li>
-							<li>작성방법 : <code>word-spacing: normal|length;</code></li>
-						</ul>
-					</article>
-				</section>
-				<section>
-					<article>
+						<p>줄바꿈에 대한 처리를 기준한다.</p>
+						<p>요소 내의 컨덴츠가 요소의 영역을 넘어갈때만<br />쓰는건 아니다.</p>
+					</li>
+					<li>
 						<h2>단어 줄바꿈 방식(word-break)</h2>
-						<p>CJK(중국어,일본어,한국어)가 <span class="point">"아닌"</span> 언어을 기준하여 줄바꿈 기준을 적용</p>
-						<ul>
-							<li>기본값 : 부모상속됨</li>
-							<li>자식상속 : 상속됨</li>
-							<li>작성방법 : <code>word-break: normal|break-all|keep-all</code></li>
-						</ul>
-					</article>
-				</section>
+						<p>CJK언어가 아닌 언어에만 적용된다.</p>
+						<p>단어를 기준하여 줄바꿈을 처리한다.</p>
+					</li>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<article>
+				<h2>수고하셨습니다<span class="comment">람쥐다람쥐다람..죄송..</span></h2>
+				<p><img src="https://s-media-cache-ak0.pinimg.com/736x/76/3d/01/763d01148d34af83ef8ebacd91acf038.jpg" alt=""></p>
+			</article>
+		</section>
+	</section>
 
-				<section>
-					<article>
-						<h2>실습 및 Q&A , 바람쐬기</h2>
-						<div class="desc">
-							<h3>지금 접속하세요.</h3>
-							<p><a href="https://goo.gl/aNvjWb" target="_blank">https://goo.gl/aNvjWb</a></p>
-						</div>
-					</article>
-				</section>
-			</section>
-			<section>
-				<section>
-                    <article>
-                        <p>드디어...</p>
-                        <h2>수업 정리</h2>
-                        <p><img src="http://wgforum.kr/files/attach/images/1302799/167/086/005/70826908e724e191d94f0628065981df.jpg" alt=""></p>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>CSS 란?</h2>
-                        <ul>
-                            <li>상속성(Cascading) : 부모 또는 루트(:root)의 속성을 상속 받는 언어.</li>
-                            <li>인라인(텍스트)는 대부분 상속 , 블럭는 대부분 상속안됨</li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>우선순위(Priority Rules)</h2>
-                        <ul>
-                            <li>1. "!important" 구문</li>
-                            <li>2. inline 직접선언 ( &lt;E style="">&lt;/E> )</li>
-                            <li>3. id (#) 로 선언</li>
-                            <li>4. class (.) 로 선언</li>
-                            <li>5. 엘리먼트로 선언</li>
-                            <li>6. 유니버셜 (*) 선언</li>
-                            <li>7. 작성순서에 따른 오버라이딩</li>
-                            <li>8. native style sheet (네이티브 스타일 시트) | 상속성에 따라 상속된 선언</li>
-                        </ul>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>작성법</h2>
-                        <div class="image"><img src="http://www.w3schools.com/css/selector.gif" alt=""></div>
-                        <h2>적용방법</h2>
-                        <ul>
-                            <li>
-                                <h3>"link"엘리먼트</h3>
-                                <p><code>&lt;link rel="stylesheets" href="CSS경로" /></code></p>
-                            </li>
-                            <li>
-                                <h3>"style"엘리먼트</h3>
-                                <p><code>&lt;style><br /><span class="comment">/* CSS 코드 */</span><br />&lt;/style></code></p>
-                            </li>
-                            <li>
-                                <h3>inline 직접선언</h3>
-                                <p><code>&lt;span style="스타일코드">&lt;/span></code></p>
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-
-				<section>
-                    <article>
-                        <h2>셀렉터(Selector)</h2>
-                        <ul class="flex">
-                            <li>
-                                <h3>Universal Selector (*) <span class="comment">: 전체선택</span></h3>
-                                <code>*{color:red;}</code>
-                            </li>
-                            <li>
-                                <h3>Element Selector (E) <span class="comment">: 엘리먼트선택</span></h3>
-                                <code>span{color:red;}</code>
-                            </li>
-                            <li>
-                                <h3>id Selector(#) <span class="comment">: id선택</span></h3>
-                                <code>#id{color:red;}</code>
-                            </li>
-                            <li>
-                                <h3>Class Selector(.) <span class="comment">: class선택</span></h3>
-                                <code>.class{background-color:gray;}</code>
-                            </li>
-                            <li>
-                                <h3>Group Selector(,) <span class="comment">: 그룹핑선택</span></h3>
-                                <code>h1 , #id , .class{color:red; }</code>
-                            </li>
-                            <li>
-                                <h3>[attribute] <span class="comment">: 어트리뷰트가 있으면 선택</span></h3>
-                                <code>[class]{color:red;}</code>
-                            </li>
-                            <li>
-                                <h3>[attribute=value] <span class="comment">: 어트리뷰트 값이 같으면 선택</span></h3>
-                                <code>[class="test"]{color:red;}</code>
-                            </li>
-                            <li>
-                                <h3>[attribute^=value] <span class="comment">: 어트리뷰트가 값으로 시작하면 선택</span></h3>
-                                <code>[class^="test"]{color:red;}</code>
-                            </li>
-                            <li>
-                                <h3>inside Selector ( ) <span class="comment">: 하위요소 검색</span></h3>
-                                <code>h1 span{border:1px solid #000;}</code>
-                            </li>
-                            <li>
-                                <h3>Child Selector(>) <span class="comment">: 자식요소 검색</span></h3>
-                                <code>h1>span{background-color:gray}</code>
-                            </li>
-                            <li>
-                                <h3>After Selector(+) <span class="comment">: 다음요소 검색</span></h3>
-                                <code>h1+span{width:500px;}</code>
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>가상 셀렉터(Selector)</h2>
-                        <ul class="flex">
-
-                            <li>
-                                <h3>Selector:checked <span class="comment">: 체크되면 선택</span></h3>
-                                <code>input[class=checkbox]:checked{}</code>
-                            </li>
-                            <li>
-                                <h3>Selector:disabled <span class="comment">: 비활성화되면 선택</span></h3>
-                                <code>input[class=checkbox]:disabled{}</code>
-                            </li>
-                            <li>
-                                <h3>Selector:focus <span class="comment">: 포커스되면 선택</span></h3>
-                                <code>input:focus{color:red;}</code>
-                            </li>
-                            <li>
-                                <h3>Selector:hover <span class="comment">: 마우스가 올라가면 선택</span></h3>
-                                <code>a:hover{}</code>
-                            </li>
-                            <li>
-                                <h3>Selector:first-child <span class="comment">: 첫번째 자식요소 선택</span></h3>
-                                <code>div p:first-child{}</code>
-                            </li>
-                            <li>
-                                <h3>Selector:nth-child(number | odd | even | n) <span class="comment">: 자식들의 순서로 선택</span></h3>
-                                <code>div p:nth-child(2){}</code>
-                            </li>
-                            <li>
-                                <h3>Selector:read-only <span class="comment">: 읽기전용일때 선택</span></h3>
-                                <code>input:read-only{}</code>
-                            </li>
-                            <li>
-                                <h3>Selector::before or Selector:before <span class="comment">: 가상요소를 앞에 생성하여 선택</span></h3>
-                                <code>.clearfix::before{}</code>
-                            </li>
-                            <li>
-                                <h3>Selector::after or Selector:after <span class="comment">: 가상요소를 뒤에 생성하여 선택</span></h3>
-                                <code>.clearfix::after{}</code>
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>컬러(color)와 단위(unit)</h2>
-                        <ul>
-                            <li>컬러는 <span class="point">RGBA</span> 방식과 <span class="point">HEX(#RRGGBB)</span>이 주로 쓰인다.</li>
-                            <li>단위는 <span class="point">"px" , "%" , "em" , "rem"</span> 이 주로쓰인다.</li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>박스모델 , 인라인박스모델</h2>
-                        <ul class="flex">
-                            <li>
-                                <div class="thumb">
-                                    <img src="http://www.cssterm.com/uploads/images/box_model.gif" alt="">
-                                    <span>Box-Model</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumb">
-                                    <img src="http://maxcdn.webappers.com/img/2013/04/diagram3.png" alt="">
-                                    <span>Inline-Model</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>박스사이징(Box Sizing)</h2>
-                        <p><img src="https://cssgurubd.files.wordpress.com/2015/01/box-model_css2_vs_css3.png" alt=""></p>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <ul class="flex">
-                            <li>
-                                <h2>디스플레이(Display)</h2>
-                                <h3>디스플레이는 <span class="point">요소의 특성을 바꾼다.</span></h3>
-                                <p>주속성 : none , block , inline , inline-block , flex</p>
-                            </li>
-                            <li>
-                                <h2>비지빌리티(visibility)</h2>
-                                <h3>비지빌리티는 요소가 <span class="point">보이는가 안보이는가만 바꾼다.</span></h3>
-                                <p>주속성 : hidden , visible</p>
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>가로값(width) , 세로값(height)</h2>
-                        <ul>
-                            <li>대부분은 "px","%","em","rem"을 쓴다.</li>
-                            <li>앞에 "min-" 이나 "max-"을 붙일수 있다.</li>
-                            <li><span class="point">"box-sizing" 여부에 따라 범위가 틀려진다.</span></li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <ul class="flex">
-                            <li>
-                                <h2>패딩(padding)</h2>
-                                <h3>배경을 영향을 받는 border-edge 내부 영역.</h3>
-                                <p><span class="point">요소들 끼리 겹치는 경우는 없다.</span></p>
-                            </li>
-                            <li>
-                                <h2>마진(margin)</h2>
-                                <h3>배경의 영향을 안받는 border-edge 외부 영역</h3>
-                                <p><span class="point">요소들 끼리 겹치는 경우가 있다.</span></p>
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <ul class="flex">
-                            <li>
-                                <h2>보더(border)</h2>
-                                <h3>컨덴츠와, 패딩 이후의 내곽선</h3>
-                                <p>border-radius라는 속성으로 둥글게 만들수도 있다.</p>
-                                <p><span class="point">width값에 영향을 준다.</span></p>
-                                <p>요소들 끼리 겹치는 경우는 없다.</p>
-                            </li>
-                            <li>
-                                <h2>아웃라인(outline)</h2>
-                                <h3>보더 밖으로 선언되는 외곽선</h3>
-                                <p>outline-offset 이라는 속성으로 더 멀리 보낼수 있다.</p>
-                                <p><span class="point">width값에 영향을 안준다.</span></p>
-                                <p>요소들 끼리 겹치는 경우가 있다.</p>
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>오버플로우(Overflow)</h2>
-                        <p>컨덴츠가 보이는 영역에서 벗어날때 처리</p>
-                        <p>scoll-x , scroll-y 같은 식으로 가로,세로도 별도 가능.</p>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <h2>폰트 속성들</h2>
-                        <ul>
-                            <li>폰트명(font-family) : 사용될 폰트명 또는 제너릭명으로 적용합니다.</li>
-                            <li>색상(Color) : 글자의 색상을 지정합니다.</li>
-                            <li>크기(size) : 글자의 크기를 지정합니다.</li>
-                            <li>굵기(weight) : 글자의 굵기를 지정합니다. (bold == 700)</li>
-                        </ul>
-                    </article>
-                </section>
-                <section>
-                    <article>
-                        <ul class="flex">
-                            <li>
-                                <h2>자평,텍스트높이(line-height)</h2>
-                                <p>인라인 요소 중 한줄에 대한 높이를 지정한다.</p>
-                            </li>
-                            <li>
-                                <h2>자간(letter-spacing)</h2>
-                                <p>글자와 글자사이의 간격에 영향을 준다.</p>
-                            </li>
-                        </ul>
-
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <ul class="flex">
-                            <li>
-                                <h2>좌우정렬(text-align)</h2>
-                                <p>인라인에만 적용된다.</p>
-                                <p>요소의 내부 컨덴츠에 적용된다.</p>
-                                <p><span class="point">상속되며, 절대적이다.</span></p>
-                            </li>
-                            <li>
-                                <h2>상하정렬(vertical-align)</h2>
-                                <p>인라인에만 적용된다.</p>
-                                <p>요소 자체의 정렬에 적용된다.</p>
-                                <p><span class="point">상속안되고, 상대적이다.</span></p>
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <ul class="flex">
-                            <li>
-                                <h2>줄바꿈 방식(white-space)</h2>
-                                <p>줄바꿈에 대한 처리를 기준한다.</p>
-                                <p>요소 내의 컨덴츠가 요소의 영역을 넘어갈때만<br />쓰는건 아니다.</p>
-                            </li>
-                            <li>
-                                <h2>단어 줄바꿈 방식(word-break)</h2>
-                                <p>CJK언어가 아닌 언어에만 적용된다.</p>
-                                <p>단어를 기준하여 줄바꿈을 처리한다.</p>
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-				<section>
-                    <article>
-                        <h2>수고하셨습니다<span class="comment">람쥐다람쥐다람..죄송..</span></h2>
-                        <p><img src="https://s-media-cache-ak0.pinimg.com/736x/76/3d/01/763d01148d34af83ef8ebacd91acf038.jpg" alt=""></p>
-                    </article>
-                </section>
-			</section>
-
-		</div>
-        <script src="slideshow.js"></script>
-		<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-	</body>
+</div>
+<script src="slideshow.js"></script>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</body>
 </html>
