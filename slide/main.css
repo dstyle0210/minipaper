@@ -1,9 +1,6 @@
 /**
  * @author Hakim El Hattab
  */
-/*
-* Noto Sans KR (korean) http://www.google.com/fonts/earlyaccess
- */
 
 /*********************************************
  * GLOBAL STYLES
@@ -12,7 +9,7 @@ html, body { padding: 0; margin: 0; overflow: hidden; font-family: 'Noto Sans Ko
 /*********************************************
  * SLIDES
  *********************************************/
-#main { position: absolute; width: 1000px; height: 700px; left: 50%; top: 50%; margin-left: -500px; margin-top: -370px; text-align: center; -webkit-perspective: 600px; -webkit-perspective-origin: 50% 25%; }
+#main { position: absolute; width: 800px; height: 700px; left: 50%; top: 50%; margin-left: -400px; margin-top: -370px; text-align: center; -webkit-perspective: 600px; -webkit-perspective-origin: 50% 25%; }
 #main>section, #main>section>section { display: none; position: absolute; width: 100%; min-height: 600px; -webkit-transform-style: preserve-3d; -webkit-transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985); -moz-transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985); -o-transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985); transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985); }
 #main section.past { display: table; opacity: 0; -webkit-transform: 	translate3d(-100%, 0, 0) rotateY(-90deg) translate3d(-100%, 0, 0); }
 #main section.present { display: table; }
@@ -39,13 +36,15 @@ a.image:hover img { background: rgba(255,255,255,0.2); -webkit-box-shadow: 0 0 2
  *********************************************/
 h1{font-size:30px;}
 h2{font-size:36px;color:#000;}
-section>article{display:table-cell;width:100%;height:700px;vertical-align:middle;text-align:center;color:#333;}
+section>article{display:table-cell;width:100%;height:700px;vertical-align:middle;color:#333;}
 section>article>h2{padding-bottom:40px;}
-section>article>table{font-size:16px;}
-section>article>table td{text-align:left;}
+section>article table{font-size:16px;}
+section>article table td{text-align:left;}
 .codepen{margin:0 auto;width:60%;}
 .flex{display:flex;flex-wrap:wrap;}
 .flex>li{width:50%;}
+.flex-nowrap{display:flex;flex-wrap:nowrap;}
+.flex-nowrap>li{flex:1;}
 .point{color:#b81e38;}
 .dark-gray{color:#000;}
 .thumb{width:100%;}
@@ -53,3 +52,17 @@ section>article>table td{text-align:left;}
 .thumb>span{display:inline-block;padding-top:15px;}
 .childProperty{margin-top:20px;border-top:1px solid #ccc;}
 .comment{font-size:0.75em;color:#666;}
+code{color:#666;}
+
+
+.spec{width:100%;padding-bottom:10px;}
+.spec h2{font-size:28px;padding-bottom:10px;}
+.spec .syntax{text-indent:-107px;padding-left:107px;}
+.spec ul li{font-size:18px;}
+
+.desc{padding-top:20px;border-top:1px dashed #666;font-size:16px;}
+.desc h3{padding-top:0;margin-top:0;padding-bottom:5px;text-align:left;}
+.examSite{padding-top:20px;}
+.specFlex{display:flex;}
+.specFlex .spec{flex:1;width:auto;padding:0 20px;}
+.specFlex .spec:nth-child(2){border-left:1px dashed #ccc;}
