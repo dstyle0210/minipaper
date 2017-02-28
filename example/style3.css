@@ -1,11 +1,11 @@
 *{margin:0;padding:0;list-style:none;}
 
 /* 배경 */
-body{background-color:#f5f5f5;}
+body{background-color:#333;}
 
-.wrap{width:100%;padding-bottom:40px;background-color:#f5f5f5;}
+.wrap{margin:10% auto 0;width:90%;height:100%;}
 
-.vcard{display:flex;box-sizing:border-box;margin-top:40px;margin-left:auto;margin-right:auto;width:90%;background-color:#fff;border:1px dashed #999;border-radius:15px;overflow:hidden;}
+.vcard{display:flex;box-sizing:border-box;margin-left:auto;margin-right:auto;width:100%;background-color:#fff;border:1px dashed #999;border-radius:15px;overflow:hidden;}
 .vcard>section{flex:1;box-sizing:border-box;width:33.3%;}
 
 /* 내정보 */
@@ -25,7 +25,7 @@ body{background-color:#f5f5f5;}
 .myInfoSec .info dd{float:left;font-size:13px;}
 
 /* 내기술 */
-.skillsSec{padding:20px;padding-bottom:40px;background-color:#333;border-top:1px solid #333;color:#fff;}
+.skillsSec{padding:20px;border-left:1px dashed #ccc;background:#f5f5f5;}
 .skillsSec h2{text-align:center;font-size:30px;padding-bottom:20px;}
 .skillsSec .skills{width:100%;overflow:hidden;}
 .skillsSec .skills article{padding-top:20px;width:100%;}
@@ -42,12 +42,15 @@ body{background-color:#f5f5f5;}
 .skillsSec div.progress-js{background-color:rgba(60, 118, 61, 0.5);}
 .skillsSec .progress span{display:none;}
 
+/* 캐리어 */
+.careerSec{padding:20px;border-left:1px dashed #ccc;}
+
 /* 포트폴리오 */
-.portfolioSec{padding:20px;background:#f5f5f5;}
+.portfolioSec{padding:20px;background:#f5f5f5;border-left:1px dashed #ccc;}
 .portfolioSec h2{text-align:center;font-size:30px;padding-bottom:20px;}
 .portfolioSec ul{width:100%;overflow:hidden;}
-.portfolioSec li{position:relative;width:560px;height:200px;}
-.portfolioSec li[class^=eq]{background-repeat:no-repeat;background-size:cover;}
+.portfolioSec li{position:relative;width:100%;height:150px;}
+.portfolioSec li[class^=eq]{background-repeat:no-repeat;background-size:cover;background-position:0 -20%;}
 .portfolioSec li.eq0{background-image:url('http://i.huffpost.com/gen/2755532/thumbs/o-KITTEN-570.jpg?1');}
 .portfolioSec li.eq1{margin-top:15px;background-image:url('http://cfile209.uf.daum.net/image/24596D41583C1ED02EE1B3');}
 .portfolioSec li.eq2{margin-top:15px;background-image:url('http://heymid.com/wp-content/uploads/wpallimport/files/bada/hyigwi-goyangi-jong-Posted-on-1-day-1-hour-19-minutes-4.jpg');}
