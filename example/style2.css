@@ -1,0 +1,58 @@
+*{margin:0;padding:0;list-style:none;}
+
+/* 배경 */
+body{background-color:#f5f5f5;}
+
+.wrap{width:100%;padding-bottom:40px;background-color:#f5f5f5;}
+
+.vcard{margin-top:40px;margin-left:auto;margin-right:auto;width:600px;background-color:#fff;border:1px dashed #999;border-radius:15px;overflow:hidden;}
+
+/* 내정보 */
+.myInfoSec{padding:20px;width:560px;overflow:hidden;}
+.myInfoSec .photo{float:left;width:200px;}
+.myInfoSec .photo img{width:200px;}
+.myInfoSec .myCard{float:right;padding-left:20px;width:340px;}
+.myInfoSec .myCard .label{padding:3px;font-size:11px;background-color:#337ab7;color:#fff;text-transform:uppercase;}
+.myInfoSec .myCard h1{padding-top:5px;}
+.myInfoSec .myCard p{padding-top:10px;font-size:14px;}
+
+/* 내정보 > 나이,주소,이메일,핸드폰 */
+.myInfoSec .info h2{display:none;}
+.myInfoSec .info dl{padding-top:10px;padding-bottom:5px;width:100%;overflow:hidden;border-bottom:1px dashed #ccc;}
+.myInfoSec .info dt{float:left;width:80px;font-family:Tahoma;font-size:13px;text-transform:uppercase;}
+.myInfoSec .info dd{float:left;font-size:13px;}
+
+/* 내기술 */
+.skillsSec{padding:20px;padding-bottom:40px;width:560px;background-color:#f5f5f5;border-top:2px dashed #fff;}
+.skillsSec h2{text-align:center;font-size:30px;padding-bottom:20px;}
+.skillsSec .skills{width:100%;overflow:hidden;}
+.skillsSec .skills article{float:left;width:33.3%}
+.skillsSec div[class^=progress]{width:90%;height:20px;background-color:#fff;border:1px solid #999;}
+.skillsSec div[class^=progress] i{display:inline-block;height:20px;text-align:right;}
+.skillsSec div[class^=progress] span{padding-right:10px;color:#fff;font-size:12px;line-height:20px;}
+.skillsSec div[class^=progress] *{vertical-align:top;}
+.skillsSec div.progress-html i{background-color:#337ab7;}
+.skillsSec div.progress-html{background-color:rgba(51, 122, 183, 0.3);}
+.skillsSec div.progress-css i{background-color:#d44950;}
+.skillsSec div.progress-css{background-color:rgba(212, 73, 80, 0.5);}
+.skillsSec div.progress-js i{background-color:#3c763d;}
+.skillsSec div.progress-js{background-color:rgba(60, 118, 61, 0.5);}
+.skillsSec .progress span{display:none;}
+
+
+/* 포트폴리오 */
+.portfolioSec{padding:20px;width:560px;background:#333;border-top:2px dashed #f5f5f5;}
+.portfolioSec h2{text-align:center;color:#fff;font-size:30px;padding-bottom:20px;}
+.portfolioSec ul{width:100%;height:520px;overflow:hidden;}
+.portfolioSec li{float:left;position:relative;}
+.portfolioSec li[class^=eq]{background-repeat:no-repeat;background-size:cover;}
+.portfolioSec li.eq0{width:270px;height:520px;background-image:url('http://i.huffpost.com/gen/2755532/thumbs/o-KITTEN-570.jpg?1');}
+.portfolioSec li.eq1{margin-left:20px;width:270px;height:250px;background-image:url('http://cfile209.uf.daum.net/image/24596D41583C1ED02EE1B3');}
+.portfolioSec li.eq2{margin-top:20px;margin-left:20px;width:270px;height:250px;background-image:url('http://heymid.com/wp-content/uploads/wpallimport/files/bada/hyigwi-goyangi-jong-Posted-on-1-day-1-hour-19-minutes-4.jpg');}
+.portfolioSec .item{position:absolute;bottom:0;left:0;width:100%;background-color:rgba(0,0,0,0.5);}
+.portfolioSec .item h3 , .portfolioSec .item p{color:#fff;}
+.portfolioSec .item h3{padding:5px;font-size:16px;}
+.portfolioSec .item p{padding:5px;font-size:12px;}
+
+
+
