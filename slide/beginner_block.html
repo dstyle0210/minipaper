@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>마봉아빠의 CSS초급 : 블럭 관련 CSS</title>
+    <link href='https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div id="main">
+
+    <section>
+        <article class="index">
+            <h1>CSS초급 - 박스관련 CSS</h1>
+            <h3 class="inverted">떠듦 by 마봉아빠 </h3>
+        </article>
+    </section>
+    <section>
+        <section>
+            <article>
+                <h2>블럭(Block)요소(초급)</h2>
+                <div class="curriculumList">
+                    <dl><dt>박스모델(Box Model)</dt><dd>블럭요소의 박스모델에 대해 설명합니다.</dd></dl>
+                    <dl><dt>가로값(width)</dt><dd>요소의 가로값을 지정합니다.</dd></dl>
+                    <dl><dt>세로값(height)</dt><dd>요소의 세로값을 지정합니다.</dd></dl>
+                    <dl><dt>패딩(padding)</dt><dd>요소 내부 컨덴츠와 블럭요소의 사이 간격을 지정합니다.</dd></dl>
+                    <dl><dt>보더(border)</dt><dd>요소의 내부 간격을 포함한 내곽선을 지정합니다.</dd></dl>
+                    <dl><dt>박스사이징(box-sizing)</dt><dd>박스모델의 사이즈지정방식을 지정합니다.</dd></dl>
+                    <dl><dt>배경(background)</dt><dd>요소의 배경을 지정합니다.</dd></dl>
+                    <dl><dt>마진(margin)</dt><dd>요소 외부의 간격을 지정합니다.</dd></dl>
+                    <dl><dt>아웃라인(outline)</dt><dd>요소 외부의 외곽선을 지정합니다.</dd></dl>
+                    <dl><dt>오버플로우(overflow)</dt><dd>컨덴츠가 요소밖으로 나갈때의 처리방법을 지정합니다.</dd></dl>
+                    <dl><dt>디스플레이(display)</dt><dd>요소의 특징 지정합니다.</dd></dl>
+                    <dl><dt>비지빌리티(visibility)</dt><dd>요소의 보이기 여부를 지정합니다.</dd></dl>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>박스모델(Box Model)</h2>
+                </div>
+                <div class="desc">
+                    <div class="image"><img src="http://www.cssterm.com/uploads/images/box_model.gif" alt=""></div>
+                </div>
+                <div class="desc">
+                    <table class="table table-hover table-bordered">
+                        <tr>
+                            <td>Content</td>
+                            <td>내부의 내용을 말합니다. 물론 다른 엘리먼트가 들어올수도 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <td>Padding</td>
+                            <td>컨덴츠와 보더사이의 간격입니다. 배경의 영향을 받습니다.</td>
+                        </tr>
+                        <tr>
+                            <td>border</td>
+                            <td>컨덴츠와 패딩을 포함한 영역의 내곽선입니다. 가로값의 영향을 받습니다.</td>
+                        </tr>
+                        <tr>
+                            <td>Margin</td>
+                            <td>보더와 외부 엘리먼트의 간격입니다. 배경의 영향을 받지않습니다.</td>
+                        </tr>
+                        <tr>
+                            <td>outline</td>
+                            <td>컨덴츠와 패딩 및 보더를 포함한 포함한 외곽선입니다. 가로값의 영향을 받지 않습니다.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-warning"><a href="http://www.cssterm.com/uploads/images/box_model.gif" target="_blank"><i class="glyphicon glyphicon-link"></i>참고이미지</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="specFlex">
+                    <div class="spec">
+                        <h2>가로값(width)</h2>
+                        <p>요소의 가로값을 지정합니다.</p>
+                        <ul>
+                            <li>기본값 : auto</li>
+                            <li>상속성 : 없음</li>
+                            <li class="syntax">작성방법 : <code><span class="point">width:</span> <span class="point">length</span> | auto;</code></li>
+                        </ul>
+                        <ul class="childProperty flex">
+                            <li>
+                                <h3>min-width</h3>
+                                <code>min-width: length | auto;</code>
+                            </li>
+                            <li>
+                                <h3>max-width</h3>
+                                <code>max-width: length | auto;</code>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="spec">
+                        <h2>세로값(height)</h2>
+                        <p>요소의 세로값을 지정합니다.</p>
+                        <ul>
+                            <li>기본값 : auto</li>
+                            <li>상속성 : 없음</li>
+                            <li class="syntax">작성방법 : <code><span class="point">height:</span> <span class="point">length</span> | auto;</code></li>
+                        </ul>
+                        <ul class="childProperty flex">
+                            <li>
+                                <h3>min-height</h3>
+                                <code>min-height: length | auto;</code>
+                            </li>
+                            <li>
+                                <h3>max-height</h3>
+                                <code>max-height: length | auto;</code>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/pegQWY?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                    <span class="label label-warning"><a href="http://caniuse.com/#feat=css3-colors" target="_blank"><i class="glyphicon glyphicon-link"></i> 호환 브라우저보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>패딩(padding)</h2>
+                    <p>요소와 컨덴츠 사이 간격을 지정힙니다.</p>
+                    <ul>
+                        <li>기본값 : 0</li>
+                        <li>상속성 : 없음</li>
+                        <li>작성방법 : <code><span class="point">padding:</span> <span class="point">length</span> | <span class="point">top right bottom left</span>;</code></li>
+                    </ul>
+                    <ul class="childProperty flex">
+                        <li>
+                            <h3>padding-top</h3>
+                            <code>padding-top: length;</code>
+                        </li>
+                        <li>
+                            <h3>padding-left</h3>
+                            <code>padding-left: length;</code>
+                        </li>
+                        <li>
+                            <h3>padding-bottom</h3>
+                            <code>padding-bottom: length;</code>
+                        </li>
+                        <li>
+                            <h3>padding-right</h3>
+                            <code>padding-right: length;</code>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/pegQWY?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                    <span class="label label-warning"><a href="http://caniuse.com/#feat=css3-colors" target="_blank"><i class="glyphicon glyphicon-link"></i> 호환 브라우저보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>마진(margin)</h2>
+                    <ul>
+                        <li>기본값 : 0</li>
+                        <li>상속성 : 없음</li>
+                        <li>작성방법 : <code><span class="point">margin:</span> <span class="point">length</span> | <span class="point">top right bottom left</span>;</code></li>
+                    </ul>
+                    <ul class="childProperty flex">
+                        <li>
+                            <h3>margin-top</h3>
+                            <code>margin-top: length;</code>
+                        </li>
+                        <li>
+                            <h3>margin-left</h3>
+                            <code>margin-left: length;</code>
+                        </li>
+                        <li>
+                            <h3>margin-bottom</h3>
+                            <code>margin-bottom: length;</code>
+                        </li>
+                        <li>
+                            <h3>margin-right</h3>
+                            <code>margin-right: length;</code>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/pegQWY?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                    <span class="label label-warning"><a href="http://caniuse.com/#feat=css3-colors" target="_blank"><i class="glyphicon glyphicon-link"></i> 호환 브라우저보기</a></span>
+                </div>
+            </article>
+        </section>
+    </section>
+    <section>
+        <article>
+            <h2>실습 및 연습</h2>
+            <div class="curriculumList">
+                <dl><dt>폰트명(font-family)</dt><dd><code><span class="point">font-family:</span> (generic-family | <span class="point">family-name</span>)+ ;</code></dd></dl>
+                <dl><dt>색상(color)</dt><dd><code><span class="point">color:</span> <span class="point">HEX(#RRGGBB)</span> | String | RGBA ;</code></dd></dl>
+                <dl><dt>크기(font-size)</dt><dd><code><span class="point">font-size:</span>medium|xx-small|x-small|small|large|x-large|<br />xx-large|smaller|larger| <span class="point">length</span>;</code></dd></dl>
+                <dl><dt>굵기(font-weight)</dt><dd><code><span class="point">font-weight:</span> normal | <span class="point">bold</span> | bolder | lighter | <span class="point">number</span>;</code></dd></dl>
+                <dl><dt>좌우정렬(text-align)</dt><dd><code><span class="point">text-align:</span> <span class="point">left</span> | <span class="point">right</span> | <span class="point">center</span> | justify;</code></dd></dl>
+                <dl><dt>상하정렬(vertical-align)</dt><dd><code><span class="point">vertical-align:</span> baseline | length | sub | super | <span class="point">top</span> | text-top | <span class="point">middle</span> | bottom | text-bottom;</code></dd></dl>
+                <dl><dt>글자 간격(자간)(letter-spacing)</dt><dd><code><span class="point">letter-spacing:</span> normal|<span class="point">length</span>;</code></dd></dl>
+                <dl><dt>단어 간격(word-spacing)</dt><dd><code><span class="point">word-spacing:</span> normal|<span class="point">length</span>;</code></dd></dl>
+                <dl><dt>줄 간격(자평)(line-height)</dt><dd><code><span class="point">line-height:</span> normal|<span class="point">number</span>|<span class="point">length</span>;</code></dd></dl>
+                <dl><dt>들여쓰기(text-indent)</dt><dd><code><span class="point">text-indent: length</span>;</code></dd></dl>
+                <dl><dt>데코레이션(text-decoration)</dt><dd><code><span class="point">text-decoration:</span> <span class="point">none</span>|<span class="point">underline</span>|overline|line-through;</code></dd></dl>
+                <dl><dt>텍스트 변형(text-transform)</dt><dd><code><span class="point">text-transform:</span> none|capitalize|<span class="point">uppercase</span>|<span class="point">lowercase</span>;</code></dd></dl>
+                <dl><dt>글자 줄바꿈(white-space)</dt><dd><code><span class="point">white-space:</span> normal|<span class="point">nowrap</span>|pre|pre-line|pre-wrap;</code></dd></dl>
+                <dl><dt>단어 줄바꿈(word-break)</dt><dd><code><span class="point">word-break:</span> normal|<span class="point">break-all</span>|keep-all</code></dd></dl>
+            </div>
+        </article>
+    </section>
+</div>
+<script src="slideshow.js"></script>
+</body>
+</html>
+<!-- section>article>h2 -->
