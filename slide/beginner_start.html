@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>마봉아빠의 CSS초급 : 시작</title>
+    <link href='https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div id="main">
+
+    <section>
+        <article class="index">
+            <h1>CSS초급</h1>
+            <h3 class="inverted">떠듦 by 마봉아빠 </h3>
+        </article>
+    </section>
+    <section>
+        <section>
+            <article>
+                <h2>CSS초급</h2>
+                <div class="curriculumList">
+                    <dl><dt>CSS란?</dt><dd>CSS(Cascading Style Sheet)가 무엇인지 설명합니다.</dd></dl>
+                    <dl><dt>작성법(Syntax)</dt><dd>CSS을 작성하는 방법을 설명합니다.</dd></dl>
+                    <dl><dt>적용방법</dt><dd>CSS을 HTML페이지에 적용하는 방법을 설명합니다.</dd></dl>
+                    <dl><dt>셀렉터(Selector) : 선택</dt><dd>HTML엘리먼트를 지정하는 방법을 설명합니다.</dd></dl>
+                    <dl><dt>셀렉터(Selector) : 검색</dt><dd>HTML엘리먼트를 찾는 방법을 설명합니다.</dd></dl>
+                    <dl><dt>컬러(Color)</dt><dd>CSS에서 색상을 지정하는 방법을 설명합니다.</dd></dl>
+                    <dl><dt>단위(Unit)</dt><dd>CSS에서 단위을 지정하는 방법을 설명합니다.</dd></dl>
+                    <dl><dt>주석(Comment)</dt><dd>CSS에서 주석 처리하는 방법을 설명합니다.</dd></dl>
+                    <dl><dt>우선순위(Priority Rules)</dt><dd>CSS가 적용되는 우선순위를 설명합니다.</dd></dl>
+                    <dl><dt>강제적용(!important)</dt><dd>CSS 우선순위에서 강제적용 시키는법을 설명합니다.</dd></dl>
+                    <dl><dt>가상 클래스(Pseudo Classes)</dt><dd>특정조건일때 선택하는 방법을 알아봅니다.</dd></dl>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>CSS란?</h2>
+                    <p>CSS(Cascading Style Sheet)는 HTML문서를 꾸미는 언어입니다.</p>
+                </div>
+                <div class="desc">
+                    <div class="image"><img src="https://s-media-cache-ak0.pinimg.com/564x/4a/85/1f/4a851ffca371d5a504581537f3080b6a.jpg" alt="" /></div>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>작성법(Syntax)</h2>
+                    <p>셀렉터 부분이 있고, 중괄호({}) 안에 속성(Property)와 값(Value)으로 이루어져 있습니다.</p>
+                </div>
+                <div class="desc">
+                    <div class="image"><img src="http://www.w3schools.com/css/selector.gif" alt=""></div>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/ZeQRJo?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>적용방법</h2>
+                    <p>HTML에 CSS을 입히는 방법은 총 4가지가 있습니다.</p>
+                </div>
+                <div class="desc">
+                    <table class="table table-hover table-bordered">
+                        <tr>
+                            <td>&lt;link&gt;</td>
+                            <td><code>&lt;link rel="stylesheets" href="CSS경로" /></code></td>
+                        </tr>
+                        <tr>
+                            <td>&lt;style&gt;</td>
+                            <td><code>&lt;style&gt; CSS 선언 &lt;/style&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>style="CSS선언"</td>
+                            <td><code>&lt;E style="CSS선언"&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>@import "CSS경로";</td>
+                            <td><code>@import "CSS경로"</code></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="exam">sample_css_beginner.html</div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>셀렉터(Selector) : 선택</h2>
+                    <p>CSS의 셀렉터를 이용해서, HTML태그(엘리먼트)를 선택합니다.</p>
+                </div>
+                <div class="desc">
+                    <ul class="flex">
+                        <li>
+                            <h3>Universal Selector (*)</h3>
+                            <code><span class="point">*</span>{property:value;}</code>
+                        </li>
+                        <li>
+                            <h3>Element Selector (E)</h3>
+                            <code><span class="point">E</span>{property:value;}</code>
+                        </li>
+                        <li>
+                            <h3>id Selector(#)</h3>
+                            <code><span class="point">#id</span>{property:value;}</code>
+                        </li>
+                        <li>
+                            <h3>Class Selector(.)</h3>
+                            <code><span class="point">.className</span>{property:value;}</code>
+                        </li>
+                        <li>
+                            <h3>Group Selector(,)</h3>
+                            <code>E <span class="point">,</span> #id <span class="point">,</span> .className{property:value;}</code>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/KWVBmb?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>셀렉터(Selector) : 검색</h2>
+                    <p>CSS의 셀렉터로 HTML태그를 검색해서 선택합니다.</p>
+                </div>
+                <div class="desc">
+                    <ul class="flex">
+                        <li>
+                            <h3>inside Selector ( ) // 빈칸</h3>
+                            <code>E<span style="background:#b81e38;">&nbsp;</span>E{property:value;}</code>
+                        </li>
+                        <li>
+                            <h3>Child Selector(>)</h3>
+                            <code>E<span class="point">></span>E{property:value;}</code>
+                        </li>
+                        <li>
+                            <h3>After Selector(+)</h3>
+                            <code>E<span class="point">+</span>E{property:value;}</code>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/oZbMEB?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>컬러(Color)</h2>
+                    <p>CSS에서 적용할 색상 작성법 입니다.</p>
+                </div>
+                <div class="desc">
+                    <ul class="flex">
+                        <li>
+                            <h3><span class="point">HEX</span>(Hexadecimal)</h3>
+                            <code>E{property:<span class="point">#RRGGBB</span>}</code>
+                        </li>
+                        <li>
+                            <h3>RGB , RGBA</h3>
+                            <code>E{property:<span class="point">rgb(0,0,0)</span> | <span class="point">rgba(0,0,0,0)</span>;}</code>
+                        </li>
+                        <li>
+                            <h3>컬러이름.(red , blue 등)</h3>
+                            <code>E{property:<span class="point">ColorName</span>}</code>
+                        </li>
+                    </ul>
+                </div>
+                <div class="desc">
+                    <ul>
+                        <li>대부분은 색상을 적용할때는 "HEX"로 #영문소문자6자리 로 표기합니다.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/mWVGwa?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>단위(Unit)</h2>
+                    <p>CSS에서 사용되는 단위의 종류입니다.</p>
+                </div>
+                <div class="desc">
+                    <ul class="flex">
+                        <li>
+                            <h3><span class="point">Pixel</span>(px)</h3>
+                            <code>E{property:number<span class="point">px</span>;}</code>
+                        </li>
+                        <li>
+                            <h3><span class="point">Percentage</span>(%)</h3>
+                            <code>E{property:number<span class="point">%</span>;}</code>
+                        </li>
+                        <li>
+                            <h3><span class="point">EM</span>(em)</h3>
+                            <code>E{property:number<span class="point">em</span>;}</code>
+                        </li>
+                    </ul>
+                </div>
+                <div class="desc">
+                    <ul>
+                        <li>"%"는 부모 HTML태그의 사이즈를 기준으로 적용됩니다.</li>
+                        <li>"EM"은 부모 HTML태그의 글자크기("font-size")을 기준으로 적용됩니다.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/evJLVv?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>주석(Comment)</h2>
+                    <p>CSS에서 주석처리 하는 방법.</p>
+                </div>
+                <div class="desc">
+                    <div class="code">
+                        <code>/*
+                            <span style="color:#999">주석내용</span>
+                        */</code>
+                    </div>
+                </div>
+                <div class="desc">
+                    <ul>
+                        <li>"//" 로 주석처리가 안되는것을 꼭 기억하세요.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/zZrJbR?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>우선순위(Priority Rules)</h2>
+                    <p>셀렉터에는 우선순위가 있어요.</p>
+                </div>
+                <div class="desc">
+                    <ul>
+                        <li>1. inline 직접선언 ( &lt;E style="">&lt;/E> )</li>
+                        <li>2. id (#) 로 선언</li>
+                        <li>3. class (.) 로 선언</li>
+                        <li>4. 엘리먼트로 선언</li>
+                        <li>5. 유니버셜 (*) 선언</li>
+                    </ul>
+                </div>
+                <div class="desc">
+                    <ul>
+                        <li>총합이 아니라 검색단계의 우선순위에 따라 적용되는것을 기억하세요.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/Wprgqx?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>강제적용(!important)</h2>
+                    <p>우선순위가 제일 높은 "!important"입니다.</p>
+                </div>
+                <div class="desc">
+                    <div class="code"><code>E{property:value <span class="point">!important</span>;}</code> , <code>&lt;E style="property:value <span class="point">!important</span>;"&gt;</code></div>
+                </div>
+                <div class="desc">
+                    <ul>
+                        <li>값뒤에 세미콜론(;)없이 "!important"을 입력해야 합니다.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/Wprgqx?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>가상 셀렉터(Pseudo Classes)</h2>
+                    <p>특정조건일때 선택하는 방법을 알아봅니다.</p>
+                </div>
+                <div class="desc">
+                    <ul class="flex">
+                        <li>
+                            <h3>:checked</h3>
+                            <code>E<span class="point">:checked</span>{property:value;}</code>
+                        </li>
+                        <li>
+                            <h3>:disabled</h3>
+                            <code>E<span class="point">:disabled</span>{property:value;}</code>
+                        </li>
+                        <li>
+                            <h3>:focus</h3>
+                            <code>E<span class="point">:focus</span>{property:value;}</code>
+                        </li>
+                        <li>
+                            <h3>:hover</h3>
+                            <code>E<span class="point">:hover</span>{property:value;}</code>
+                        </li>
+                        <li>
+                            <h3>:first-child</h3>
+                            <code>E<span class="point">:first-child</span>{property:value;}</code>
+                        </li>
+                        <li>
+                            <h3>:nth-child(number | odd | even | n)</h3>
+                            <code>E<span class="point">:nth-child(n)</span>{property:value;}</code>
+                        </li>
+                    </ul>
+                </div>
+                <div class="desc">
+                    <ul>
+                        <li>실무에서 많이 사용하는 가상 셀렉터만 정리 했고, 실제로는 엄청 많이 있어요.<a href="https://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank">[참고]</a></li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/Wprgqx?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h2>수고하셨습니다.</h2>
+            </article>
+        </section>
+    </section>
+</div>
+<script src="slideshow.js"></script>
+</body>
+</html>
+<!-- section>article>h2 -->
