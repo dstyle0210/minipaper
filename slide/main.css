@@ -47,11 +47,14 @@ section>article table td{text-align:left;}
 .flex-nowrap{display:flex;flex-wrap:nowrap;}
 .flex-nowrap>li{flex:1;}
 .point{color:#b81e38;}
+.subPoint{color:#ff6600;}
 .dark-gray{color:#000;}
 .thumb{width:100%;}
 .thumb>img{width:90%;height:auto;}
 .thumb>span{display:inline-block;padding-top:15px;}
 .childProperty{margin-top:20px;border-top:1px solid #ccc;}
+.childProperty li:nth-child(odd){padding-right:5px;}
+.childProperty li:nth-child(even){padding-left:5px;}
 .comment{font-size:0.75em;color:#666;}
 code{color:#555;}
 
@@ -67,6 +70,7 @@ code{color:#555;}
 .desc .image{padding-bottom:20px;text-align:center;}
 .desc .code{padding-bottom:20px;text-align:center;}
 .desc .code code{display:inline-block;font-size:16px;font-family:inherit;white-space:pre-line;text-align:left;}
+.desc ul.noti li{margin-bottom:0;}
 
 
 .specFlex{display:flex;}
@@ -87,3 +91,6 @@ code{color:#555;}
 .btnSec .label{text-align:center;}
 .btnSec .label a{color:#fff !important;font-weight:300;font-size:14px;border-bottom:0;text-shadow: none; border: none;}
 .btnSec .label a:hover{background:transparent;}
+
+/*! caniuse */
+.caniuse{color:#fff!important;font-size:13px!important;text-shadow:none!important;border-bottom:0!important;line-height:inherit!important;vertical-align:middle!important;}
