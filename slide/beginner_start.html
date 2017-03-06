@@ -16,26 +16,27 @@
 
     <section>
         <article class="index">
-            <h1>CSS초급</h1>
+            <h1>CSS초급 : 시작</h1>
             <h3 class="inverted">떠듦 by 마봉아빠 </h3>
         </article>
     </section>
     <section>
         <section>
             <article>
-                <h2>CSS초급</h2>
+                <h2>커리큘럼</h2>
                 <div class="curriculumList">
-                    <dl><dt>CSS란?</dt><dd>CSS(Cascading Style Sheet)가 무엇인지 설명합니다.</dd></dl>
-                    <dl><dt>작성법(Syntax)</dt><dd>CSS을 작성하는 방법을 설명합니다.</dd></dl>
-                    <dl><dt>적용방법</dt><dd>CSS을 HTML페이지에 적용하는 방법을 설명합니다.</dd></dl>
-                    <dl><dt>셀렉터(Selector) : 선택</dt><dd>HTML엘리먼트를 지정하는 방법을 설명합니다.</dd></dl>
-                    <dl><dt>셀렉터(Selector) : 검색</dt><dd>HTML엘리먼트를 찾는 방법을 설명합니다.</dd></dl>
-                    <dl><dt>컬러(Color)</dt><dd>CSS에서 색상을 지정하는 방법을 설명합니다.</dd></dl>
-                    <dl><dt>단위(Unit)</dt><dd>CSS에서 단위을 지정하는 방법을 설명합니다.</dd></dl>
-                    <dl><dt>주석(Comment)</dt><dd>CSS에서 주석 처리하는 방법을 설명합니다.</dd></dl>
-                    <dl><dt>우선순위(Priority Rules)</dt><dd>CSS가 적용되는 우선순위를 설명합니다.</dd></dl>
-                    <dl><dt>강제적용(!important)</dt><dd>CSS 우선순위에서 강제적용 시키는법을 설명합니다.</dd></dl>
-                    <dl><dt>가상 클래스(Pseudo Classes)</dt><dd>특정조건일때 선택하는 방법을 알아봅니다.</dd></dl>
+                    <dl><dt>CSS란?</dt><dd><span class="subPoint">CSS(Cascading Style Sheet)</span>가 무엇인지 설명합니다.</dd></dl>
+                    <dl><dt>작성법(Syntax)</dt><dd><span class="subPoint">CSS을 작성하는 방법</span>을 설명합니다.</dd></dl>
+                    <dl><dt>적용방법</dt><dd>CSS을 <span class="subPoint">HTML페이지에 적용하는 방법</span>을 설명합니다.</dd></dl>
+                    <dl><dt>셀렉터(Selector) : 선택</dt><dd><span class="subPoint">HTML엘리먼트를 선택</span>하는 방법을 설명합니다.</dd></dl>
+                    <dl><dt>셀렉터(Selector) : 검색</dt><dd><span class="subPoint">HTML엘리먼트를 찾는</span> 방법을 설명합니다.</dd></dl>
+                    <dl><dt>컬러(Color)</dt><dd>CSS에서 <span class="subPoint">색상을 지정하는 방법</span>을 설명합니다.</dd></dl>
+                    <dl><dt>단위(Unit)</dt><dd>CSS에서 <span class="subPoint">단위을 지정하는 방법</span>을 설명합니다.</dd></dl>
+                    <dl><dt>주석(Comment)</dt><dd>CSS에서 <span class="subPoint">주석 처리하는 방법</span>을 설명합니다.</dd></dl>
+                    <dl><dt>우선순위(Priority Rules)</dt><dd><span class="subPoint">CSS가 적용되는 우선순위</span>를 설명합니다.</dd></dl>
+                    <dl><dt>강제적용(!important)</dt><dd>CSS 우선순위에서 <span class="subPoint">강제적용</span> 시키는법을 설명합니다.</dd></dl>
+                    <dl><dt>가상 클래스(Pseudo Classes)</dt><dd><span class="subPoint">특정조건일때 선택</span>하는 방법을 알아봅니다.</dd></dl>
+                    <dl><dt>:nth-child(n)</dt><dd>가상셀렉터중 <span class="subPoint">:nth-child(n)</span>에 대해 알아봅니다.</dd></dl>
                 </div>
             </article>
         </section>
@@ -43,10 +44,10 @@
             <article>
                 <div class="spec">
                     <h2>CSS란?</h2>
-                    <p>CSS(Cascading Style Sheet)는 HTML문서를 꾸미는 언어입니다.</p>
+                    <p class="subDesc">CSS(Cascading Style Sheet)는 HTML문서를 꾸미는 언어입니다.</p>
                 </div>
                 <div class="desc">
-                    <div class="image"><img src="https://s-media-cache-ak0.pinimg.com/564x/4a/85/1f/4a851ffca371d5a504581537f3080b6a.jpg" alt="" /></div>
+                    <div class="image"><img src="https://www.sololearn.com/Uploads/html-css.jpg" alt="" /></div>
                 </div>
             </article>
         </section>
@@ -54,10 +55,10 @@
             <article>
                 <div class="spec">
                     <h2>작성법(Syntax)</h2>
-                    <p>셀렉터 부분이 있고, 중괄호({}) 안에 속성(Property)와 값(Value)으로 이루어져 있습니다.</p>
+                    <p class="subDesc">셀렉터 부분이 있고, 중괄호({}) 안에 속성(Property)와 값(Value)으로 이루어져 있습니다.</p>
                 </div>
                 <div class="desc">
-                    <div class="image"><img src="http://www.w3schools.com/css/selector.gif" alt=""></div>
+                    <div class="image"><img src="https://mdn.mozillademos.org/files/9461/css-declaration-small.png" alt=""></div>
                 </div>
                 <div class="btnSec">
                     <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/ZeQRJo?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
@@ -68,7 +69,7 @@
             <article>
                 <div class="spec">
                     <h2>적용방법</h2>
-                    <p>HTML에 CSS을 입히는 방법은 총 4가지가 있습니다.</p>
+                    <p class="subDesc">HTML에 CSS을 입히는 방법은 총 4가지가 있습니다.</p>
                 </div>
                 <div class="desc">
                     <table class="table table-hover table-bordered">
@@ -90,14 +91,14 @@
                         </tr>
                     </table>
                 </div>
-                <div class="exam">sample_css_beginner.html</div>
+                <div class="exam">예제 : sample_css_beginner.html</div>
             </article>
         </section>
         <section>
             <article>
                 <div class="spec">
                     <h2>셀렉터(Selector) : 선택</h2>
-                    <p>CSS의 셀렉터를 이용해서, HTML태그(엘리먼트)를 선택합니다.</p>
+                    <p class="subDesc">CSS의 셀렉터를 이용해서, HTML태그(엘리먼트)를 선택합니다.</p>
                 </div>
                 <div class="desc">
                     <ul class="flex">
@@ -138,12 +139,12 @@
             <article>
                 <div class="spec">
                     <h2>셀렉터(Selector) : 검색</h2>
-                    <p>CSS의 셀렉터로 HTML태그를 검색해서 선택합니다.</p>
+                    <p class="subDesc">CSS의 셀렉터로 HTML태그를 <span class="subPoint">검색</span>해서 선택합니다.</p>
                 </div>
                 <div class="desc">
                     <ul class="flex">
                         <li>
-                            <h3>inside Selector ( ) // 빈칸</h3>
+                            <h3>inside Selector ( )</h3>
                             <code>E<span style="background:#b81e38;">&nbsp;</span>E{property:value;}</code>
                         </li>
                         <li>
@@ -151,13 +152,30 @@
                             <code>E<span class="point">></span>E{property:value;}</code>
                         </li>
                         <li>
-                            <h3>After Selector(+)</h3>
+                            <h3>Next Selector(+)</h3>
                             <code>E<span class="point">+</span>E{property:value;}</code>
+                        </li>
+                        <li>
+                            <h3>After Selector(~)</h3>
+                            <code>E<span class="point">~</span>E{property:value;}</code>
                         </li>
                     </ul>
                 </div>
                 <div class="btnSec">
                     <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/oZbMEB?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>꿀팁!</h2>
+                    <p class="subDesc">CSS의 셀렉터연습 사이트 : CSS Dinner</p>
+                </div>
+                <div class="desc">
+                    <div class="image"><img src="http://images.shejidaren.com/wp-content/uploads/2014/03/css-diner.gif" alt=""></div>
+                </div>
+                <div class="btnSec">
                     <span class="label label-warning"><a href="http://flukeout.github.io/" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 연습하기</a></span>
                 </div>
             </article>
@@ -166,7 +184,7 @@
             <article>
                 <div class="spec">
                     <h2>컬러(Color)</h2>
-                    <p>CSS에서 적용할 색상 작성법 입니다.</p>
+                    <p class="subDesc">CSS에서 적용할 색상 작성법 입니다.</p>
                 </div>
                 <div class="desc">
                     <ul class="flex">
@@ -197,8 +215,19 @@
         <section>
             <article>
                 <div class="spec">
+                    <h2>꿀팁!</h2>
+                    <p class="subDesc">크롬 개발자모드로 색상 알아내기</p>
+                </div>
+                <div class="desc">
+                    <div class="image"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2015/09/chrome-devtools.webp" alt=""></div>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
                     <h2>단위(Unit)</h2>
-                    <p>CSS에서 사용되는 단위의 종류입니다.</p>
+                    <p class="subDesc">CSS에서 사용되는 단위의 종류입니다.</p>
                 </div>
                 <div class="desc">
                     <ul class="flex">
@@ -218,6 +247,7 @@
                 </div>
                 <div class="desc">
                     <ul class="noti">
+                        <li>단위는 앞으로 나올 설명에서 "length"와 같아요.</li>
                         <li>"%"는 부모 HTML태그의 <span class="subPoint">사이즈</span>를 기준으로 적용됩니다.</li>
                         <li>"EM"은 부모 HTML태그의 <span class="subPoint">글자크기("font-size")</span>을 기준으로 적용됩니다.</li>
                     </ul>
@@ -231,7 +261,7 @@
             <article>
                 <div class="spec">
                     <h2>주석(Comment)</h2>
-                    <p>CSS에서 주석처리 하는 방법.</p>
+                    <p class="subDesc">CSS에서 주석처리 하는 방법.</p>
                 </div>
                 <div class="desc">
                     <div class="code">
@@ -254,7 +284,7 @@
             <article>
                 <div class="spec">
                     <h2>우선순위(Priority Rules)</h2>
-                    <p>셀렉터에는 우선순위가 있어요.</p>
+                    <p class="subDesc">셀렉터에는 우선순위가 있어요.</p>
                 </div>
                 <div class="desc">
                     <ul>
@@ -280,7 +310,7 @@
             <article>
                 <div class="spec">
                     <h2>강제적용(!important)</h2>
-                    <p>우선순위가 제일 높은 "!important"입니다.</p>
+                    <p class="subDesc">우선순위가 제일 높은 "!important"입니다.</p>
                 </div>
                 <div class="desc">
                     <div class="code"><code>E{property:value <span class="point">!important</span>;}</code> , <code>&lt;E style="property:value <span class="point">!important</span>;"&gt;</code></div>
@@ -299,7 +329,7 @@
             <article>
                 <div class="spec">
                     <h2>가상 셀렉터(Pseudo Classes)</h2>
-                    <p>특정조건일때 선택하는 방법을 알아봅니다.</p>
+                    <p class="subDesc">특정조건일때 선택하는 방법을 알아봅니다.</p>
                 </div>
                 <div class="desc">
                     <ul class="flex">
@@ -324,7 +354,7 @@
                             <code>E<span class="point">:first-child</span>{property:value;}</code>
                         </li>
                         <li>
-                            <h3>:nth-child(number | odd | even | n)</h3>
+                            <h3>:nth-child(number|odd|even|n) <a href="http://caniuse.com/#feat=css-sel3" class="label label-warning caniuse"><i class="glyphicon glyphicon-link"></i></a></h3>
                             <code>E<span class="point">:nth-child(n)</span>{property:value;}</code>
                         </li>
                     </ul>
@@ -335,16 +365,38 @@
                     </ul>
                 </div>
                 <div class="btnSec">
-                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/Wprgqx?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/qReqPY" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
                     <span class="label label-warning"><a href="http://flukeout.github.io/" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 연습하기</a></span>
                 </div>
             </article>
         </section>
         <section>
             <article>
-                <h2>수고하셨습니다.</h2>
+                <div class="spec">
+                    <h2>가상 셀렉터(Pseudo Classes) : nth-child(n)</h2>
+                    <p class="subDesc">가상셀렉터 중 "nth-child"에 대해서 연구.</p>
+                </div>
+                <div class="desc">
+                    <div class="code"><code>:nth-child(n)</code></div>
+                </div>
+                <div class="desc">
+                    <ul>
+                        <li>"an+b"를 이해하세요.</li>
+                        <li>"2n"은 "even"과 같고, "2n+1" 은 "odd"와 같아요.</li>
+                        <li>"번째"를 선택하겠다 라는 개념이 중요합니다.</li>
+                        <li>IE8에서 호환성이 안되기 때문에 주의해야 합니다.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/ryMNQR" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
             </article>
         </section>
+    </section>
+    <section>
+        <article>
+            <h2>수고하셨습니다.</h2>
+        </article>
     </section>
 </div>
 <script src="slideshow.js"></script>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>마봉아빠의 CSS초급 : 블럭 관련 CSS</title>
+    <title>마봉아빠의 CSS초급 : 블럭(Block)</title>
     <link href='https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
@@ -16,14 +16,14 @@
 
     <section>
         <article class="index">
-            <h1>CSS초급 - 박스관련 CSS</h1>
+            <h1>CSS초급 - 블럭(Block)</h1>
             <h3 class="inverted">떠듦 by 마봉아빠 </h3>
         </article>
     </section>
     <section>
         <section>
             <article>
-                <h2>블럭(Block)요소(초급)</h2>
+                <h2>커리큘럼</h2>
                 <div class="curriculumList">
                     <dl><dt>박스모델(Box Model)</dt><dd>블럭요소의 <span class="subPoint">박스모델</span>에 대해 설명합니다.</dd></dl>
                     <dl><dt>가로값(width)</dt><dd>요소의 <span class="subPoint">가로값</span>을 지정합니다.</dd></dl>
@@ -44,6 +44,7 @@
             <article>
                 <div class="spec">
                     <h2>박스모델(Box Model)</h2>
+                    <p class="subDesc">CSS의 기본구조인 박스모델에 대해서 알아봅니다.</p>
                 </div>
                 <div class="desc">
                     <div class="image"><img src="http://www.cssterm.com/uploads/images/box_model.gif" alt=""></div>
@@ -82,7 +83,7 @@
                 <div class="specFlex">
                     <div class="spec">
                         <h2>가로값(width)</h2>
-                        <p>요소의 가로값을 지정합니다.</p>
+                        <p class="subDesc">요소의 가로값을 지정합니다.</p>
                         <ul>
                             <li>기본값 : auto</li>
                             <li>상속성 : 없음</li>
@@ -101,7 +102,7 @@
                     </div>
                     <div class="spec">
                         <h2>세로값(height)</h2>
-                        <p>요소의 세로값을 지정합니다.</p>
+                        <p class="subDesc">요소의 세로값을 지정합니다.</p>
                         <ul>
                             <li>기본값 : auto</li>
                             <li>상속성 : 없음</li>
@@ -128,7 +129,7 @@
             <article>
                 <div class="spec">
                     <h2>패딩(padding)</h2>
-                    <p>요소와 컨덴츠 사이 간격을 지정힙니다.</p>
+                    <p class="subDesc">요소와 컨덴츠 사이 간격을 지정힙니다.</p>
                     <ul>
                         <li>기본값 : 0</li>
                         <li>상속성 : 없음</li>
@@ -162,6 +163,7 @@
             <article>
                 <div class="spec">
                     <h2>보더(border)</h2>
+                    <p class="subDesc">컨덴츠와 패딩을 포함한 영역의 내곽선입니다.</p>
                     <ul>
                         <li>기본값 : none</li>
                         <li>자식상속 : 안함</li>
@@ -211,6 +213,7 @@
             <article>
                 <div class="spec">
                     <h2>박스사이징(Box Sizing)</h2>
+                    <p class="subDesc">사이즈 부분에 대한 포함범위를 설정합니다.</p>
                     <ul>
                         <li>기본값 : content-box</li>
                         <li>상속성 : 없음</li>
@@ -242,6 +245,7 @@
             <article>
                 <div class="spec">
                     <h2>배경(background)</h2>
+                    <p class="subDesc">박스(Box)영역에 배경을 설정합니다.</p>
                     <ul>
                         <li>기본값 : none</li>
                         <li>상속성 : 없음</li>
@@ -292,6 +296,7 @@
             <article>
                 <div class="spec">
                     <h2>마진(margin)</h2>
+                    <p class="subDesc">박스(Box)영역 밖의 간격을 설정합니다.</p>
                     <ul>
                         <li>기본값 : 0</li>
                         <li>상속성 : 없음</li>
@@ -325,6 +330,7 @@
             <article>
                 <div class="spec">
                     <h2>아웃라인(outline)</h2>
+                    <p class="subDesc">박스(Box)영역 밖의 외곽선을 설정합니다.</p>
                     <ul>
                         <li>기본값 : none</li>
                         <li>상속성 : 없음</li>
@@ -375,6 +381,7 @@
             <article>
                 <div class="spec">
                     <h2>오버플로우(overflow)</h2>
+                    <p class="subDesc">박스(Box)영역 밖의 으로 컨덴츠가 나갈경우의 처리방법을 설정합니다.</p>
                     <ul>
                         <li>기본값 : visible</li>
                         <li>상속성 : 없음</li>
@@ -396,26 +403,140 @@
                 </div>
             </article>
         </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>디스플레이(display)</h2>
+                    <p class="subDesc">요소의 박스모델 속성을 변경합니다.</p>
+                    <ul>
+                        <li>기본값 : 엘리먼트형태 상속</li>
+                        <li>상속성 : 없음</li>
+                        <li>작성방법 : <code><span class="point">display:</span> inline | <span class="point">block</span> | <span class="point">inline-block</span> | <span class="point">none</span> | <span class="point">flex</span> | table | table-cell;</code></li>
+                    </ul>
+                </div>
+                <div class="desc">
+                    <table class="table table-hover table-bordered">
+                        <colgroup>
+                            <col style="width:200px">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>값</th>
+                            <th>설명</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>inline</td>
+                            <td>인라인요소로 적용합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>block</td>
+                            <td>블럭요소로 적용합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>inline-block</td>
+                            <td>인라인-블럭 요소로 적용합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>none</td>
+                            <td>화면 상으로 완전히 사라지도록 처리합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>flex <a href="http://caniuse.com/#feat=flexbox" class="label label-warning caniuse"><i class="glyphicon glyphicon-link"></i></a></td>
+                            <td>CSS3의 flex 레이아웃 구조의 컨테이너로 적용합니다. (기본은 block속성을 따라갑니다.)</td>
+                        </tr>
+                        <tr>
+                            <td>table</td>
+                            <td>테이블 요소로 적용합니다. (기본은 inline-block을 따라갑니다.)</td>
+                        </tr>
+                        <tr>
+                            <td>table-cell</td>
+                            <td>테이블 요소의 &quot;td&quot; 또는 &quot;th&quot; 요소로 적용합니다.</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/JWKgZW?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>비지빌리티(visibility)</h2>
+                    <p class="subDesc">요소의 보여짐 여부를 결정합니다.</p>
+                    <ul>
+                        <li>기본값 : visible</li>
+                        <li>상속성 : 없음</li>
+                        <li>작성방법 : <code><span class="point">visibility:</span> visible|<span class="point">hidden</span>|collapse|initial|inherit;</code></li>
+                    </ul>
+                </div>
+                <div class="desc">
+                    <table class="table table-hover table-bordered">
+                        <colgroup>
+                            <col style="width:200px">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>값</th>
+                            <th>설명</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>visible</td>
+                            <td>화면상 보여지도록 합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>hidden</td>
+                            <td>화면상 보여지지 않도록 합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>collapse</td>
+                            <td>테이블요소 한정으로 보이지 않도록 처리합니다. 다른요소에 사용하면 "hidden"과 같습니다.</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="desc">
+                    <ul>
+                        <li>"display"와 의 차이점을 꼭 기억하세요.</li>
+                        <li>display: 요소의 속성을 바꾼다. / visibility: 보이고, 안보이고만 처리한다.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/NpRKdP?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/BWLBpX?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기2</a></span>
+                </div>
+            </article>
+        </section>
     </section>
     <section>
         <article>
-            <h2>실습 및 연습</h2>
+            <h2>최종정리</h2>
             <div class="curriculumList">
-                <dl><dt>폰트명(font-family)</dt><dd><code><span class="point">font-family:</span> (generic-family | <span class="point">family-name</span>)+ ;</code></dd></dl>
-                <dl><dt>색상(color)</dt><dd><code><span class="point">color:</span> <span class="point">HEX(#RRGGBB)</span> | String | RGBA ;</code></dd></dl>
-                <dl><dt>크기(font-size)</dt><dd><code><span class="point">font-size:</span>medium|xx-small|x-small|small|large|x-large|<br />xx-large|smaller|larger| <span class="point">length</span>;</code></dd></dl>
-                <dl><dt>굵기(font-weight)</dt><dd><code><span class="point">font-weight:</span> normal | <span class="point">bold</span> | bolder | lighter | <span class="point">number</span>;</code></dd></dl>
-                <dl><dt>좌우정렬(text-align)</dt><dd><code><span class="point">text-align:</span> <span class="point">left</span> | <span class="point">right</span> | <span class="point">center</span> | justify;</code></dd></dl>
-                <dl><dt>상하정렬(vertical-align)</dt><dd><code><span class="point">vertical-align:</span> baseline | length | sub | super | <span class="point">top</span> | text-top | <span class="point">middle</span> | bottom | text-bottom;</code></dd></dl>
-                <dl><dt>글자 간격(자간)(letter-spacing)</dt><dd><code><span class="point">letter-spacing:</span> normal|<span class="point">length</span>;</code></dd></dl>
-                <dl><dt>단어 간격(word-spacing)</dt><dd><code><span class="point">word-spacing:</span> normal|<span class="point">length</span>;</code></dd></dl>
-                <dl><dt>줄 간격(자평)(line-height)</dt><dd><code><span class="point">line-height:</span> normal|<span class="point">number</span>|<span class="point">length</span>;</code></dd></dl>
-                <dl><dt>들여쓰기(text-indent)</dt><dd><code><span class="point">text-indent: length</span>;</code></dd></dl>
-                <dl><dt>데코레이션(text-decoration)</dt><dd><code><span class="point">text-decoration:</span> <span class="point">none</span>|<span class="point">underline</span>|overline|line-through;</code></dd></dl>
-                <dl><dt>텍스트 변형(text-transform)</dt><dd><code><span class="point">text-transform:</span> none|capitalize|<span class="point">uppercase</span>|<span class="point">lowercase</span>;</code></dd></dl>
-                <dl><dt>글자 줄바꿈(white-space)</dt><dd><code><span class="point">white-space:</span> normal|<span class="point">nowrap</span>|pre|pre-line|pre-wrap;</code></dd></dl>
-                <dl><dt>단어 줄바꿈(word-break)</dt><dd><code><span class="point">word-break:</span> normal|<span class="point">break-all</span>|keep-all</code></dd></dl>
+                <dl><dt>박스모델(Box Model)</dt><dd><span class="point">Content</span>,<span class="point">Padding</span>,<span class="point">Border</span>,<span class="point">Margin</span>으로 이루어져 있습니다.</dd></dl>
+                <dl><dt>가로값(width)</dt><dd><code><span class="point">width:</span> <span class="point">length</span> | auto;</code></dd></dl>
+                <dl><dt>세로값(height)</dt><dd><code><span class="point">height:</span> <span class="point">length</span> | auto;</code></dd></dl>
+                <dl><dt>패딩(padding)</dt><dd><code><span class="point">padding:</span> <span class="point">length</span> | <span class="point">top right bottom left</span>;</code></dl>
+                <dl><dt>보더(border)</dt><dd><code><span class="point">border:</span> <span class="point">border-width border-style border-color</span>;</code></dd></dl>
+                <dl><dt>박스사이징(box-sizing)</dt><dd><code><span class="point">box-sizing:</span> content-box|<span class="point">border-box</span>|initial|inherit;</code></dd></dl>
+                <dl><dt>배경(background)</dt><dd><code><span class="point">background:</span> <span class="point">bg-color</span> <span class="point">bg-image</span> <span class="point">position</span>/bg-size <span class="point">bg-repeat</span> bg-origin bg-clip bg-attachment initial|inherit;</code></dd></dl>
+                <dl><dt>마진(margin)</dt><dd><span class="subPoint"><code><span class="point">margin:</span> <span class="point">length</span> | <span class="point">top right bottom left</span>;</code></dd></dl>
+                <dl><dt>아웃라인(outline)</dt><dd><code><span class="point">outline:</span> <span class="point">outline-width outline-style outline-color</span>;</code></dd></dl>
+                <dl><dt>오버플로우(overflow)</dt><dd><code><span class="point">overflow:</span> visible | <span class="point">hidden</span> | scroll | <span class="point">auto</span>;</code></dd></dl>
+                <dl><dt>디스플레이(display)</dt><dd><code><span class="point">display:</span> inline | <span class="point">block</span> | <span class="point">inline-block</span> | <span class="point">none</span> | <span class="point">flex</span> | table | table-cell;</code></dd></dl>
+                <dl><dt>비지빌리티(visibility)</dt><dd><code><span class="point">visibility:</span> visible|<span class="point">hidden</span>|collapse|initial|inherit;</code></dd></dl>
             </div>
+        </article>
+    </section>
+    <section>
+        <article>
+            <h2>수고하셨습니다.</h2>
         </article>
     </section>
 </div>

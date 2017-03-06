@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>마봉아빠의 CSS초급 : 텍스트 관련 CSS</title>
+    <title>마봉아빠의 CSS초급 : 인라인(Inline)</title>
     <link href='https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
@@ -16,29 +16,44 @@
 
     <section>
         <article class="index">
-            <h1>CSS초급 - 텍스트 관련 CSS</h1>
+            <h1>CSS초급 : 인라인(Inline)</h1>
             <h3 class="inverted">떠듦 by 마봉아빠 </h3>
         </article>
     </section>
     <section>
         <section>
             <article>
-                <h2>텍스트요소(초급)</h2>
+                <h2>커리큘럼</h2>
                 <div class="curriculumList">
-                    <dl><dt>폰트명(font-family)</dt><dd>텍스트에 사용될 폰트명을 지정합니다.</dd></dl>
-                    <dl><dt>색상(color)</dt><dd>글자 색상을 지정합니다.</dd></dl>
-                    <dl><dt>크기(font-size)</dt><dd>글자 크기를 지정합니다.</dd></dl>
-                    <dl><dt>굵기(font-weight)</dt><dd>글자의 굵기를 지정합니다.</dd></dl>
-                    <dl><dt>좌우정렬(text-align)</dt><dd>요소의 글자 정렬을 지정합니다.</dd></dl>
-                    <dl><dt>상하정렬(vertical-align)</dt><dd>글자의 위아래 정렬위치를 지정합니다.</dd></dl>
-                    <dl><dt>글자 간격(자간)(letter-spacing)</dt><dd>글자와 글자사이 간격을 지정합니다.</dd></dl>
-                    <dl><dt>단어 간격(word-spacing)</dt><dd>단어와 단어사이 간격을 지정합니다.</dd></dl>
-                    <dl><dt>줄 간격(자평)(line-height)</dt><dd>여러줄에 대한 간격을 지정합니다.</dd></dl>
-                    <dl><dt>들여쓰기(text-indent)</dt><dd>첫 문장 들여쓰기 간격을 지정합니다.</dd></dl>
-                    <dl><dt>데코레이션(text-decoration)</dt><dd>글자의 꾸밈요소를 지정합니다.</dd></dl>
-                    <dl><dt>텍스트 변형(text-transform)</dt><dd>대,소문자 변형을 지정합니다.</dd></dl>
-                    <dl><dt>글자 줄바꿈(white-space)</dt><dd>요소내 줄바꿈 기준을 지정합니다.</dd></dl>
-                    <dl><dt>단어 줄바꿈(word-break)</dt><dd>요소내 단어별 줄바꿈 기준을 지정합니다.</dd></dl>
+                    <dl><dt>인라인(Inline)이란?</dt><dd><span class="subPoint">인라인 이라는 박스모델</span>에 대해 설명합니다.</dd></dl>
+                    <dl><dt>폰트명(font-family)</dt><dd>텍스트에 사용될 <span class="subPoint">폰트명</span>을 지정합니다.</dd></dl>
+                    <dl><dt>색상(color)</dt><dd><span class="subPoint">글자 색상</span>을 지정합니다.</dd></dl>
+                    <dl><dt>크기(font-size)</dt><dd><span class="subPoint">글자 크기</span>를 지정합니다.</dd></dl>
+                    <dl><dt>굵기(font-weight)</dt><dd><span class="subPoint">글자의 굵기</span>를 지정합니다.</dd></dl>
+                    <dl><dt>좌우정렬(text-align)</dt><dd>요소의 <span class="subPoint">글자 정렬</span>을 지정합니다.</dd></dl>
+                    <dl><dt>상하정렬(vertical-align)</dt><dd>글자의 <span class="subPoint">위아래 정렬위치</span>를 지정합니다.</dd></dl>
+                    <dl><dt>글자 간격(자간)(letter-spacing)</dt><dd><span class="subPoint">글자와 글자사이 간격</span>을 지정합니다.</dd></dl>
+                    <dl><dt>단어 간격(word-spacing)</dt><dd><span class="subPoint">단어와 단어사이 간격</span>을 지정합니다.</dd></dl>
+                    <dl><dt>줄 간격(자평)(line-height)</dt><dd><span class="subPoint">여러줄에 대한 간격</span>을 지정합니다.</dd></dl>
+                    <dl><dt>들여쓰기(text-indent)</dt><dd>첫 문장 <span class="subPoint">들여쓰기 간격</span>을 지정합니다.</dd></dl>
+                    <dl><dt>데코레이션(text-decoration)</dt><dd>글자의 <span class="subPoint">꾸밈요소</span>를 지정합니다.</dd></dl>
+                    <dl><dt>텍스트 변형(text-transform)</dt><dd><span class="subPoint">대,소문자 변형</span>을 지정합니다.</dd></dl>
+                    <dl><dt>글자 줄바꿈(white-space)</dt><dd>요소내 <span class="subPoint">줄바꿈 기준</span>을 지정합니다.</dd></dl>
+                    <dl><dt>단어 줄바꿈(word-break)</dt><dd>요소내 <span class="subPoint">단어별 줄바꿈 기준</span>을 지정합니다.</dd></dl>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>인라인(Inline)이란?</h2>
+                    <p class="subDesc">쉽게 생각하면 인라인은 텍스트(글자)을 지칭합니다.</p>
+                </div>
+                <div class="desc">
+                    <div class="image"><img src="http://www.dmxzone.com/downloads/images/vertical-align.jpg" alt=""></div>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/yMayJr?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
                 </div>
             </article>
         </section>
@@ -46,6 +61,7 @@
             <article>
                 <div class="spec">
                     <h2>폰트명(font-family)</h2>
+                    <p class="subDesc">어떤 글자체(폰트)을 사용할것인지를 결정합니다.</p>
                     <ul>
                         <li>기본값 : 브라우저의 기본폰트</li>
                         <li>상속성 : 있음</li>
@@ -54,7 +70,7 @@
                 </div>
                 <div class="desc">
                     <h3>참고사항</h3>
-                    <ul>
+                    <ul class="noti">
                         <li>"한글"로 된 폰트명이거나, "띄어쓰기"가 있는 폰트명은 ""(따옴표)로 감싸서 선언합니다.</li>
                     </ul>
                 </div>
@@ -93,46 +109,33 @@
             <article>
                 <div class="spec">
                     <h2>색상(color)</h2>
+                    <p class="subDesc">텍스트에 적용될 색상을 선택합니다.</p>
                     <ul>
-                        <li>기본값 : 브라우저 기본컬러</li>
+                        <li>기본값 : 브라우저 기본컬러(검은색)</li>
                         <li>상속성 : 있음</li>
                         <li class="syntax">작성방법 : <code><span class="point">color:</span> <span class="point">HEX(#RRGGBB)</span> | String | <span class="point">RGBA</span>;</code> </li>
                     </ul>
                 </div>
                 <div class="desc">
                     <h3>참고사항</h3>
-                    <ul>
+                    <ul class="noti">
                         <li>대부분 색상은 HEX(#RRGGBB)방식을 많이 사용합니다.</li>
-                        <li>RGBA방식( rgb(R,G,B,A) )을 이용하여, 투명도를 함께 적용가능합니다. / IE8 이하는 불가.</li>
-                        <li>크롬 개발자모드(F12버튼)를 이용해서 색상을 추출하여 사용하면 편해요.</li>
+                        <li>RGBA방식( rgb(R,G,B,A) )<a href="http://caniuse.com/#feat=css3-colors" class="label label-warning caniuse" target="_blank"><i class="glyphicon glyphicon-link"></i></a>을 이용하여, 투명도를 함께 적용가능합니다. / IE8 이하는 불가. </li>
                     </ul>
                 </div>
                 <div class="btnSec">
                     <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/qrOWea?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
-                    <span class="label label-warning"><a href="http://caniuse.com/#feat=css3-colors" target="_blank"><i class="glyphicon glyphicon-link"></i> 호환 브라우저보기</a></span>
                 </div>
             </article>
         </section>
         <section>
             <article>
                 <div class="spec">
-                    <h2>크기(font-size)</h2>
-                    <ul>
-                        <li>기본값 : medium</li>
-                        <li>상속성 : 있음</li>
-                        <li class="syntax">작성방법 : <code><span class="point">font-size:</span>medium|xx-small|x-small|small|large|x-large|<br />xx-large|smaller|larger| <span class="point">length</span>;</code> </li>
-                    </ul>
+                    <h2>꿀팁!</h2>
+                    <p class="subDesc">크롬 개발자모드(F12버튼)를 이용해서 색상을 추출하여 사용하면 편해요.</p>
                 </div>
                 <div class="desc">
-                    <h3>참고사항</h3>
-                    <ul>
-                        <li>smaller , larger는 부모의 사이즈에 따라 작아지거나, 커지는 상대적인 사이즈입니다.</li>
-                        <li>font-size는 단위중, "em" 에 대해 영향을 주는 속성입니다.</li>
-                    </ul>
-                </div>
-                <div class="btnSec">
-                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/BWNLjo?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
-                    <span class="label label-warning"><a href="http://caniuse.com/#search=font-size" target="_blank"><i class="glyphicon glyphicon-link"></i> 호환 브라우저보기</a></span>
+                    <div class="image"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2015/09/chrome-devtools.webp" alt=""></div>
                 </div>
             </article>
         </section>
@@ -148,7 +151,7 @@
                 </div>
                 <div class="desc">
                     <h3>참고사항</h3>
-                    <ul>
+                    <ul class="noti">
                         <li>bolder , lighter는 부모의 굵기에 따라 굵어지거나, 얇아지는 상대적인 사이즈입니다.</li>
                         <li>number는 100단위로 입력하고, 폰트,브라우저 에 따라 굵어지는 값이 다릅니다.</li>
                         <li>number의 "400"은 "normal" 과 같고, "700"은 "bold" 와 같습니다.</li>
@@ -156,7 +159,6 @@
                 </div>
                 <div class="btnSec">
                     <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/RpPoGK?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
-                    <span class="label label-warning"><a href="http://caniuse.com/#search=font-weight" target="_blank"><i class="glyphicon glyphicon-link"></i> 호환 브라우저보기</a></span>
                 </div>
             </article>
         </section>
@@ -172,13 +174,12 @@
                 </div>
                 <div class="desc">
                     <h3>참고사항</h3>
-                    <ul>
+                    <ul class="noti">
                         <li>텍스트를 정렬하는 요소로, 블럭요소를 정렬하지는 못합니다.</li>
                     </ul>
                 </div>
                 <div class="btnSec">
                     <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/QpbGXo?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
-                    <span class="label label-warning"><a href="http://caniuse.com/#search=text-align" target="_blank"><i class="glyphicon glyphicon-link"></i> 호환 브라우저보기</a></span>
                 </div>
             </article>
         </section>
@@ -194,14 +195,14 @@
                 </div>
                 <div class="desc">
                     <h3>참고사항</h3>
-                    <ul>
+                    <ul class="noti">
                         <li>baseline을 기준으로 정렬되는것이 중요합니다.</li>
                         <li>baseline이 없는 한글은 폰트의 영문자의 baseline을 따라갑니다.</li>
+                        <li>baseline을 간단하게 확인하는 방법은 영문 소문자 "x"의 하단라인 입니다.</li>
                     </ul>
                 </div>
                 <div class="btnSec">
                     <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/qrdROm?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
-                    <span class="label label-warning"><a href="http://caniuse.com/#search=vertical-align" target="_blank"><i class="glyphicon glyphicon-link"></i> 호환 브라우저보기</a></span>
                 </div>
             </article>
         </section>
@@ -235,8 +236,6 @@
                 </div>
                 <div class="btnSec">
                     <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/xqGgRd?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
-                    <span class="label label-warning"><a href="http://caniuse.com/#search=letter-spacing" target="_blank"><i class="glyphicon glyphicon-link"></i> 호환 브라우저보기</a></span>
-                    <span class="label label-warning"><a href="http://caniuse.com/#search=word-spacing" target="_blank"><i class="glyphicon glyphicon-link"></i> 호환 브라우저보기</a></span>
                 </div>
             </article>
         </section>
@@ -252,13 +251,12 @@
                 </div>
                 <div class="desc">
                     <h3>참고사항</h3>
-                    <ul>
+                    <ul class="noti">
                         <li>number로 선언할때, 요소의 font-size을 기준으로 1로 표현됩니다.</li>
                     </ul>
                 </div>
                 <div class="btnSec">
                     <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/EWVamE" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
-                    <span class="label label-warning"><a href="http://caniuse.com/#search=line-height" target="_blank"><i class="glyphicon glyphicon-link"></i> 호환 브라우저보기</a></span>
                 </div>
             </article>
         </section>
@@ -280,7 +278,6 @@
                 </div>
                 <div class="btnSec">
                     <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/evNgRz?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
-                    <span class="label label-warning"><a href="http://caniuse.com/#search=text-indent" target="_blank"><i class="glyphicon glyphicon-link"></i> 호환 브라우저보기</a></span>
                 </div>
             </article>
         </section>
@@ -323,7 +320,6 @@
                 </div>
                 <div class="btnSec">
                     <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/EWjZEX?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
-                    <span class="label label-warning"><a href="http://caniuse.com/#search=text-decoration" target="_blank"><i class="glyphicon glyphicon-link"></i> 호환 브라우저보기</a></span>
                 </div>
             </article>
         </section>
@@ -361,7 +357,6 @@
                 </div>
                 <div class="btnSec">
                     <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/xqGqZJ?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
-                    <span class="label label-warning"><a href="http://caniuse.com/#search=text-transform" target="_blank"><i class="glyphicon glyphicon-link"></i> 호환 브라우저보기</a></span>
                 </div>
             </article>
         </section>
@@ -390,18 +385,17 @@
                             <td>엔터(line break) 및 공백(tab , space)을 그대로 표현합니다. 영역에 따른 줄바꿈이 되지 않습니다.</td>
                         </tr>
                         <tr>
-                            <td>pre-line</td>
-                            <td>엔터(line break)만 줄바꿈 되며, 공백은 여러개여도 1개만 표시, 영역이 넘어가면 줄바꿈이 됩니다.</td>
+                            <td>pre-wrap</td>
+                            <td>엔터(line break) 및 공백(tab , space)을 그대로 표현합니다. 영역에 따른 줄바꿈이 됩니다.</td>
                         </tr>
                         <tr>
-                            <td>pre-wrap</td>
-                            <td>엔터(line break)만 줄바꿈 되며, 공백은 여러개여도 1개만 표시, 영역에 따른 줄바꿈이 됩니다.</td>
+                            <td>pre-line</td>
+                            <td>엔터(line break)만 줄바꿈 되며, 공백은 여러개여도 1개만 표시, 영역이 넘어가면 줄바꿈이 됩니다.</td>
                         </tr>
                     </table>
                 </div>
                 <div class="btnSec">
                     <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/bqdqRw?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
-                    <span class="label label-warning"><a href="https://www.w3schools.com/cssref/pr_text_white-space.asp" target="_blank"><i class="glyphicon glyphicon-link"></i> 호환 브라우저보기</a></span>
                 </div>
             </article>
         </section>
@@ -436,13 +430,7 @@
                 </div>
                 <div class="btnSec">
                     <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/qrdeww?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
-                    <span class="label label-warning"><a href="http://caniuse.com/#search=word-break" target="_blank"><i class="glyphicon glyphicon-link"></i> 호환 브라우저보기</a></span>
                 </div>
-            </article>
-        </section>
-        <section>
-            <article>
-                <h2>수고하셨습니다.</h2>
             </article>
         </section>
     </section>
@@ -465,6 +453,11 @@
                 <dl><dt>글자 줄바꿈(white-space)</dt><dd><code><span class="point">white-space:</span> normal|<span class="point">nowrap</span>|pre|pre-line|pre-wrap;</code></dd></dl>
                 <dl><dt>단어 줄바꿈(word-break)</dt><dd><code><span class="point">word-break:</span> normal|<span class="point">break-all</span>|keep-all</code></dd></dl>
             </div>
+        </article>
+    </section>
+    <section>
+        <article>
+            <h2>수고하셨습니다.</h2>
         </article>
     </section>
 </div>
