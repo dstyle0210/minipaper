@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>마봉아빠의 CSS초급 : 레이아웃속성</title>
+    <link href='https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div id="main">
+
+    <section>
+        <article class="index">
+            <h1>CSS초급 : 레이아웃속성</h1>
+            <h3 class="inverted">떠듦 by 마봉아빠 </h3>
+        </article>
+    </section>
+    <section>
+        <section>
+            <article>
+                <h2>커리큘럼</h2>
+                <div class="curriculumList">
+                    <dl><dt>레이아웃 방식</dt><dd>레이아웃을 만드는 3가지 방법을 소개합니다.</dd></dl>
+                    <dl><dt>플로트(float)</dt><dd>요소를 배치하는 방법인 플로트에 대해 설명합니다.</dd></dl>
+                    <dl><dt>클리어(clear)</dt><dd>플로트을 해제하는 방법에 대해 설명합니다.</dd></dl>
+                    <dl><dt>어려워요! 해즈레이아웃(haslayout)</dt><dd>플로트의 영역을 지정해주는 개념에 대해 설명합니다.</dd></dl>
+                    <dl><dt>쉬워요! 클리어픽스(.clearfix)</dt><dd>미리 만들어진 클래스 라이브러리 입니다.</dd></dl>
+                    <dl><dt>포지션(position)</dt><dd>요소를 좌표로 배치하는 포지션에 대해 설명합니다.</dd></dl>
+                    <dl><dt>포지션(position):absolute</dt><dd>절대적 좌표로 적용하는 방법에 대해 설명합니다.</dd></dl>
+                    <dl><dt>포지션(position):relative</dt><dd>상대적 좌표로 적용하는 방법에 대해 설명합니다.</dd></dl>
+                    <dl><dt>방향(top,left,bottom,right)</dt><dd>포지션에 사용되는 방향에 대해 설명합니다.</dd></dl>
+                    <dl><dt>플랙스(display:flex)</dt><dd>새로운 레이아웃 방법인 플랙스에 대해 소개합니다.</dd></dl>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>레이아웃(Layout) 방식</h2>
+                    <p class="subDesc">CSS의 레이아웃방법에 대해 설명합니다.</p>
+                </div>
+                <div class="desc">
+                    <ul class="flex-nowrap">
+                        <li>
+                            <h2><span class="point">플로트(Float)</span></h2>
+                            <p>요소의 <span class="subPoint">플로우(flow)</span>을<br />조정하여 레이아웃.</p>
+                            <ul class="propertyList">
+                                <li>float</li>
+                                <li>clear</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><span class="point">포지션(Position)</span></h2>
+                            <p>요소의 <span class="subPoint">좌표(direction)</span>을<br />조정하여 레이아웃.</p>
+                            <ul class="propertyList">
+                                <li>position</li>
+                                <li>top</li>
+                                <li>left</li>
+                                <li>right</li>
+                                <li>bottom</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><span class="point">플랙스(Flex)</span></h2>
+                            <p>요소의 <span class="subPoint">방향축(axis)</span>을<br />조정하여 레이아웃.</p>
+                            <ul class="propertyList">
+                                <li>display:flex;</li>
+                                <li>flex-direction</li>
+                                <li>flex-wrap</li>
+                                <li>flex-flow</li>
+                                <li>align-items</li>
+                                <li>align-content</li>
+                                <li>justify-content</li>
+                                <li>flex-grow</li>
+                                <li>flex-shrink</li>
+                                <li>flex-basis</li>
+                                <li>flex</li>
+                                <li>align-self</li>
+                                <li>order</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/xgoXZp?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="specFlex">
+                    <div class="spec">
+                        <h2>플로우(float)</h2>
+                        <p class="subDesc">직역하면 띄우다(float)라는 의미입니다.</p>
+                        <ul>
+                            <li>기본값 : none</li>
+                            <li>상속성 : 없음</li>
+                            <li class="syntax">작성방법 : <code><span class="point">float:</span> none|<span class="point">left</span>|<span class="point">right</span> |initial|inherit;</code></li>
+                        </ul>
+                    </div>
+                    <div class="spec">
+                        <h2>클리어(clear)</h2>
+                        <p class="subDesc">플로트된 흐름을 해제합니다.</p>
+                        <ul>
+                            <li>기본값 : none</li>
+                            <li>상속성 : 없음</li>
+                            <li class="syntax">작성방법 : <code><span class="point">clear:</span> none|left|right | <span class="point">both</span>|initial|inherit;</code></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="desc">
+                    <ul class="noti">
+                        <li>띄우다(float)라는 의미처럼 "살짝 뜬 요소이다" 라는 개념이 중요합니다.</li>
+                        <li>clear는 흐름을 막는 속성입니다. 요소의 float 상태를 해제하려면, "float:none"을 해야합니다.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/BWLoKL" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>어려워요 : 해즈레이아웃(hasLayout)</h2>
+                    <p class="subDesc">플로트의 영역을 지정해주는 개념입니다. (개념만 이해하세요.)</p>
+                </div>
+                <div class="desc" style="width:100%;overflow:hidden;">
+                    <div class="flex">
+                        <div class="image" style="flex:1;"><img src="http://kenyo--c.com/wp-content/uploads/2015/04/iehaslayout.png" alt=""></div>
+                        <ul class="noti" style="padding-left:20px;flex:1;">
+                            <li>- position:absolute;</li>
+                            <li>- float:left|right</li>
+                            <li>- display:inline-block</li>
+                            <li>- width:'auto'외의 값</li>
+                            <li>- height:'auto'외의 값</li>
+                            <li>- zoom:'normal'외의 값</li>
+                            <li>- writing-mode:tb-rl(ie전용)</li>
+                            <li>- overflow:hidden | scroll | auto(ie7만 적용)</li>
+                            <li>- overflow-x,overflow-y:hidden | scroll | auto(ie7만 적용)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/EWgVpz" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>쉬워요! : 클리어픽스(.clearfix)</h2>
+                    <p class="subDesc">플로트의 흐름을 잡아주는 이미 만들어진 클래스 라이브러리 입니다.</p>
+                </div>
+                <div class="desc" style="width:100%;overflow:hidden;">
+                    <div class="code"><code>.clearfix{*zoom:1}
+                        .clearfix:after,.clearfix:before{display:table;content:"";line-height:0}
+                        .clearfix:after{clear:both}</code></div>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/BWLoKL" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+    </section>
+    <section>
+        <article>
+            <h2>속성(Property) 정리</h2>
+            <div class="curriculumList">
+                <dl><dt>가로값(width)</dt><dd><code><span class="point">width:</span> <span class="point">length</span> | auto;</code></dd></dl>
+                <dl><dt>세로값(height)</dt><dd><code><span class="point">height:</span> <span class="point">length</span> | auto;</code></dd></dl>
+                <dl><dt>패딩(padding)</dt><dd><code><span class="point">padding:</span> <span class="point">length</span> | <span class="point">top right bottom left</span>;</code></dl>
+                <dl><dt>보더(border)</dt><dd><code><span class="point">border:</span> <span class="point">border-width border-style border-color</span>;</code></dd></dl>
+                <dl><dt>박스사이징(box-sizing)</dt><dd><code><span class="point">box-sizing:</span> content-box|<span class="point">border-box</span>|initial|inherit;</code></dd></dl>
+                <dl><dt>배경(background)</dt><dd><code><span class="point">background:</span> <span class="point">bg-color</span> <span class="point">bg-image</span> <span class="point">position</span>/bg-size <span class="point">bg-repeat</span> bg-origin bg-clip bg-attachment initial|inherit;</code></dd></dl>
+                <dl><dt>마진(margin)</dt><dd><span class="subPoint"><code><span class="point">margin:</span> <span class="point">length</span> | <span class="point">top right bottom left</span>;</code></dd></dl>
+                <dl><dt>아웃라인(outline)</dt><dd><code><span class="point">outline:</span> <span class="point">outline-width outline-style outline-color</span>;</code></dd></dl>
+                <dl><dt>오버플로우(overflow)</dt><dd><code><span class="point">overflow:</span> visible | <span class="point">hidden</span> | scroll | <span class="point">auto</span>;</code></dd></dl>
+                <dl><dt>디스플레이(display)</dt><dd><code><span class="point">display:</span> inline | <span class="point">block</span> | <span class="point">inline-block</span> | <span class="point">none</span> | <span class="point">flex</span> | table | table-cell;</code></dd></dl>
+                <dl><dt>비지빌리티(visibility)</dt><dd><code><span class="point">visibility:</span> visible|<span class="point">hidden</span>|collapse|initial|inherit;</code></dd></dl>
+            </div>
+        </article>
+    </section>
+    <section>
+        <article>
+            <h2>수고하셨습니다.</h2>
+        </article>
+    </section>
+</div>
+<script src="slideshow.js"></script>
+</body>
+</html>
+<!-- section>article>h2 -->

@@ -44,8 +44,7 @@ section>article table td{text-align:left;}
 .codepen{margin:0 auto;width:60%;}
 .flex{display:flex;flex-wrap:wrap;}
 .flex>li{width:50%;}
-.flex-nowrap{display:flex;flex-wrap:nowrap;}
-.flex-nowrap>li{flex:1;}
+
 .point{color:#b81e38;}
 .subPoint{color:#ff6600;}
 .dark-gray{color:#000;}
@@ -61,7 +60,7 @@ code{color:#555;}
 
 .spec{width:100%;padding-bottom:10px;}
 .spec h2{margin:0;font-size:28px;padding-bottom:10px;}
-.spec .syntax{text-indent:-107px;padding-left:107px;}
+.spec .syntax{text-indent:-82px;padding-left:82px;}
 .spec ul li{font-size:18px;}
 .spec p.subDesc{text-align:center;font-size:16px;color:#666;}
 
@@ -97,3 +96,18 @@ code{color:#555;}
 
 /*! 별도예제 */
 .exam{text-align:right;font-size:14px;}
+
+/*! 플랙스 nowrap 형태 */
+.flex-nowrap{display:flex;flex-wrap:nowrap;}
+.flex-nowrap>li{flex:1;padding:0 20px;border-left:1px dashed #666;}
+.flex-nowrap>li:first-child{border-left:0;}
+.flex-nowrap>li h2{text-align:center;font-size:24px;}
+
+/*! 플랙스 nowrap 형태 에서 속성리스트 */
+.propertyList{font-size:14px;}
+.propertyList>li{margin:0;padding:0;line-height:1.5em;}
+
+
+
+
+
