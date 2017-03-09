@@ -28,7 +28,7 @@ li{list-style:none;}
 ul{margin:0;padding:0;text-align:left;}
 a:not(.image) { color: #1b6263; text-decoration: none; border-bottom: 1px dashed rgba(0,0,0,0.3); padding: 1px 3px; }
 a:not(.image):hover { color: #fff; background: #2fa794; text-shadow: none; border: none; }
-img { background: rgba(255,255,255,0.12); border: 4px solid #eee; -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); -webkit-transition: all .11s linear; -moz-transition: all .11s linear; -o-transition: all .11s linear; transition: all .11s linear; }
+img:not(.null) { background: rgba(255,255,255,0.12); border: 4px solid #eee; -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); -webkit-transition: all .11s linear; -moz-transition: all .11s linear; -o-transition: all .11s linear; transition: all .11s linear; }
 a.image:hover img { background: rgba(255,255,255,0.2); -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.25); -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.25); box-shadow: 0 0 20px rgba(0, 0, 0, 0.25); }
 
 /*********************************************
@@ -44,7 +44,6 @@ section>article table td{text-align:left;}
 .codepen{margin:0 auto;width:60%;}
 .flex{display:flex;flex-wrap:wrap;}
 .flex>li{width:50%;}
-
 .point{color:#b81e38;}
 .subPoint{color:#ff6600;}
 .dark-gray{color:#000;}
@@ -109,6 +108,7 @@ code{color:#555;}
 .propertyList>li{margin:0;padding:0;line-height:1.5em;}
 
 
-
+/*! 감사합니다. */
+.thx{text-align:center;}
 
 
