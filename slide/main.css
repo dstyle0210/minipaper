@@ -78,6 +78,8 @@ code{color:#555;}
 .specFlex + .specFlex{border-top:1px dashed #ccc;}
 
 /*! 커리큘럼 리스트 */
+.curriculum{padding-bottom:20px;}
+.curriculum p{text-align:center;color:#333;font-size:16px;}
 .curriculumList{display:flex;width:100%;flex-wrap:wrap;}
 .curriculumList *{margin:0;padding:0;list-style:none;}
 .curriculumList dl{box-sizing:border-box;padding:10px 0;width:48%;border-bottom:1px dashed #666;}
