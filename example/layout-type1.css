@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.wrap{padding-top:50px;width:100%;}
+.vcardWrap{position:relative;margin:0 auto;width:600px;overflow:hidden;}
+.vcardWrap .topSec{padding-bottom:20px;width:100%;overflow:hidden;}
+.vcardWrap .descSec{padding-top:40px;}
+.vcardWrap .descSec p{padding-top:10px;}
+.vcardWrap .bottomSec{border-top:1px dashed #333;}
+.vcardWrap .bottomSec article{padding:20px 0;border-bottom:1px dashed #ccc;}
