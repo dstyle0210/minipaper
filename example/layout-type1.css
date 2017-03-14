@@ -3,7 +3,9 @@
 .wrap{padding-top:50px;width:100%;}
 .vcardWrap{position:relative;margin:0 auto;width:600px;overflow:hidden;}
 .vcardWrap .topSec{padding-bottom:20px;width:100%;overflow:hidden;}
+.vcardWrap .photoSec{margin:0 auto;width:150px;height:150px;overflow:hidden;border:1px dashed #999;border-radius:75px;}
+.vcardWrap .photoSec img{margin-left:-109px;margin-top:-80px;width:400px;height:auto;}
 .vcardWrap .descSec{padding-top:40px;}
 .vcardWrap .descSec p{padding-top:10px;}
-.vcardWrap .bottomSec{border-top:1px dashed #333;}
-.vcardWrap .bottomSec article{padding:20px 0;border-bottom:1px dashed #ccc;}
+.vcardWrap .reviewSec{border-top:1px dashed #333;}
+.vcardWrap .reviewSec article{padding:20px 0;border-bottom:1px dashed #ccc;}

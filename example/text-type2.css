@@ -6,12 +6,12 @@
 .vcardWrap .titleSec p{font-size:12px;line-height:20px;text-align:right;}
 .vcardWrap .descSec h3{font-size:24px;color:#333;text-align:center;}
 .vcardWrap .descSec p{font-size:13px;line-height:1.7;}
-.vcardWrap .bottomSec h4{font-size:28px;text-transform:uppercase;}
-.vcardWrap .bottomSec article :nth-child(2){font-weight:700;}
-.vcardWrap .bottomSec .css :nth-child(2){color:#b81e38;}
-.vcardWrap .bottomSec .html5{text-align:right;}
-.vcardWrap .bottomSec .html5 :nth-child(2){color:#de5423;}
-.vcardWrap .bottomSec .jquery :nth-child(2){color:#1068ad;}
-.vcardWrap .bottomSec .nodejs{text-align:right;}
-.vcardWrap .bottomSec .nodejs :nth-child(2){color:#90c53f;}
-.vcardWrap .bottomSec p{font-size:14px;}
+.vcardWrap .reviewSec h4{font-size:28px;text-transform:uppercase;}
+.vcardWrap .reviewSec article :nth-child(2){font-weight:700;}
+.vcardWrap .reviewSec .css :nth-child(2){color:#b81e38;}
+.vcardWrap .reviewSec .html5{text-align:right;}
+.vcardWrap .reviewSec .html5 :nth-child(2){color:#de5423;}
+.vcardWrap .reviewSec .jquery :nth-child(2){color:#1068ad;}
+.vcardWrap .reviewSec .nodejs{text-align:right;}
+.vcardWrap .reviewSec .nodejs :nth-child(2){color:#90c53f;}
+.vcardWrap .reviewSec p{font-size:14px;}
