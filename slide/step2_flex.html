@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>마봉아빠의 CSS중급 : 시작</title>
+    <link href='https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div id="main">
+
+    <section>
+        <section>
+            <article class="index">
+                <h1>CSS중급 : 플랙스(Flex)</h1>
+                <h3 class="inverted">떠듦 by 마봉아빠 </h3>
+            </article>
+        </section>
+    </section>
+    <section>
+        <section>
+            <article>
+                <h2>CSS중급 : 플랙스(Flex) : 커리큘럼</h2>
+                <div class="curriculumList">
+                    <dl><dt>플랙스 레이아웃이란?</dt><dd>요소의 <span class="subPoint">방향축(axis)</span>을<br />조정하여 레이아웃하는 방법입니다.</dd></dl>
+                    <dl><dt>컨테이너 : display:flex;</dt><dd>플랙스 레이아웃을 사용하겠다 라는 선언에 대해 설명합니다.</dd></dl> <!-- display:flex; -->
+                    <dl><dt>컨테이너 : flex_direction</dt><dd>컨테이너의 정렬방향(direction)을 설정합니다.</dd></dl>
+                    <dl><dt>컨테이너 : flex_wrap</dt><dd>컨테이너의 정렬방향에 따른 줄바꿈여부를 설정합니다.</dd></dl>
+                    <dl><dt>컨테이너 : flex_flow</dt><dd>flex_direction와 flex_wrap을 단축 선언합니다.</dd></dl>
+                    <dl><dt>컨테이너 : flex_align_items</dt><dd>컨테이너의 정렬방향에 따른 정렬방식(align)를 설정합니다.</dd></dl>
+                    <dl><dt>컨테이너 : flex_align_content</dt><dd>컨테이너의 정렬방향에 따른 줄바꿈시 정렬방식을 설정합니다.</dd></dl>
+                    <dl><dt>컨테이너 : flex_justify</dt><dd>컨테이너의 아이템 배치방법을 설정합니다.</dd></dl>
+                    <dl><dt>아이템 : flex-grow</dt><dd>아이템의 정렬방향에 따른 적용비율을 설정합니다.</dd></dl>
+                    <dl><dt>아이템 : flex_shrink</dt><dd>아이템의 정렬방향에 따른 역 적용비율을 설정합니다.</dd></dl>
+                    <dl><dt>아이템 : flex_basis</dt><dd>아이템이 적용되고자 하는 기본비율(basis)을 적용합니다.</dd></dl>
+                    <dl><dt>아이템 : flex</dt><dd>flex-grow , flex_shrink , flex_basis을 단축선언합니다.</dd></dl>
+                    <dl><dt>아이템 : align_self</dt><dd>아이템의 정렬방향에 따른 정렬방식을 설정합니다.</dd></dl>
+                    <dl><dt>아이템 : order</dt><dd>아이템의 정렬순서를 설정합니다.</dd></dl>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>엣지(Edge)</h2>
+                    <p class="subDesc">박스모델에서의 각 영역의 가상의 외곽선</p>
+                </div>
+                <div class="desc">
+                    <div class="image"><img src="http://www.vanseodesign.com/blog/wp-content/uploads/2012/11/css-box-model.png" alt=""> </div>
+                </div>
+                <div class="desc">
+                    <ul class="noti">
+                        <li>각 요소의 엣지가 맞닿아 있는것이 기본적인 흐름입니다.</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>흐름(Flow)</h2>
+                    <p class="subDesc">HTML 문서 내 요소의 레이아웃적인 배치방식</p>
+                </div>
+                <div class="desc">
+                    <ul class="flex-nowrap">
+                        <li>
+                            <h2><span class="point">블럭(Block)요소</span></h2>
+                            <p>만나면 서로의 margin 엣지를 기준으로 위아래 배치된다.</p>
+                            <ul class="propertyList">
+                                <li>body</li>
+                                <li>h1,h2,h3,h4,h5,h6</li>
+                                <li>header , footer</li>
+                                <li>div , section , article</li>
+                                <li>ul, ol , dl , li</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><span class="point">인라인(inline)</span></h2>
+                            <p>만나면 서로의 margin 엣지를 기준으로 좌우 배치되나, 줄바꿈이 가능하다.</p>
+                            <ul class="propertyList">
+                                <li>a , i , b , strong , </li>
+                                <li>flex-direction</li>
+                                <li>flex-wrap</li>
+                                <li>flex-flow</li>
+                                <li>align-items</li>
+                                <li>align-content</li>
+                                <li>justify-content</li>
+                                <li>flex-grow</li>
+                                <li>flex-shrink</li>
+                                <li>flex-basis</li>
+                                <li>flex</li>
+                                <li>align-self</li>
+                                <li>order</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="desc">
+                    <ul class="noti">
+                        <li>각 요소의 엣지가 맞닿아 있는것이 기본적인 흐름입니다.</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+    </section>
+
+</div>
+<script src="slideshow.js"></script>
+</body>
+</html>

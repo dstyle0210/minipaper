@@ -40,14 +40,16 @@
                     <dl><dt>[초급] 블럭요소</dt><dd>HTML요소 중 블럭요소 속성들을 설명합니다. </dd></dl>
                     <dl><dt>[초급] 레이아웃</dt><dd>HTML요소을 꾸밀때 사용되는 레이아웃속성에 대해 설명합니다.</dd></dl>
                     <dl><dt>[초급] 표레이아웃</dt><dd>HTML요소 중 표(table)을 꾸미는 속성을 설명합니다.</dd></dl>
-                    <dl><dt>[초급] 미디어</dt><dd>CSS을 이용해서 다른 미디어에 적용하는 법을 설명합니다.</dd></dl>
-                    <dl><dt>[중급] 시작</dt><dd>중급에서 배워야 될 이론과, 일부 속성, 값에 대해 설명합니다.</dd></dl>
-                    <dl><dt>[중급] 그리드(Grid)</dt><dd>그리드에 대해 설명합니다.</dd></dl>
+                    <dl><dt>[초급] 미디어와 미디어쿼리</dt><dd>CSS을 이용해서 다른 미디어에 적용하는 법을 설명합니다.</dd></dl>
+                    <dl><dt>[중급] 시작</dt><dd>CSS의 공통 중 이해하지 어렵지만 필요한 부분을 설명합니다.</dd></dl>
                     <dl><dt>[중급] CSS3 플랙스(Flex) 레이아웃</dt><dd>플랙스 레이아웃에 대해서 셜명합니다.</dd></dl>
+                    <dl><dt>[중급] CSS3 트랜스폼</dt><dd>CSS을 이용해서 움직임을 구현합니다.</dd></dl>
+                    <dl><dt>[중급] CSS3 트랜지션</dt><dd>CSS을 이용해서 움직임을 구현합니다.</dd></dl>
                     <dl><dt>[중급] CSS3 애니메이션</dt><dd>CSS을 이용해서 움직임을 구현합니다.</dd></dl>
-                    <dl><dt>[중급] 미디어 쿼리</dt><dd>반응형 웹을 만드는 미디어쿼리에 대해 설명합니다.</dd></dl>
-                    <dl><dt>[중급] 전처리기(LESS , SASS)</dt><dd>CSS을 컴파일하는 전처리기에 대해 설명합니다.</dd></dl>
-                    <dl><dt>[중급] CSS방법론(BEM, SMACSS , OOCSS)</dt><dd>CSS을 어떻게 구현하는것이 좋은가에 대한 방법론을 제시합니다.</dd></dl>
+                    <dl><dt>[고급] 전처리기(Pre-Processor) : 환경셋팅</dt><dd>CSS을 컴파일하는 전처리기를 사용하는 방법에 대해 설명합니다.</dd></dl>
+                    <dl><dt>[고급] 전처리기(Pre-Processor) : LESS API</dt><dd>CSS을 컴파일하는 전처리기중 LESS에 대해 설명합니다.</dd></dl>
+                    <dl><dt>[고급] 전처리기(Pre-Processor) : SASS(scss) API</dt><dd>CSS을 컴파일하는 전처리기중 SASS(scss)에 대해 설명합니다.</dd></dl>
+                    <dl><dt>[??] CSS방법론(BEM, SMACSS , OOCSS)</dt><dd>CSS을 어떻게 구현하는것이 좋은가에 대한 방법론을 제시합니다.</dd></dl>
                     <dl><dt>[??] 버그</dt><dd>알려진 CSS버그에 대해 설명합니다.</dd></dl>
                     <dl><dt>[??] 기법</dt><dd>알려진 CSS기법에 대해 설명합니다.</dd></dl>
                 </div>
@@ -59,26 +61,78 @@
             <article>
                 <h2>CSS중급 : 시작 : 커리큘럼</h2>
                 <div class="curriculumList">
-                    <dl><dt>네이티브 스타일시트(Native Style Sheet)</dt><dd>CSS에서 <span class="subPoint">단위을 지정하는 방법</span>을 설명합니다.</dd></dl>
-                    <dl><dt>플로우(Flow)</dt><dd>CSS에서 <span class="subPoint">단위을 지정하는 방법</span>을 설명합니다.</dd></dl>
-                    <dl><dt>엣지(Edge)</dt><dd>CSS에서 <span class="subPoint">단위을 지정하는 방법</span>을 설명합니다.</dd></dl>
-                    <dl><dt>그리드(Grid)</dt><dd>CSS에서 <span class="subPoint">단위을 지정하는 방법</span>을 설명합니다.</dd></dl>
-                    <dl><dt>단위(Unit)</dt><dd>CSS에서 <span class="subPoint">단위을 지정하는 방법</span>을 설명합니다.</dd></dl>
+                    <dl><dt>[이론] 엣지(Edge)</dt><dd>CSS에서 <span class="subPoint">단위을 지정하는 방법</span>을 설명합니다.</dd></dl>
+                    <dl><dt>[이론] 흐름(Flow)</dt><dd>CSS에서 <span class="subPoint">단위을 지정하는 방법</span>을 설명합니다.</dd></dl>
+                    <dl><dt>[이론] 인라인-블럭(inline-block)</dt><dd>CSS에서 <span class="subPoint">단위을 지정하는 방법</span>을 설명합니다.</dd></dl>
+                    <dl><dt>[이론] 그리드(Grid)</dt><dd>CSS에서 <span class="subPoint">단위을 지정하는 방법</span>을 설명합니다.</dd></dl>
+                    <dl><dt>단위(Unit)</dt><dd>CSS에서 사용가능한 유용한 단위들을 설명합니다.</dd></dl>
                     <dl><dt>셀렉터(Selector) : 어트리뷰트</dt><dd><span class="subPoint">HTML엘리먼트를 어트리뷰트로 선택</span>하는 방법을 설명합니다.</dd></dl>
                     <dl><dt>:nth-child(n)</dt><dd>가상셀렉터중 <span class="subPoint">:nth-child(n)</span>에 대해 알아봅니다.</dd></dl>
-                    <dl><dt>초기설정값(initial)</dt><dd>CSS에서 <span class="subPoint">단위을 지정하는 방법</span>을 설명합니다.</dd></dl>
-                    <dl><dt>부모상속값(inherit)</dt><dd>CSS에서 <span class="subPoint">단위을 지정하는 방법</span>을 설명합니다.</dd></dl>
+                    <dl><dt>초기설정값(initial)</dt><dd>CSS속성의 기본값으로 재선언하는 값에 대해 설명합니다.</dd></dl>
+                    <dl><dt>부모상속값(inherit)</dt><dd>CSS속성을 부모의 값을 재선언하는 방법에 대해 설명합니다.</dd></dl>
                 </div>
             </article>
         </section>
         <section>
             <article>
                 <div class="spec">
-                    <h2>CSS란?</h2>
-                    <p class="subDesc">CSS(Cascading Style Sheet)는 HTML문서를 꾸미는 언어입니다.</p>
+                    <h2>엣지(Edge)</h2>
+                    <p class="subDesc">박스모델에서의 각 영역의 가상의 외곽선</p>
                 </div>
                 <div class="desc">
-                    <div class="image"><img src="https://www.sololearn.com/Uploads/html-css.jpg" alt="" /></div>
+                    <div class="image"><img src="http://www.vanseodesign.com/blog/wp-content/uploads/2012/11/css-box-model.png" alt=""> </div>
+                </div>
+                <div class="desc">
+                    <ul class="noti">
+                        <li>각 요소의 엣지가 맞닿아 있는것이 기본적인 흐름입니다.</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>흐름(Flow)</h2>
+                    <p class="subDesc">HTML 문서 내 요소의 레이아웃적인 배치방식</p>
+                </div>
+                <div class="desc">
+                    <ul class="flex-nowrap">
+                        <li>
+                            <h2><span class="point">블럭(Block)요소</span></h2>
+                            <p>만나면 서로의 margin 엣지를 기준으로 위아래 배치된다.</p>
+                            <ul class="propertyList">
+                                <li>body</li>
+                                <li>h1,h2,h3,h4,h5,h6</li>
+                                <li>header , footer</li>
+                                <li>div , section , article</li>
+                                <li>ul, ol , dl , li</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><span class="point">인라인(inline)</span></h2>
+                            <p>만나면 서로의 margin 엣지를 기준으로 좌우 배치되나, 줄바꿈이 가능하다.</p>
+                            <ul class="propertyList">
+                                <li>a , i , b , strong , </li>
+                                <li>flex-direction</li>
+                                <li>flex-wrap</li>
+                                <li>flex-flow</li>
+                                <li>align-items</li>
+                                <li>align-content</li>
+                                <li>justify-content</li>
+                                <li>flex-grow</li>
+                                <li>flex-shrink</li>
+                                <li>flex-basis</li>
+                                <li>flex</li>
+                                <li>align-self</li>
+                                <li>order</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="desc">
+                    <ul class="noti">
+                        <li>각 요소의 엣지가 맞닿아 있는것이 기본적인 흐름입니다.</li>
+                    </ul>
                 </div>
             </article>
         </section>
