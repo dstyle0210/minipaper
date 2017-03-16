@@ -29,17 +29,17 @@
                 <div class="curriculumList">
                     <dl><dt>플랙스 레이아웃이란?</dt><dd>요소의 <span class="subPoint">방향축(axis)</span>을<br />조정하여 레이아웃하는 방법입니다.</dd></dl>
                     <dl><dt><span class="point">컨테이너 : display:flex;</span></dt><dd><span class="subPoint">플랙스 레이아웃을 사용하겠다 라는 선언</span>에 대해 설명합니다.</dd></dl> <!-- display:flex; -->
-                    <dl><dt><span class="point">컨테이너 : flex_direction</span></dt><dd>컨테이너의 <span class="subPoint">정렬방향(direction)</span>을 설정합니다.</dd></dl>
-                    <dl><dt><span class="point">컨테이너 : flex_wrap</span></dt><dd>컨테이너의 정렬방향에 따른 <span class="subPoint">줄바꿈 여부</span>를 설정합니다.</dd></dl>
-                    <dl><dt>컨테이너 : flex_flow</dt><dd>flex_direction와 flex_wrap을 단축 선언합니다.</dd></dl>
-                    <dl><dt>컨테이너 : flex_align_items</dt><dd>컨테이너의 <span class="subPoint">정렬방향에 따른 정렬방식(align)</span>를 설정합니다.</dd></dl>
-                    <dl><dt>컨테이너 : flex_align_content</dt><dd>컨테이너의 <span class="subPoint">정렬방향에 따른 줄바꿈시 정렬방식</span>을 설정합니다.</dd></dl>
-                    <dl><dt><span class="point">컨테이너 : flex_justify</span></dt><dd>컨테이너의 <span class="subPoint">아이템 배치방법</span>을 설정합니다.</dd></dl>
-                    <dl><dt>아이템 : flex-grow</dt><dd>아이템의 <span class="subPoint">정렬방향에 따른 적용비율</span>을 설정합니다.</dd></dl>
-                    <dl><dt>아이템 : flex_shrink</dt><dd>아이템의 <span class="subPoint">정렬방향에 따른 역 적용비율</span>을 설정합니다.</dd></dl>
-                    <dl><dt>아이템 : flex_basis</dt><dd>아이템에 <span class="subPoint">적용되어야 하는 기본값(basis)</span>을 적용합니다.</dd></dl>
+                    <dl><dt><span class="point">컨테이너 : flex-direction</span></dt><dd>컨테이너의 <span class="subPoint">흐름방향(main axis)</span>을 설정합니다.</dd></dl>
+                    <dl><dt><span class="point">컨테이너 : flex-wrap</span></dt><dd>컨테이너의 흐름방향(main axis)에 따른 <span class="subPoint">줄바꿈 여부</span>를 설정합니다.</dd></dl>
+                    <dl><dt>컨테이너 : flex-flow</dt><dd>flex_direction와 flex_wrap을 단축 선언합니다.</dd></dl>
+                    <dl><dt><span class="point">컨테이너 : justify-content</span></dt><dd>컨테이너의 흐름방향(main axis)에 따른 <span class="subPoint">아이템 배치방법</span>을 설정합니다.</dd></dl>
+                    <dl><dt>컨테이너 : align-items</dt><dd>컨테이너의 <span class="subPoint">정렬방향(cross axis)에 따른 정렬(align)</span>를 설정합니다.</dd></dl>
+                    <dl><dt>컨테이너 : align-content</dt><dd>컨테이너의 <span class="subPoint">정렬방향(cross axis)에 따른 줄바꿈시 정렬방식</span>을 설정합니다.</dd></dl>
+                    <dl><dt>아이템 : flex_basis</dt><dd>흐름방향(main axis)에 대한 아이템의 <span class="subPoint">기본값(basis)</span>을 적용합니다.</dd></dl>
+                    <dl><dt>아이템 : flex-grow</dt><dd>아이템의 <span class="subPoint">흐름방향(main axis)에 따른 적용비율</span>을 설정합니다.</dd></dl>
+                    <dl><dt>아이템 : flex-shrink</dt><dd>아이템의 <span class="subPoint">흐름방향(main axis)에 따른 역 적용비율</span>을 설정합니다.</dd></dl>
                     <dl><dt><span class="point">아이템 : flex</span></dt><dd>flex-grow , flex_shrink , flex_basis을 단축선언합니다.</dd></dl>
-                    <dl><dt>아이템 : align_self</dt><dd>아이템의 <span class="subPoint">정렬방향에 따른 정렬방식</span>을 설정합니다.</dd></dl>
+                    <dl><dt>아이템 : align_self</dt><dd>아이템의 <span class="subPoint">흐름방향(main axis)에 따른 정렬방향(cross axis)</span>을 설정합니다.</dd></dl>
                     <dl><dt>아이템 : order</dt><dd>아이템의 <span class="subPoint">정렬순서</span>를 설정합니다.</dd></dl>
                 </div>
             </article>
@@ -51,8 +51,17 @@
                     <p class="subDesc">요소의 <span class="subPoint">방향축(axis)</span>을 조정하여 레이아웃하는 방법입니다.</p>
                 </div>
                 <div class="desc">
+                    <div class="image"><img src="https://developer.mozilla.org/files/3739/flex_terms.png" alt=""></div>
+                </div>
+                <div class="desc">
                     <ul class="noti">
-                        <li></li>
+                        <li>현재 플랙스 레이아웃은 모바일 브라우저 및 최신 브라우저에서만 정상적으로 동작합니다. <a href="http://caniuse.com/#search=flex" class="label label-warning caniuse"><i class="glyphicon glyphicon-link"></i></a> </li>
+                        <li><span class="point">컨테이너(container)</span>는 플랙스레이아웃의 부모요소 이면서, 전체영역 입니다. </li>
+                        <li><span class="point">아이템(item)</span>은 플랙스레이아웃의 자식요소 입니다.</li>
+                        <li><span class="subPoint">흐름방향(main axis)</span>는 플랙스레이아웃의 흐름(Flow)의 기준입니다. </li>
+                        <li><span class="subPoint">흐름방향(main axis)</span>는 main-start(흐름방향 시작) 와 main-end(흐름방향 끝)으로 나뉘어집니다.</li>
+                        <li><span class="subPoint">정렬방향(cross axis)</span>은 플랙스레이아웃의 정렬(Align) 방향입니다.</li>
+                        <li><span class="subPoint">정렬방향(cross axis)</span>은 cross-start(정렬방향 시작) 와 cross-end(정렬방향 끝)으로 나뉘어집니다.</li>
                     </ul>
                 </div>
             </article>
@@ -65,8 +74,11 @@
                 </div>
                 <div class="desc">
                     <ul class="noti">
-                        <li></li>
+                        <li>과거에는 "display:box" , "display:flexbox" , "display:flex" 이 3가지는 시기가 틀릴뿐 동일 레이아웃 선언이며, 현재는 "display:flex"로 통합되었습니다. </li>
                     </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/JWrvZO?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
                 </div>
             </article>
         </section>
@@ -74,17 +86,40 @@
             <article>
                 <div class="spec">
                     <h2>컨테이너 : flex_direction</h2>
-                    <p class="subDesc">컨테이너의 <span class="subPoint">정렬방향(direction)</span>을 설정합니다.</p>
+                    <p class="subDesc">컨테이너의 <span class="subPoint">흐름방향(main axis)</span>을 설정합니다.</p>
                     <ul>
-                        <li>기본값 : none</li>
+                        <li>기본값 : row</li>
                         <li>상속성 : 없음</li>
-                        <li class="syntax">작성방법 : <code></code></li>
+                        <li class="syntax">작성방법 : <code><span class="point">flex-direction:</span> <span class="point">row</span>|row-reverse|<span class="point">column</span>|column-reverse|initial|inherit;</code></li>
                     </ul>
                 </div>
                 <div class="desc">
+                    <table class="table table-hover table-bordered">
+                        <tr>
+                            <td>row</td>
+                            <td>"좌->우" 로 흐름기준(main axis)을 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>row-reverse</td>
+                            <td>"우->좌" 로 흐름기준(main axis)을 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>column</td>
+                            <td>"상->하" 로 흐름기준(main axis)을 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>column-reverse</td>
+                            <td>"하->상" 으로 흐름기준(main axis)을 설정합니다.</td>
+                        </tr>
+                    </table>
                     <ul class="noti">
-                        <li></li>
+                        <li>본 속성은 다른 속성들의 기준축이 되기 때문에 꼭 알고 있어야 합니다.</li>
+                        <li>값이 "row"라면, 흐름방향시작(main start)는 좌(left) , 흐름방향끝은 우(right)로 설정되게 됩니다.</li>
+                        <li>값이 "row-reverse"라면, 흐름방향시작(main start)는 우(right) , 흐름방향끝은 좌(left)로 설정되게 됩니다.</li>
                     </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/QpqrJb?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
                 </div>
             </article>
         </section>
@@ -92,17 +127,31 @@
             <article>
                 <div class="spec">
                     <h2>컨테이너 : flex_wrap</h2>
-                    <p class="subDesc">컨테이너의 정렬방향에 따른 <span class="subPoint">줄바꿈 여부</span>를 설정합니다.</p>
+                    <p class="subDesc">컨테이너의 흐름방향(main axis)에 따른 <span class="subPoint">줄바꿈 여부</span>를 설정합니다.</p>
                     <ul>
-                        <li>기본값 : none</li>
+                        <li>기본값 : nowrap</li>
                         <li>상속성 : 없음</li>
-                        <li class="syntax">작성방법 : <code></code></li>
+                        <li class="syntax">작성방법 : <code><span class="point">flex-wrap:</span> <span class="point">nowrap</span>|<span class="point">wrap</span>|wrap-reverse|initial|inherit;</code></li>
                     </ul>
                 </div>
                 <div class="desc">
-                    <ul class="noti">
-                        <li></li>
-                    </ul>
+                    <table class="table table-hover table-bordered">
+                        <tr>
+                            <td>nowrap</td>
+                            <td>아이템에 대해 줄바꿈 처리하지 않습니다. 아이템의 사이즈가 강제 조정됩니다.</td>
+                        </tr>
+                        <tr>
+                            <td>wrap</td>
+                            <td>아이템이 컨테이너의 정렬기준(cross start -> cross end)로 줄바꿈 배치 됩니다.</td>
+                        </tr>
+                        <tr>
+                            <td>wrap-reverse</td>
+                            <td>아이템이 컨테이너의 역 정렬기준(cross end -> cross start)로 줄바꿈 배치 됩니다.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/KWXePg?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
                 </div>
             </article>
         </section>
@@ -112,105 +161,157 @@
                     <h2>컨테이너 : flex_flow</h2>
                     <p class="subDesc">flex_direction와 flex_wrap을 단축 선언합니다.</p>
                     <ul>
-                        <li>기본값 : none</li>
+                        <li>기본값 : row nowrap</li>
                         <li>상속성 : 없음</li>
-                        <li class="syntax">작성방법 : <code></code></li>
+                        <li class="syntax">작성방법 : <code><span class="point">flex-flow: flex-direction flex-wrap</span>|initial|inherit;</code></li>
                     </ul>
                 </div>
-                <div class="desc">
-                    <ul class="noti">
-                        <li></li>
-                    </ul>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/PpJazo?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
                 </div>
             </article>
         </section>
         <section>
             <article>
                 <div class="spec">
-                    <h2>컨테이너 : flex_align_items</h2>
-                    <p class="subDesc">컨테이너의 <span class="subPoint">정렬방향에 따른 정렬방식(align)</span>를 설정합니다.</p>
-                    <ul>
-                        <li>기본값 : none</li>
-                        <li>상속성 : 없음</li>
-                        <li class="syntax">작성방법 : <code></code></li>
-                    </ul>
+                    <h2>실습</h2>
+                    <p class="subDesc">흐름방향(main axis)이해하기</p>
                 </div>
-                <div class="desc">
-                    <ul class="noti">
-                        <li></li>
-                    </ul>
+                <div class="example">
+                    <iframe height='478' scrolling='no' title='[마봉아빠 CSS중급/플랙스]  main axis(예제)' src='//codepen.io/dstyle0210/embed/xqXzXy/?height=478&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/dstyle0210/pen/xqXzXy/'>[마봉아빠 CSS중급/플랙스]  main axis(예제)</a> by 원용봉 (<a href='http://codepen.io/dstyle0210'>@dstyle0210</a>) on <a href='http://codepen.io'>CodePen</a>. </iframe>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/peWKRP" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 연습하기</a></span>
                 </div>
             </article>
         </section>
         <section>
             <article>
                 <div class="spec">
-                    <h2>컨테이너 : flex_align_content</h2>
-                    <p class="subDesc">컨테이너의 <span class="subPoint">정렬방향에 따른 줄바꿈 시 정렬방식</span>을 설정합니다.</p>
+                    <h2>컨테이너 : justify-content</h2>
+                    <p class="subDesc">컨테이너의 흐름방향(main axis)에 따른 <span class="subPoint">아이템 배치방법</span>을 설정합니다.</p>
                     <ul>
-                        <li>기본값 : none</li>
+                        <li>기본값 : flex-start</li>
                         <li>상속성 : 없음</li>
-                        <li class="syntax">작성방법 : <code></code></li>
+                        <li class="syntax">작성방법 : <code>justify-content: flex-start|flex-end|center|space-between|space-around|initial|inherit;</code></li>
                     </ul>
                 </div>
                 <div class="desc">
-                    <ul class="noti">
-                        <li></li>
-                    </ul>
+                    <table class="table table-hover table-bordered">
+                        <tr>
+                            <td>flex-start</td>
+                            <td>아이템을 흐름방향 시작점(main start)을 기준으로 정렬합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>flex-end</td>
+                            <td>아이템을 흐름방향 종료점(main end)을 기준으로 정렬합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>center</td>
+                            <td>아이템을 흐름방향(main axis) 중간점을 기준으로 정렬합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>space-between</td>
+                            <td>아이템을 흐름방향 시작점(main-start) 와 종료점(main end)을 기준하여 <span class="point">아이템을</span>배치합니다.
+                        </tr>
+                        <tr>
+                            <td>space-around</td>
+                            <td>아이템을 흐름방향 시작점(main-start) 와 종료점(main end)을 기준하여 <span class="point">공간을</span>배치합니다.
+                        </tr>
+                    </table>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/dvVgNa?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 연습하기</a></span>
                 </div>
             </article>
         </section>
         <section>
             <article>
                 <div class="spec">
-                    <h2>컨테이너 : flex_justify</h2>
-                    <p class="subDesc">컨테이너의 <span class="subPoint">아이템 배치방법</span>을 설정합니다.</p>
+                    <h2>컨테이너 : align_items</h2>
+                    <p class="subDesc">컨테이너의 <span class="subPoint">정렬방향(cross axis)에 따른 정렬(align)</span>를 설정합니다.</p>
                     <ul>
-                        <li>기본값 : none</li>
+                        <li>기본값 : stretch</li>
                         <li>상속성 : 없음</li>
-                        <li class="syntax">작성방법 : <code></code></li>
+                        <li class="syntax">작성방법 : <code><span class="point">align-items</span>: <span class="point">stretch</span>|<span class="point">center</span>|flex-start|flex-end|baseline|initial|inherit;</code></li>
                     </ul>
                 </div>
                 <div class="desc">
-                    <ul class="noti">
-                        <li></li>
-                    </ul>
+                    <table class="table table-hover table-bordered">
+                        <tr>
+                            <td>stretch</td>
+                            <td>컨테이너의 정렬기준(cross axis) 사이즈에 아이템들의 사이즈를 맞춥니다.</td>
+                        </tr>
+                        <tr>
+                            <td>center</td>
+                            <td>아이템 사이즈 번화없이 정렬기준(cross axis)의 중간점을 기준으로 배치합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>flex-start</td>
+                            <td>아이템 사이즈 번화없이 정렬기준 시작점(cross start)을 기준으로 배치합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>flex-end</td>
+                            <td>아이템 사이즈 번화없이 정렬기준 종료점(cross end)을 기준으로 배치합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>baseline</td>
+                            <td>아이템 사이즈 번화없이 컨테이너의 baseline을 기준으로 배치합니다.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/vxezXR?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 연습하기</a></span>
                 </div>
             </article>
         </section>
         <section>
             <article>
                 <div class="spec">
-                    <h2>아이템 : flex-grow</h2>
-                    <p class="subDesc">아이템의 <span class="subPoint">정렬방향에 따른 적용비율</span>을 설정합니다.</p>
+                    <h2>컨테이너 : align_content</h2>
+                    <p class="subDesc">컨테이너의 <span class="subPoint">정렬방향(cross axis)에 따른 줄바꿈시 정렬방식</span>을 설정합니다.</p>
                     <ul>
-                        <li>기본값 : none</li>
+                        <li>기본값 : stretch</li>
                         <li>상속성 : 없음</li>
-                        <li class="syntax">작성방법 : <code></code></li>
+                        <li class="syntax">작성방법 : <code><span class="point">align-content</span>: stretch|center|flex-start|flex-end|space-between|space-around|initial|inherit;</code></li>
                     </ul>
                 </div>
                 <div class="desc">
+                    <table class="table table-hover table-bordered">
+                        <tr>
+                            <td>stretch</td>
+                            <td>줄바꿈이 일어날경우, 컨테이너의 정렬기준(cross axis) 사이즈에 아이템들의 사이즈를 맞춥니다.</td>
+                        </tr>
+                        <tr>
+                            <td>center</td>
+                            <td>줄바꿈이 일어날경우, 아이템 사이즈 번화없이 컨테이너의 정렬기준(cross axis) 중간점에 아이템을 모아서 배치합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>flex-start</td>
+                            <td>줄바꿈이 일어날경우, 아이템 사이즈 번화없이 컨테이너의 정렬기준 시작점(cross start)에 아이템을 모아서 배치합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>flex-end</td>
+                            <td>줄바꿈이 일어날경우, 아이템 사이즈 번화없이 컨테이너의 정렬기준 종료점(cross end)에 아이템을 모아서 배치합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>space-between</td>
+                            <td>줄바꿈이 일어날경우, 아이템 사이즈 번화없이 컨테이너의 정렬기준 시작점(cross-start) 와 종료점(cross end)을 기준하여 <span class="point">아이템을</span>배치합니다.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>space-around</td>
+                            <td>줄바꿈이 일어날경우, 아이템 사이즈 번화없이 컨테이너의 정렬기준 시작점(cross-start) 와 종료점(cross end)을 기준하여 <span class="point">공간을</span>배치합니다.
+                            </td>
+                        </tr>
+                    </table>
                     <ul class="noti">
-                        <li></li>
+                        <li>줄바꿈이 일어나야지만 하므로, flex-wrap:nowrap 일경우, 본 속성은 무시됩니다.</li>
+                        <li>본 속성이 선언 될 경우, align-items 속성은 무시됩니다.</li>
                     </ul>
                 </div>
-            </article>
-        </section>
-        <section>
-            <article>
-                <div class="spec">
-                    <h2>아이템 : flex_shrink</h2>
-                    <p class="subDesc">아이템의 <span class="subPoint">정렬방향에 따른 역 적용비율</span>을 설정합니다.</p>
-                    <ul>
-                        <li>기본값 : none</li>
-                        <li>상속성 : 없음</li>
-                        <li class="syntax">작성방법 : <code></code></li>
-                    </ul>
-                </div>
-                <div class="desc">
-                    <ul class="noti">
-                        <li></li>
-                    </ul>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/yMzxdV?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 연습하기</a></span>
                 </div>
             </article>
         </section>
@@ -218,17 +319,88 @@
             <article>
                 <div class="spec">
                     <h2>아이템 : flex_basis</h2>
-                    <p class="subDesc">아이템에 <span class="subPoint">적용되어야 하는 기본값(basis)</span>을 적용합니다.</p>
+                    <p class="subDesc">흐름방향(main axis)에 대한 아이템의 <span class="subPoint">기본값(basis)</span>을 적용합니다.</p>
                     <ul>
                         <li>기본값 : none</li>
                         <li>상속성 : 없음</li>
-                        <li class="syntax">작성방법 : <code></code></li>
+                        <li class="syntax">작성방법 : <code>flex-basis: length|auto|initial|inherit;</code></li>
                     </ul>
                 </div>
                 <div class="desc">
+                    <table class="table table-hover table-bordered">
+                        <tr>
+                            <td>auto</td>
+                            <td>아이템의 기본값을 자동으로 가져옵니다.</td>
+                        </tr>
+                        <tr>
+                            <td>length</td>
+                            <td>아이템의 기본값을 단위로 지정합니다.</td>
+                        </tr>
+                    </table>
                     <ul class="noti">
-                        <li></li>
+                        <li>"auto"의 경우에는 아이템의 사이즈의 기준이 베이스가 됩니다.</li>
                     </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/RpLEwx?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 연습하기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>아이템 : flex-grow</h2>
+                    <p class="subDesc">아이템의 <span class="subPoint">흐름방향(main axis)에 따른 적용비율</span>을 설정합니다.</p>
+                    <ul>
+                        <li>기본값 : 0</li>
+                        <li>상속성 : 없음</li>
+                        <li class="syntax">작성방법 : <code><span class="point">flex-grow:</span> <span class="point">number</span>|initial|inherit;</code></li>
+                    </ul>
+                </div>
+                <div class="desc">
+                    <table class="table table-hover table-bordered">
+                        <tr>
+                            <td>length</td>
+                            <td>흐름방향(main axis)에 아이템이 적용될만큼의 비율을 정수로 표현합니다.</td>
+                        </tr>
+                    </table>
+                    <ul class="noti">
+                        <li>기본값인 "0" 은 비율을 적용하지 않고, 아이템의 가로값을 사용하겠다 라는 의미입니다.</li>
+                        <li>아이템이 3개일경우, 모두 flex-grow:1 로 선언하면 "1:1:1" 비율로 사이즈가 결정됩니다.</li>
+                        <li>비율 계산하는 부분에 대해서 꼭 이해하세요.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/dvVggx?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 연습하기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>아이템 : flex-shrink</h2>
+                    <p class="subDesc">아이템의 <span class="subPoint">흐름방향(main axis)에 따른 역 적용비율</span>을 설정합니다.</p>
+                    <ul>
+                        <li>기본값 : 1</li>
+                        <li>상속성 : 없음</li>
+                        <li class="syntax">작성방법 : <code><span class="point">flex-shrink</span>: <span class="point">number</span>|initial|inherit;</code></li>
+                    </ul>
+                </div>
+                <div class="desc">
+                    <table class="table table-hover table-bordered">
+                        <tr>
+                            <td>length</td>
+                            <td>아이템의 총 가로값을 기준으로, 창이 줄어들경우 아이템이 줄어들 비율을 적용합니다.</td>
+                        </tr>
+                    </table>
+                    <ul class="noti">
+                        <li>기본값인 "0" 은 비율을 적용하지 않고, 아이템의 가로값을 사용하겠다 라는 의미입니다.</li>
+                        <li>아이템이 3개일경우, 모두 flex-grow:1 로 선언하면 "1:1:1" 비율로 사이즈가 결정됩니다.</li>
+                        <li>비율 계산하는 부분에 대해서 꼭 이해하세요.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/OpxaPp?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 연습하기</a></span>
                 </div>
             </article>
         </section>
