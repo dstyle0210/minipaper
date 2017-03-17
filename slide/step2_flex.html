@@ -191,7 +191,7 @@
                     <ul>
                         <li>기본값 : flex-start</li>
                         <li>상속성 : 없음</li>
-                        <li class="syntax">작성방법 : <code>justify-content: flex-start|flex-end|center|space-between|space-around|initial|inherit;</code></li>
+                        <li class="syntax">작성방법 : <code><span class="point">justify-content</span>: flex-start|flex-end|<span class="point">center</span>|<span class="point">space-between</span>|<span class="point">space-around</span>|initial|inherit;</code></li>
                     </ul>
                 </div>
                 <div class="desc">
@@ -238,7 +238,7 @@
                     <table class="table table-hover table-bordered">
                         <tr>
                             <td>stretch</td>
-                            <td>컨테이너의 정렬기준(cross axis) 사이즈에 아이템들의 사이즈를 맞춥니다.</td>
+                            <td>컨테이너의 정렬기준(cross axis) 사이즈에 아이템의 사이즈를 늘려 배치합니다.</td>
                         </tr>
                         <tr>
                             <td>center</td>
@@ -282,30 +282,30 @@
                         </tr>
                         <tr>
                             <td>center</td>
-                            <td>줄바꿈이 일어날경우, 아이템 사이즈 번화없이 컨테이너의 정렬기준(cross axis) 중간점에 아이템을 모아서 배치합니다.</td>
+                            <td>줄바꿈이 일어날경우, 컨테이너의 정렬기준(cross axis) 중간점에 아이템을 모아서 배치합니다.</td>
                         </tr>
                         <tr>
                             <td>flex-start</td>
-                            <td>줄바꿈이 일어날경우, 아이템 사이즈 번화없이 컨테이너의 정렬기준 시작점(cross start)에 아이템을 모아서 배치합니다.</td>
+                            <td>줄바꿈이 일어날경우, 컨테이너의 정렬기준 시작점(cross start)에 아이템을 모아서 배치합니다.</td>
                         </tr>
                         <tr>
                             <td>flex-end</td>
-                            <td>줄바꿈이 일어날경우, 아이템 사이즈 번화없이 컨테이너의 정렬기준 종료점(cross end)에 아이템을 모아서 배치합니다.</td>
+                            <td>줄바꿈이 일어날경우, 컨테이너의 정렬기준 종료점(cross end)에 아이템을 모아서 배치합니다.</td>
                         </tr>
                         <tr>
                             <td>space-between</td>
-                            <td>줄바꿈이 일어날경우, 아이템 사이즈 번화없이 컨테이너의 정렬기준 시작점(cross-start) 와 종료점(cross end)을 기준하여 <span class="point">아이템을</span>배치합니다.
+                            <td>줄바꿈이 일어날경우, 컨테이너의 정렬기준 시작점(cross-start) 와 종료점(cross end)을 기준하여 <span class="point">아이템을</span>배치합니다.
                             </td>
                         </tr>
                         <tr>
                             <td>space-around</td>
-                            <td>줄바꿈이 일어날경우, 아이템 사이즈 번화없이 컨테이너의 정렬기준 시작점(cross-start) 와 종료점(cross end)을 기준하여 <span class="point">공간을</span>배치합니다.
+                            <td>줄바꿈이 일어날경우, 컨테이너의 정렬기준 시작점(cross-start) 와 종료점(cross end)을 기준하여 <span class="point">공간을</span>배치합니다.
                             </td>
                         </tr>
                     </table>
                     <ul class="noti">
                         <li>줄바꿈이 일어나야지만 하므로, flex-wrap:nowrap 일경우, 본 속성은 무시됩니다.</li>
-                        <li>본 속성이 선언 될 경우, align-items 속성은 무시됩니다.</li>
+                        <li>본 속성에서 "stretch" 외 값이 지정 경우, align-items 속성은 무시됩니다.</li>
                     </ul>
                 </div>
                 <div class="btnSec">
