@@ -27,6 +27,7 @@
                 <ul>
                     <li>- 챕터당 중간중간 실습이 있습니다.</li>
                     <li>- 챕터 마지막엔 과제 겸 실습이 있습니다.</li>
+                    <li>- 엘리먼트(Element)라고 표현된건 HTML태그를 지칭합니다.</li>
                     <li>- 과제제출은 안하셔도 되며, 질문은 게시판을 이용해주세요.</li>
                 </ul>
             </article>
@@ -35,17 +36,16 @@
             <article>
                 <h2>마봉아빠 CSS 전체 커리큘럼</h2>
                 <div class="curriculumList">
-                    <dl><dt>[초급] 시작</dt><dd>CSS에 관련하여 필수적인 공통부분에 대해 설명합니다.</dd></dl>
-                    <dl><dt>[초급] 텍스트(인라인)요소</dt><dd>HTML요소 중 텍스트를 꾸며주는 CSS에 대해 설명합니다.</dd></dl>
-                    <dl><dt>[초급] 블럭요소</dt><dd>HTML요소 중 블럭요소 속성들을 설명합니다. </dd></dl>
-                    <dl><dt>[초급] 레이아웃</dt><dd>HTML요소을 꾸밀때 사용되는 레이아웃속성에 대해 설명합니다.</dd></dl>
-                    <dl><dt>[초급] 표레이아웃</dt><dd>HTML요소 중 표(table)을 꾸미는 속성을 설명합니다.</dd></dl>
-                    <dl><dt>[초급] 미디어</dt><dd>CSS을 이용해서 다른 미디어에 적용하는 법을 설명합니다.</dd></dl>
-                    <dl><dt>[중급] 시작</dt><dd>CSS의 공통 중 이해하지 어렵지만 필요한 부분을 설명합니다.</dd></dl>
+                    <dl><dt>[초급] 시작</dt><dd>CSS에 관련하여 <span class="subPoint">필수적인 공통</span>부분에 대해 설명합니다.</dd></dl>
+                    <dl><dt>[초급] 텍스트(인라인)요소</dt><dd>HTML요소 중 <span class="subPoint">텍스트를 꾸며주는 CSS</span>에 대해 설명합니다.</dd></dl>
+                    <dl><dt>[초급] 블럭요소</dt><dd>HTML요소 중 <span class="subPoint">블럭요소 속성</span>들을 설명합니다. </dd></dl>
+                    <dl><dt>[초급] 레이아웃</dt><dd>HTML요소을 <span class="subPoint">꾸밀때 사용되는 레이아웃 속성</span>에 대해 설명합니다.</dd></dl>
+                    <dl><dt>[초급] 표레이아웃</dt><dd>HTML요소 중 <span class="subPoint">표(table)을 꾸미는 속성</span>을 설명합니다.</dd></dl>
+                    <dl><dt>[초중급] 미디어 , 미디어쿼리</dt><dd>CSS을 이용해서 다양한 <span class="subPoint">미디어을 호환하는 법</span>을 설명합니다.</dd></dl>
+                    <dl><dt>[중급] 시작</dt><dd>CSS의 공통 중 <span class="subPoint">이해하지 어렵지만 필요한 공통부분</span>을 설명합니다.</dd></dl>
                     <dl><dt>[중급] 그리드(Grid)</dt><dd>그리드에 대해 설명합니다.</dd></dl>
                     <dl><dt>[중급] CSS3 플랙스(Flex) 레이아웃</dt><dd>플랙스 레이아웃에 대해서 셜명합니다.</dd></dl>
                     <dl><dt>[중급] CSS3 애니메이션</dt><dd>CSS을 이용해서 움직임을 구현합니다.</dd></dl>
-                    <dl><dt>[중급] 미디어 쿼리</dt><dd>반응형 웹을 만드는 미디어쿼리에 대해 설명합니다.</dd></dl>
                     <dl><dt>[중급] 전처리기(LESS , SASS)</dt><dd>CSS을 컴파일하는 전처리기에 대해 설명합니다.</dd></dl>
                     <dl><dt>[중급] CSS방법론(BEM, SMACSS , OOCSS)</dt><dd>CSS을 어떻게 구현하는것이 좋은가에 대한 방법론을 제시합니다.</dd></dl>
                     <dl><dt>[??] 버그</dt><dd>알려진 CSS버그에 대해 설명합니다.</dd></dl>
@@ -162,8 +162,8 @@
                 </div>
                 <div class="desc">
                     <ul class="noti">
-                        <li>HTML태그의 "id" 와 대입 되는것이 "#" 이고, "class"와 대입되는것이 "." 입니다.</li>
-                        <li>class로 선택할때는 class 안에 여러개의 class 값이 들어갈 수 있습니다.</li>
+                        <li>HTML태그의 "id" 어트리뷰트 와 대입 되는것이 "#" 이고, "class" 어트리뷰트와 대입되는것이 "." 입니다.</li>
+                        <li>HTML태그의 "class" 어트리뷰트는 값으로 여러개의 className(클래스명) 이 들어갈 수 있습니다.</li>
                     </ul>
                 </div>
                 <div class="btnSec">
@@ -240,7 +240,7 @@
                 </div>
                 <div class="desc">
                     <ul class="noti">
-                        <li>대부분은 색상을 적용할때는 "HEX"로 <span class="subPoint">#영문소문자6자리</span> 로 표기합니다.</li>
+                        <li>대부분의 퍼블리셔는 색상을 적용할때, "HEX 형식"으로 <span class="subPoint">#영문소문자 6자리</span> 로 표기합니다.</li>
                     </ul>
                 </div>
                 <div class="btnSec">
@@ -319,6 +319,20 @@
         <section>
             <article>
                 <div class="spec">
+                    <h2>실습</h2>
+                    <p class="subDesc">색상 , 단위 , 주석 처리해보기.</p>
+                </div>
+                <div class="example">
+                    <iframe height='500' scrolling='yes' title='[마봉아빠 CSS초급/시작] 색상,단위,주석(예제)' src='//codepen.io/dstyle0210/embed/preview/yMpmwB/?height=500&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/dstyle0210/pen/yMpmwB/'>[마봉아빠 CSS초급/시작] 색상,단위,주석(예제)</a> by 원용봉 (<a href='http://codepen.io/dstyle0210'>@dstyle0210</a>) on <a href='http://codepen.io'>CodePen</a>. </iframe>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/KWZOQE?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 연습하기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
                     <h2>우선순위(Priority Rules)</h2>
                     <p class="subDesc">셀렉터에는 우선순위가 있어요.</p>
                 </div>
@@ -333,7 +347,6 @@
                 </div>
                 <div class="desc">
                     <ul class="noti">
-                        <li>총합이 아니라 <span class="subPoint">검색단계의 우선순위</span>에 따라 적용됩니다.</li>
                         <li>우선순위가 같으면, <span class="subPoint">나중에 선언된 속성</span>이 적용됩니다.</li>
                     </ul>
                 </div>

@@ -86,6 +86,9 @@ code{color:#555;}
 .curriculumList dl:nth-child(even){margin-left:4%;}
 .curriculumList dt{font-size:20px;text-align:left;color:#000;}
 .curriculumList dd{font-size:14px;color:#666;font-weight:500;}
+.curriculumList dd + dd{padding-top:5px;}
+.curriculumList.nowrap dl{width:100%;}
+.curriculumList.nowrap dl:nth-child(even){margin-left:0;}
 
 /*! 예제보기, 브라우저보기 */
 .btnSec{padding-top:15px;text-align:right;}
