@@ -37,17 +37,18 @@
                 <h2>마봉아빠 CSS 전체 커리큘럼</h2>
                 <div class="curriculumList">
                     <dl><dt>[초급] 시작</dt><dd>CSS에 관련하여 <span class="subPoint">필수적인 공통</span>부분에 대해 설명합니다.</dd></dl>
-                    <dl><dt>[초급] 텍스트(인라인)요소</dt><dd>HTML요소 중 <span class="subPoint">텍스트를 꾸며주는 CSS</span>에 대해 설명합니다.</dd></dl>
-                    <dl><dt>[초급] 블럭요소</dt><dd>HTML요소 중 <span class="subPoint">블럭요소 속성</span>들을 설명합니다. </dd></dl>
-                    <dl><dt>[초급] 레이아웃</dt><dd>HTML요소을 <span class="subPoint">꾸밀때 사용되는 레이아웃 속성</span>에 대해 설명합니다.</dd></dl>
-                    <dl><dt>[초급] 표레이아웃</dt><dd>HTML요소 중 <span class="subPoint">표(table)을 꾸미는 속성</span>을 설명합니다.</dd></dl>
-                    <dl><dt>[초중급] 미디어 , 미디어쿼리</dt><dd>CSS을 이용해서 다양한 <span class="subPoint">미디어을 호환하는 법</span>을 설명합니다.</dd></dl>
-                    <dl><dt>[중급] 시작</dt><dd>CSS의 공통 중 <span class="subPoint">이해하지 어렵지만 필요한 공통부분</span>을 설명합니다.</dd></dl>
-                    <dl><dt>[중급] 그리드(Grid)</dt><dd>그리드에 대해 설명합니다.</dd></dl>
-                    <dl><dt>[중급] CSS3 플랙스(Flex) 레이아웃</dt><dd>플랙스 레이아웃에 대해서 셜명합니다.</dd></dl>
-                    <dl><dt>[중급] CSS3 애니메이션</dt><dd>CSS을 이용해서 움직임을 구현합니다.</dd></dl>
-                    <dl><dt>[중급] 전처리기(LESS , SASS)</dt><dd>CSS을 컴파일하는 전처리기에 대해 설명합니다.</dd></dl>
-                    <dl><dt>[중급] CSS방법론(BEM, SMACSS , OOCSS)</dt><dd>CSS을 어떻게 구현하는것이 좋은가에 대한 방법론을 제시합니다.</dd></dl>
+                    <dl><dt>[초급] 텍스트(inline)요소</dt><dd>HTML요소 중 <span class="subPoint">텍스트를 꾸며주는 CSS</span>에 대해 설명합니다.</dd></dl>
+                    <dl><dt>[초급] 블럭(block)요소</dt><dd>HTML요소 중 <span class="subPoint">블럭요소 속성</span>들을 설명합니다. </dd></dl>
+                    <dl><dt>[초급] 레이아웃(Layout)</dt><dd>HTML요소을 <span class="subPoint">꾸밀때 사용되는 레이아웃 속성</span>에 대해 설명합니다.</dd></dl>
+                    <dl><dt>[초급] 표(Table) 관련 속성</dt><dd>HTML요소 중 <span class="subPoint">표(table)을 꾸미는 속성</span>을 설명합니다.</dd></dl>
+                    <dl><dt>[초중급] 미디어 쿼리(Media queries)</dt><dd>CSS을 이용해서 다양한 <span class="subPoint">미디어을 호환하는 법</span>을 설명합니다.</dd></dl>
+                    <dl><dt>[중급] 시작</dt><dd>CSS의 <span class="subPoint">이론 및 셀렉터, 값에 대해서 좀 더 깊게</span> 설명합니다.</dd></dl>
+                    <dl><dt>[중급] CSS3 플랙스(Flex) 레이아웃</dt><dd><span class="subPoint">플랙스 레이아웃</span>에 대해서 셜명합니다.</dd></dl>
+                    <dl><dt>[중급] CSS3 2D 트랜스폼(Transforms)</dt><dd>CSS을 이용해서 움직임을 구현합니다.</dd></dl>
+                    <dl><dt>[중급] CSS3 트랜지션(Transition)</dt><dd>CSS을 이용해서 움직임을 구현합니다.</dd></dl>
+                    <dl><dt>[??] 전처리기(LESS , SASS)</dt><dd>CSS을 컴파일하는 전처리기에 대해 설명합니다.</dd></dl>
+                    <dl><dt>[??] CSS방법론(BEM, SMACSS , OOCSS)</dt><dd>CSS을 어떻게 구현하는것이 좋은가에 대한 방법론을 제시합니다.</dd></dl>
+                    <dl><dt>[??] 그리드(Grid)</dt><dd>그리드에 대해 설명합니다.</dd></dl>
                     <dl><dt>[??] 버그</dt><dd>알려진 CSS버그에 대해 설명합니다.</dd></dl>
                     <dl><dt>[??] 기법</dt><dd>알려진 CSS기법에 대해 설명합니다.</dd></dl>
                 </div>
@@ -73,6 +74,7 @@
                     <dl><dt>:nth-child(n)</dt><dd>가상셀렉터중 <span class="subPoint">:nth-child(n)</span>에 대해 알아봅니다.</dd></dl>
                     <dl><dt>디스플레이(display)</dt><dd>요소의 <span class="subPoint">구조적 특징을 변경</span>합니다.</dd></dl>
                     <dl><dt>비지빌리티(visibility)</dt><dd>요소의 <span class="subPoint">보이기 여부</span>를 지정합니다.</dd></dl>
+                    <dl><dt>투명도(opacity)</dt><dd>요소의 <span class="subPoint">투명도</span>를 지정합니다.</dd></dl>
                 </div>
             </article>
         </section>
@@ -509,7 +511,7 @@
                     <ul>
                         <li>기본값 : visible</li>
                         <li>상속성 : 없음</li>
-                        <li>작성방법 : <code><span class="point">visibility:</span> visible|<span class="point">hidden</span>|collapse|initial|inherit;</code></li>
+                        <li>작성방법 : <code><span class="point">visibility:</span> visible|<span class="point">hidden</span>|collapse;</code></li>
                     </ul>
                 </div>
                 <div class="desc">
@@ -555,8 +557,29 @@
         <section>
             <article>
                 <div class="spec">
+                    <h2>투명도(opacity)</h2>
+                    <p class="subDesc">요소의 투명도를 조절합니다.</p>
+                    <ul>
+                        <li>기본값 : 1</li>
+                        <li>상속성 : 없음</li>
+                        <li>작성방법 : <code><span class="point">opacity:</span> <span class="point">number</span>;</code></li>
+                    </ul>
+                </div>
+                <div class="desc">
+                    <ul>
+                        <li>0 ~ 1 까지의 투명도를 조절이 가능하고, 소수점은 두자리까지 적용됩니다.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/dvmqEp?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
                     <h2>실습</h2>
-                    <p class="subDesc">디스플레이와 비지빌리티를 연습해봅니다.</p>
+                    <p class="subDesc">디스플레이와 비지빌리티, 투명도를 연습해봅니다.</p>
                 </div>
                 <div class="example">
                     <iframe height='375' scrolling='no' title='[마봉아빠 CSS초급/시작] 보이고 안보이고 처리 샘플(예제)' src='//codepen.io/dstyle0210/embed/oZwNJq/?height=375&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/dstyle0210/pen/oZwNJq/'>[마봉아빠 CSS초급/시작] 보이고 안보이고 처리 샘플(예제)</a> by 원용봉 (<a href='http://codepen.io/dstyle0210'>@dstyle0210</a>) on <a href='http://codepen.io'>CodePen</a>. </iframe>
@@ -595,7 +618,8 @@
                 <h2>속성(Property) 정리</h2>
                 <div class="curriculumList">
                     <dl><dt>디스플레이(display)</dt><dd><code><span class="point">display:</span> inline | <span class="point">block</span> | <span class="point">inline-block</span> | <span class="point">none</span> | <span class="point">flex</span> | table | table-cell;</code></dd></dl>
-                    <dl><dt>비지빌리티(visibility)</dt><dd><code><span class="point">visibility:</span> visible|<span class="point">hidden</span>|collapse|initial|inherit;</code></dd></dl>
+                    <dl><dt>비지빌리티(visibility)</dt><dd><code><span class="point">visibility:</span> visible|<span class="point">hidden</span>|collapse;</code></dd></dl>
+                    <dl><dt>투명도(opacity)</dt><dd><code><span class="point">opacity:</span> <span class="point">number</span>;</code></dd></dl>
                 </div>
             </article>
         </section>

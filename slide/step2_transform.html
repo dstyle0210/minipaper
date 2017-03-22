@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>마봉아빠의 CSS중급 : 시작</title>
+    <link href='https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div id="main">
+
+    <section>
+        <section>
+            <article class="index">
+                <h1>CSS중급 : 트랜스폼(Transforms)</h1>
+                <h3 class="inverted">떠듦 by 마봉아빠 </h3>
+            </article>
+        </section>
+    </section>
+    <section>
+        <section>
+            <article>
+                <h2>CSS중급 : 트랜스폼(Transforms) : 커리큘럼</h2>
+                <div class="curriculumList">
+                    <dl><dt>트랜스폼의 정의</dt><dd></dd></dl>
+                    <dl><dt>2D : translate()</dt><dd></dd></dl>
+                    <dl><dt>2D : rotate()</dt><dd></dd></dl>
+                    <dl><dt>2D : scale()</dt><dd></dd></dl>
+                    <dl><dt>2D : skewX()</dt><dd></dd></dl>
+                    <dl><dt>2D : skewY()</dt><dd></dd></dl>
+                    <dl><dt>2D : matrix()</dt><dd></dd></dl>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>플랙스 레이아웃이란?</h2>
+                    <p class="subDesc">요소의 <span class="subPoint">방향축(axis)</span>을 조정하여 레이아웃하는 방법입니다.</p>
+                </div>
+                <div class="desc">
+                    <div class="image"><img src="https://developer.mozilla.org/files/3739/flex_terms.png" alt=""></div>
+                </div>
+                <div class="desc">
+                    <ul class="noti">
+                        <li>현재 플랙스 레이아웃은 모바일 브라우저 및 최신 브라우저에서만 정상적으로 동작합니다. <a href="http://caniuse.com/#search=flex" class="label label-warning caniuse"><i class="glyphicon glyphicon-link"></i></a> </li>
+                        <li><span class="point">컨테이너(container)</span>는 플랙스레이아웃의 부모요소 이면서, 전체영역 입니다. </li>
+                        <li><span class="point">아이템(item)</span>은 플랙스레이아웃의 자식요소 입니다.</li>
+                        <li><span class="subPoint">흐름방향(main axis)</span>는 플랙스레이아웃의 흐름(Flow)의 기준입니다. </li>
+                        <li><span class="subPoint">흐름방향(main axis)</span>는 main-start(흐름방향 시작) 와 main-end(흐름방향 끝)으로 나뉘어집니다.</li>
+                        <li><span class="subPoint">정렬방향(cross axis)</span>은 플랙스레이아웃의 정렬(Align) 방향입니다.</li>
+                        <li><span class="subPoint">정렬방향(cross axis)</span>은 cross-start(정렬방향 시작) 와 cross-end(정렬방향 끝)으로 나뉘어집니다.</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+    </section>
+    <section>
+        <article>
+            <h2>속성(Property) 정리</h2>
+            <div class="curriculumList">
+                <dl><dt><span class="point">컨테이너 : display:flex;</span></dt><dd><span class="subPoint">플랙스 레이아웃을 사용하겠다 라는 선언</span>에 대해 설명합니다.</dd></dl> <!-- display:flex; -->
+                <dl><dt><span class="point">컨테이너 : flex-direction</span></dt><dd><code><span class="point">flex-direction:</span> <span class="point">row</span>|row-reverse|<span class="point">column</span>|column-reverse|initial|inherit;</code></dd></dl>
+                <dl><dt><span class="point">컨테이너 : flex-wrap</span></dt><dd>컨테이너의 흐름방향(main axis)에 따른 <span class="subPoint">줄바꿈 여부</span>를 설정합니다.</dd></dl>
+                <dl><dt>컨테이너 : flex-flow</dt><dd>flex_direction와 flex_wrap을 단축 선언합니다.</dd></dl>
+                <dl><dt><span class="point">컨테이너 : justify-content</span></dt><dd>컨테이너의 흐름방향(main axis)에 따른 <span class="subPoint">아이템 배치방법</span>을 설정합니다.</dd></dl>
+                <dl><dt>컨테이너 : align-items</dt><dd>컨테이너의 <span class="subPoint">정렬방향(cross axis)에 따른 정렬(align)</span>를 설정합니다.</dd></dl>
+                <dl><dt>컨테이너 : align-content</dt><dd>컨테이너의 <span class="subPoint">정렬방향(cross axis)에 따른 줄바꿈시 정렬방식</span>을 설정합니다.</dd></dl>
+                <dl><dt>아이템 : flex_basis</dt><dd>흐름방향(main axis)에 대한 아이템의 <span class="subPoint">기본값(basis)</span>을 적용합니다.</dd></dl>
+                <dl><dt>아이템 : flex-grow</dt><dd><span class="subPoint">컨테이너에 아이템이 배치되고 <span class="subPoint">남은 공간을 아이템에 분배하는 비(ratio)</span>을 설정합니다.</dd></dl>
+                <dl><dt>아이템 : flex-shrink</dt><dd><span class="subPoint">컨테이너에 아이템이 배치되고 <span class="subPoint">넘쳐진 공간을 아이템에 분배하는 비(ratio)</span>을 설정합니다.</dd></dl>
+                <dl><dt><span class="point">아이템 : flex</span></dt><dd>flex-grow , flex_shrink , flex_basis을 단축선언합니다.</dd></dl>
+                <dl><dt>아이템 : align-self</dt><dd>아이템 개별의 <span class="subPoint">정렬방향(cross axis)</span>을 설정합니다.</dd></dl>
+                <dl><dt>아이템 : order</dt><dd>흐름방향(main axis)상 아이템의 <span class="subPoint">우선순위</span>를 지정합니다.</dd></dl>
+            </div>
+        </article>
+    </section>
+</div>
+<script src="slideshow.js"></script>
+</body>
+</html>
