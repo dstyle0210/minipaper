@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>마봉아빠의 CSS초급 : 시작</title>
+    <link href='https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../asset/main.css">
+</head>
+
+<body>
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div id="main">
+
+    <section>
+        <section>
+            <article class="index">
+                <h1>CSS별첨 : 중급 셀렉터</h1>
+                <h3 class="inverted">떠듦 by 마봉아빠 </h3>
+            </article>
+        </section>
+    </section>
+    <section>
+        <section>
+            <article>
+                <h2>CSS별첨 : 중급셀렉터 : 커리큘럼</h2>
+                <div class="curriculumList">
+                    <dl><dt>셀렉터(Selector) : Attribute</dt><dd>HTML태그의 어트리뷰트(Attribute)을 이용하여 선택하는 방법을 설명합니다.</dd></dl>
+                    <dl><dt>가상 셀렉터(Pseudo Classes) : nth-child(n)</dt><dd>CSS의 가상클래스 중, :nth-child(n)을 좀더 잘쓰는 방법을 설명합니다.</dd></dl>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>셀렉터(Selector) : Attribute</h2>
+                    <p class="subDesc">HTML태그의 어트리뷰트(Attribute)을 이용하여 선택하는 방법을 설명합니다.</p>
+                </div>
+                <div class="desc">
+                    <ul class="flex">
+                        <li>
+                            <h3>[attribute]</h3>
+                            <p><span class="comment">: Attr을 가지고 있으면 선택</span></p>
+                            <code>E<span class="point">[attribute]</span>{property:value;}</code>
+                        </li>
+                        <li>
+                            <h3>[attribute=value]</h3>
+                            <p><span class="comment">: Attr의 값이 같으면 선택</span></p>
+                            <code>E<span class="point">[attribute=value]</span>{property:value;}</code>
+                        </li>
+                        <li>
+                            <h3>[attribute*=value]</h3>
+                            <p><span class="comment">: Attr의 값이 "글자로" 포함되어 있으면 선택</span></p>
+                            <code>E<span class="point">[attribute*=value]</span>{property:value;}</code>
+                        </li>
+                        <li>
+                            <h3>[attribute^=value]</h3>
+                            <p><span class="comment">: Attr의 값으로 시작하면 선택</span></p>
+                            <code>E<span class="point">[attribute^=value]</span>{property:value;}</code>
+                        </li>
+                        <li>
+                            <h3>[attribute$=value]</h3>
+                            <p><span class="comment">: Attr의 값으로 끝나면 선택</span></p>
+                            <code>E<span class="point">[attribute$=value]</span>{property:value;}</code>
+                        </li>
+                        <li>
+                            <h3>[attribute|=value]</h3>
+                            <p><span class="comment">: Attr의 값이 "언어형식" 으로 포함되어있으면 선택</span></p>
+                            <code>E<span class="point">[attribute|=value]</span>{property:value;}</code>
+                        </li>
+                        <li>
+                            <h3>[attribute~=value]</h3>
+                            <p><span class="comment">: Attr의 값이 "단어로" 포함 되어있으면 선택</span></p>
+                            <code>E<span class="point">[attribute~=value]</span>{property:value;}</code>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/GrPydq?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>가상 셀렉터(Pseudo Classes) : nth-child(n)</h2>
+                    <p class="subDesc">CSS의 가상클래스 중, :nth-child(n)을 좀더 잘쓰는 방법을 설명합니다.</p>
+                </div>
+                <div class="desc">
+                    <div class="code"><code>:nth-child(n)</code></div>
+                </div>
+                <div class="desc">
+                    <ul>
+                        <li>"an+b"를 이해하세요.</li>
+                        <li>"2n"은 "even"과 같고, "2n+1" 은 "odd"와 같아요.</li>
+                        <li>"번째"를 선택하겠다 라는 개념이 중요합니다. ( 1st, 2nd, 3rd, 4th, ..., nth )</li>
+                        <li>IE8에서 호환성이 안되기 때문에 주의해야 합니다.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/ryMNQR" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+    </section>
+    <section>
+        <section>
+            <article>
+                <h2>중급 셀렉터(Selector) 정리</h2>
+                <div class="curriculumList">
+                    <dl><dt>[attribute]</dt><dd><code>E<span class="point">[attribute]</span>{property:value;}</code></dd></dl>
+                    <dl><dt>[attribute=value]</dt><dd><code>E<span class="point">[attribute=value]</span>{property:value;}</code></dd></dl>
+                    <dl><dt>[attribute*=value]</dt><dd><code>E<span class="point">[attribute*=value]</span>{property:value;}</code></dd></dl>
+                    <dl><dt>[attribute^=value]</dt><dd><code>E<span class="point">[attribute^=value]</span>{property:value;}</code></dd></dl>
+                    <dl><dt>[attribute$=value]</dt><dd><code>E<span class="point">[attribute$=value]</span>{property:value;}</code></dd></dl>
+                    <dl><dt>[attribute~=value]</dt><dd><code>E<span class="point">[attribute~=value]</span>{property:value;}</code></dd></dl>
+                    <dl><dt>[attribute|=value]</dt><dd><code>E<span class="point">[attribute|=value]</span>{property:value;}</code></dd></dl>
+                    <dl><dt>:nth-child(number|odd|even|n)</dt><dd><code>E<span class="point">:nth-child(n)</span>{property:value;}</code></dd></dl>
+                </div>
+            </article>
+        </section>
+    </section>
+    <section>
+        <article>
+            <div class="thx">
+                <img src="http://cfile228.uf.daum.net/image/273D4A42574D1C8A2F27B8" class="null" alt="">
+                <h2>감사합니다.</h2>
+            </div>
+        </article>
+    </section>
+</div>
+<script src="../../asset/slideshow.js"></script>
+</body>
+</html>
+<!-- section>article>h2 -->
