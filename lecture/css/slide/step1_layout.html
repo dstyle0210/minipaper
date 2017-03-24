@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>마봉아빠의 CSS초급 : 레이아웃</title>
+    <link href='https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../asset/main.css">
+</head>
+
+<body>
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div id="main">
+
+    <section>
+        <article class="index">
+            <h1>CSS초급 : 레이아웃</h1>
+            <h3 class="inverted">떠듦 by 마봉아빠 </h3>
+        </article>
+    </section>
+    <section>
+        <section>
+            <article>
+                <h2>CSS초급 : 레이아웃 : 커리큘럼</h2>
+                <div class="curriculumList">
+                    <dl><dt>레이아웃 방식</dt><dd>레이아웃을 만드는 <span class="subPoint">3가지 방법</span>을 소개합니다.</dd></dl>
+                    <dl><dt>플로트(float)</dt><dd><span class="subPoint">요소를 배치하는 방법</span>인 플로트에 대해 설명합니다.</dd></dl>
+                    <dl><dt>클리어(clear)</dt><dd><span class="subPoint">플로트을 해제</span>하는 방법에 대해 설명합니다.</dd></dl>
+                    <dl><dt>어려워요! 해즈레이아웃(haslayout)</dt><dd>플로트의 <span class="subPoint">영역을 지정해주는 개념</span>에 대해 설명합니다.</dd></dl>
+                    <dl><dt>쉬워요! 클리어픽스(.clearfix)</dt><dd>미리 만들어진 <span class="subPoint">클래스 라이브러리</span> 입니다.</dd></dl>
+                    <dl><dt>포지션(position)</dt><dd><span class="subPoint">요소를 좌표로 배치</span>하는 포지션에 대해 설명합니다.</dd></dl>
+                    <dl><dt>포지션(position):absolute</dt><dd><span class="subPoint">절대적 좌표로 적용</span>하는 방법에 대해 설명합니다.</dd></dl>
+                    <dl><dt>포지션(position):relative</dt><dd><span class="subPoint">상대적 좌표로 적용</span>하는 방법에 대해 설명합니다.</dd></dl>
+                    <dl><dt>포지션(position):fixed</dt><dd><span class="subPoint">고정 좌표로 적용</span>하는 방법에 대해 설명합니다.</dd></dl>
+                    <dl><dt>좌표(top,left,bottom,right)</dt><dd>포지션에 사용되는 <span class="subPoint">좌표</span>에 대해 설명합니다.</dd></dl>
+                    <dl><dt>인덱스 깊이(z-index)</dt><dd><span class="subPoint">포지션된 요소의 인덱스 깊이</span>를 설정합니다.</dd></dl>
+                    <dl><dt>플랙스(display:flex)</dt><dd>새로운 레이아웃 방법인 <span class="subPoint">플랙스에 대해 소개</span>합니다.</dd></dl>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>레이아웃(Layout) 방식</h2>
+                    <p class="subDesc">CSS의 레이아웃방법에 대해 설명합니다.</p>
+                </div>
+                <div class="desc">
+                    <ul class="flex-nowrap">
+                        <li>
+                            <h2><span class="point">플로트(Float)</span></h2>
+                            <p>요소의 <span class="subPoint">흐름(flow)</span>을<br />조정하여 레이아웃.</p>
+                            <ul class="propertyList">
+                                <li>float</li>
+                                <li>clear</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><span class="point">포지션(Position)</span></h2>
+                            <p>요소의 <span class="subPoint">좌표(direction)</span>을<br />조정하여 레이아웃.</p>
+                            <ul class="propertyList">
+                                <li>position</li>
+                                <li>top</li>
+                                <li>left</li>
+                                <li>right</li>
+                                <li>bottom</li>
+                                <li>z-index</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h2><span class="point">플랙스(Flex)</span></h2>
+                            <p>요소의 <span class="subPoint">방향축(axis)</span>을<br />조정하여 레이아웃.</p>
+                            <ul class="propertyList">
+                                <li>display:flex;</li>
+                                <li>flex-direction</li>
+                                <li>flex-wrap</li>
+                                <li>flex-flow</li>
+                                <li>align-items</li>
+                                <li>align-content</li>
+                                <li>justify-content</li>
+                                <li>flex-grow</li>
+                                <li>flex-shrink</li>
+                                <li>flex-basis</li>
+                                <li>flex</li>
+                                <li>align-self</li>
+                                <li>order</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/xgoXZp?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="specFlex">
+                    <div class="spec">
+                        <h2>플로트(float)</h2>
+                        <p class="subDesc">직역하면 띄우다(float)라는 의미입니다.</p>
+                        <ul>
+                            <li>기본값 : none</li>
+                            <li>상속성 : 없음</li>
+                            <li class="syntax">작성방법 : <code><span class="point">float:</span> none|<span class="point">left</span>|<span class="point">right</span>;</code></li>
+                        </ul>
+                    </div>
+                    <div class="spec">
+                        <h2>클리어(clear)</h2>
+                        <p class="subDesc">플로트된 흐름을 해제합니다.</p>
+                        <ul>
+                            <li>기본값 : none</li>
+                            <li>상속성 : 없음</li>
+                            <li class="syntax">작성방법 : <code><span class="point">clear:</span> none|left|right | <span class="point">both</span>;</code></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="desc">
+                    <ul class="noti">
+                        <li>띄우다(float)라는 의미처럼 "살짝 뜬 요소이다" 라는 개념이 중요합니다.</li>
+                        <li>바다에 배가 떠다닌다고 상상해 보면 좀 더 이해하기 쉽습니다.</li>
+                        <li>clear는 흐름을 막는 속성입니다. 요소의 float 상태를 해제하려면, "float:none"을 해야합니다.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/LWRqVz" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>어려워요 : 해즈레이아웃(hasLayout)</h2>
+                    <p class="subDesc">플로트의 영역을 지정해주는 개념입니다. (개념만 이해하세요.)</p>
+                </div>
+                <div class="desc" style="width:100%;overflow:hidden;">
+                    <div class="flex">
+                        <div class="image" style="flex:1;"><img src="http://kenyo--c.com/wp-content/uploads/2015/04/iehaslayout.png" alt=""></div>
+                        <ul class="noti" style="padding-left:20px;flex:1;">
+                            <li>- position:absolute;</li>
+                            <li>- float:left|right</li>
+                            <li>- display:inline-block</li>
+                            <li>- width:'auto'외의 값</li>
+                            <li>- height:'auto'외의 값</li>
+                            <li>- zoom:'normal'외의 값</li>
+                            <li>- writing-mode:tb-rl(ie전용)</li>
+                            <li>- overflow:hidden | scroll | auto(ie7만 적용)</li>
+                            <li>- overflow-x,overflow-y:hidden | scroll | auto(ie7만 적용)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/EWgVpz" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>쉬워요! : 클리어픽스(.clearfix)</h2>
+                    <p class="subDesc">플로트의 흐름을 부모영역으로 한정하는(haslayout) 클래스 라이브러리 입니다.</p>
+                </div>
+                <div class="desc" style="width:100%;overflow:hidden;">
+                    <div class="code"><code>.clearfix{*zoom:1}
+                        .clearfix:after,.clearfix:before{display:table;content:"";line-height:0}
+                        .clearfix:after{clear:both}</code></div>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/BWLoKL" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>실습</h2>
+                    <p class="subDesc">플로트로 계단 만들기</p>
+                </div>
+                <div class="example">
+                    <iframe height='564' scrolling='no' title='[마봉아빠 CSS초급/레이아웃]  플로트샘플:예제' src='//codepen.io/dstyle0210/embed/RpGEmM/?height=564&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/dstyle0210/pen/RpGEmM/'>[마봉아빠 CSS초급/레이아웃]  플로트샘플:예제</a> by 원용봉 (<a href='http://codepen.io/dstyle0210'>@dstyle0210</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/GWjPLG" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 연습하기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>포지션(position)</h2>
+                    <p class="subDesc">요소를 좌표로 배치하는 포지션에 대해 설명합니다.</p>
+                    <ul>
+                        <li>기본값 : none</li>
+                        <li>상속성 : 없음</li>
+                        <li class="syntax">작성방법 : <code><span class="point">position:</span> static|<span class="point">absolute</span>|<span class="point">fixed</span>|<span class="point">relative</span>;</code></li>
+                    </ul>
+                </div>
+                <div class="desc">
+                    <ul class="flex-nowrap">
+                        <li style="flex:5">
+                            <h3><span class="point">절대적(absolute)</span></h3>
+                            <ul>
+                                <li><span class="subPoint">포지션을 가진 상위요소</span>를 기준으로,</li>
+                                <li>요소의 <span class="subPoint">공간을 무시하고</span>,</li>
+                                <li><span class="subPoint">공중에 띄워서</span>,</li>
+                                <li>좌표위치에 놓습니다.</li>
+                            </ul>
+                        </li>
+                        <li style="flex:4">
+                            <h3><span class="point">상대적(relative)</span></h3>
+                            <ul>
+                                <li><span class="subPoint">부모요소</span>를 기준으로,</li>
+                                <li>요소의 <span class="subPoint">공간은 유지</span>하고</li>
+                                <li><span class="subPoint">공중에 띄워서</span>,</li>
+                                <li>좌표위치에 놓습니다.</li>
+                            </ul>
+                        </li>
+                        <li style="flex:5">
+                            <h3><span class="point">고정(fixed)</span></h3>
+                            <ul>
+                                <li><span class="subPoint">루트요소(&lt;html&gt;)</span>를 기준으로,</li>
+                                <li>요소의 <span class="subPoint">공간을 무시하고</span>,</li>
+                                <li><span class="subPoint">공중에 띄워서</span>,</li>
+                                <li>좌표위치에 놓습니다.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/gmwZPx" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>포지션(position):absolute</h2>
+                    <p class="subDesc"><span class="point">포지션을 가진 상위요소</span>를 기준으로, 요소의 <span class="point">공간을 무시</span>하고, 공중에 띄워서, 좌표위치에 놓습니다.</p>
+                </div>
+                <div class="desc">
+                    <ul class="noti">
+                        <li>상위요소 중에 "포지션을 가진 요소가 없으면" 루트요소가 기준이 됩니다.</li>
+                        <li>브라우저의 스크롤에 따라 움직입니다.</li>
+                        <li>공중에 띄워지기 때문에, 형제요소에 영향을 주지 않습니다.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/PpGXmE" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>포지션(position):relative</h2>
+                    <p class="subDesc"><span class="point">부모요소</span>를 기준으로, 요소의 <span class="point">공간은 유지</span>하고 공중에 띄워서, 좌표위치에 놓습니다.</p>
+                </div>
+                <div class="desc">
+                    <ul class="noti">
+                        <li>부모요소의 포지션 여부는 상관 없습니다.</li>
+                        <li>브라우저의 스크롤에 따라 움직입니다.</li>
+                        <li>공간이 유지 되기 때문에, 형제요소에 영향을 주게 됩니다.</li>
+                        <li>공간이 유지 되기 때문에, 좌표가 없다면 차이가 없습니다.</li>
+                        <li>absolute가 상위요소의 포지션을 필요로 하기 때문에, relative을 이용해서 기준점을 잡아줍니다.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/peEqwG" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>포지션(position):fixed</h2>
+                    <p class="subDesc"><span class="point">루트요소(&lt;html&gt;)</span>를 기준으로, 요소의 <span class="point">공간을 무시</span>하고 공중에 띄워서, 좌표위치에 놓습니다.</p>
+                </div>
+                <div class="desc">
+                    <ul class="noti">
+                        <li>어디에 선언 되었든, 루트요소가 기준이 됩니다.</li>
+                        <li>브라우저의 스크롤에 따라 움직이지 않습니다.</li>
+                        <li>공중에 띄워지기 때문에, 형제요소에 영향을 주지 않습니다.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/ZepVvg" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>좌표(direction)</h2>
+                    <p class="subDesc">포지션된 요소의 좌표를 설정합니다.</p>
+                </div>
+                <div class="specFlex">
+                    <div class="spec">
+                        <h2>top</h2>
+                        <ul>
+                            <li>기본값 : auto</li>
+                            <li>상속성 : 없음</li>
+                            <li class="syntax">작성방법 : <code><span class="point">top:</span> auto|<span class="point">length</span>;</code></li>
+                        </ul>
+                    </div>
+                    <div class="spec">
+                        <h2>left</h2>
+                        <ul>
+                            <li>기본값 : auto</li>
+                            <li>상속성 : 없음</li>
+                            <li class="syntax">작성방법 : <code><span class="point">left:</span> auto|<span class="point">length</span>;</code></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="specFlex">
+                    <div class="spec">
+                        <h2>bottom</h2>
+                        <ul>
+                            <li>기본값 : auto</li>
+                            <li>상속성 : 없음</li>
+                            <li class="syntax">작성방법 : <code><span class="point">bottom:</span> auto|<span class="point">length</span>;</code></li>
+                        </ul>
+                    </div>
+                    <div class="spec">
+                        <h2>right</h2>
+                        <ul>
+                            <li>기본값 : auto</li>
+                            <li>상속성 : 없음</li>
+                            <li class="syntax">작성방법 : <code><span class="point">right:</span> auto|<span class="point">length</span>;</code></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="desc">
+                    <ul class="noti">
+                        <li>left와 right 처럼 반대되는 속성을 한번에 선언은 가능하지만, 구현이 확실하지 않으니, 사용하지 마세요.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/bqwzqX" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>인덱스 깊이(z-index)</h2>
+                    <p class="subDesc">포지션된 요소의 인덱스 깊이를 설정합니다.</p>
+                    <ul>
+                        <li>기본값 : auto</li>
+                        <li>상속성 : 없음</li>
+                        <li class="syntax">작성방법 : <code><span class="point">z-index:</span> auto|<span class="point">number</span>;</code></li>
+                    </ul>
+                </div>
+                <div class="desc">
+                    <ul class="noti">
+                        <li>음수로 적용하면, 아래로 가라앉아서 사라지게 되면서, 포커스도 안잡히게 됩니다.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/peEGdy" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>실습</h2>
+                    <p class="subDesc">포지션으로 퍼즐만들기</p>
+                </div>
+                <div class="example">
+                    <iframe height='500' scrolling='yes' title='[마봉아빠 CSS초급/레이아웃]  포지션샘플:예제' src='//codepen.io/dstyle0210/embed/jBMdxW/?height=892&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/dstyle0210/pen/jBMdxW/'>[마봉아빠 CSS초급/레이아웃]  포지션샘플:예제</a> by 원용봉 (<a href='http://codepen.io/dstyle0210'>@dstyle0210</a>) on <a href='http://codepen.io'>CodePen</a>. </iframe>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/aJmMee" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 연습하기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>플랙스(display:flex)</h2>
+                    <p class="subDesc">새로운 레이아웃 기법인 Flex를 소개합니다.</p>
+                </div>
+                <div class="desc">
+                    <div class="image"><img src="https://developer.mozilla.org/files/3739/flex_terms.png" alt=""></div>
+                </div>
+                <div class="desc">
+                    <ul class="noti">
+                        <li>현재 플랙스 레이아웃은 모바일 브라우저 및 최신 브라우저에서만 정상적으로 동작합니다.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/enxaneta/pen/adLPwv" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 샘플보기</a></span>
+                </div>
+            </article>
+        </section>
+    </section>
+    <section>
+        <article>
+            <h2>레이아웃 : 속성(Property) 정리</h2>
+            <div class="curriculumList">
+                <dl><dt>플로트(float)</dt><dd><code><span class="point">float:</span> none|<span class="point">left</span>|<span class="point">right</span>;</code></dd></dl>
+                <dl><dt>클리어(clear)</dt><dd><code><span class="point">clear:</span> none|left|right|<span class="point">both</span>;</code></dd></dl>
+                <dl><dt>포지션(position)</dt><dd><code><span class="point">position:</span> static|<span class="point">absolute</span>|<span class="point">fixed</span>|<span class="point">relative</span>;</code></dl>
+                <dl><dt>좌표:상단(top)</dt><dd><code><span class="point">top:</span> auto|<span class="point">length</span> ;</code></dd></dl>
+                <dl><dt>좌표:좌단(left)</dt><dd><code><span class="point">left:</span> auto|<span class="point">length</span> ;</code></dd></dl>
+                <dl><dt>좌표:하단(bottom)</dt><dd><code><span class="point">bottom:</span> auto|<span class="point">length</span> ;</code></dd></dl>
+                <dl><dt>좌표:우단(right)</dt><dd><code><span class="point">right:</span> auto|<span class="point">length</span> ;</code></dd></dl>
+                <dl><dt>인덱스깊이(z-index)</dt><dd><code><span class="point">z-index:</span> auto|<span class="point">number</span>;</code></dd></dl>
+            </div>
+        </article>
+    </section>
+    <section>
+        <article>
+            <div class="thx">
+                <img src="http://cfile228.uf.daum.net/image/273D4A42574D1C8A2F27B8" class="null" alt="">
+                <h2>감사합니다.</h2>
+            </div>
+        </article>
+    </section>
+</div>
+<script src="../../asset/slideshow.js"></script>
+</body>
+</html>
+<!-- section>article>h2 -->

@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>마봉아빠의 CSS초급 : 블럭(Block)</title>
+    <link href='https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../asset/main.css">
+</head>
+
+<body>
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div id="main">
+
+    <section>
+        <article class="index">
+            <h1>CSS초급 : 블럭(Block)</h1>
+            <h3 class="inverted">떠듦 by 마봉아빠 </h3>
+        </article>
+    </section>
+    <section>
+        <section>
+            <article>
+                <div class="curriculum">
+                    <h2>CSS초급 : 블럭(Block) : 커리큘럼</h2>
+                </div>
+                <div class="curriculumList">
+                    <dl><dt>박스모델(Box Model)</dt><dd>블럭요소의 <span class="subPoint">박스모델</span>에 대해 설명합니다.</dd></dl>
+                    <dl><dt>가로값(width)</dt><dd>요소의 <span class="subPoint">가로값</span>을 지정합니다.</dd></dl>
+                    <dl><dt>세로값(height)</dt><dd>요소의 <span class="subPoint">세로값</span>을 지정합니다.</dd></dl>
+                    <dl><dt>패딩(padding)</dt><dd><span class="subPoint">컨덴츠와 보더 사이 간격</span>을 지정합니다.</dd></dl>
+                    <dl><dt>보더(border)</dt><dd><span class="subPoint">컨덴츠와 패딩영역을 감싸는 내곽선</span>을 지정합니다.</dd></dl>
+                    <dl><dt>박스사이징(box-sizing)</dt><dd><span class="subPoint">박스모델의 사이즈 지정방식</span>을 지정합니다.</dd></dl>
+                    <dl><dt>배경(background)</dt><dd>요소의 <span class="subPoint">보더 내부의 배경</span>을 지정합니다.</dd></dl>
+                    <dl><dt>오버플로우(overflow)</dt><dd><span class="subPoint">컨덴츠가 보더 밖으로 나갈때의 처리방법</span>을 지정합니다.</dd></dl>
+                    <dl><dt>마진(margin)</dt><dd><span class="subPoint">보더와 외부 요소의 간격</span>을 지정합니다.</dd></dl>
+                    <dl><dt>아웃라인(outline)</dt><dd><span class="subPoint">보더 외부의 외곽선</span>을 지정합니다.</dd></dl>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>박스모델(Box Model)</h2>
+                    <p class="subDesc">CSS의 기본구조인 박스모델에 대해서 알아봅니다.</p>
+                </div>
+                <div class="desc">
+                    <div class="image"><img src="http://www.cssterm.com/uploads/images/box_model.gif" alt=""></div>
+                </div>
+                <div class="desc">
+                    <table class="table table-hover table-bordered">
+                        <tr>
+                            <td>Content</td>
+                            <td>내부의 내용을 말합니다. 물론 다른 엘리먼트가 들어올수도 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <td>Padding</td>
+                            <td>컨덴츠와 보더사이의 간격입니다. 배경의 영향을 받습니다.</td>
+                        </tr>
+                        <tr>
+                            <td>border</td>
+                            <td>컨덴츠와 패딩을 포함한 영역의 내곽선입니다. 가로값의 영향을 받습니다.</td>
+                        </tr>
+                        <tr>
+                            <td>Margin</td>
+                            <td>보더와 외부 엘리먼트의 간격입니다. 배경의 영향을 받지않습니다.</td>
+                        </tr>
+                        <tr>
+                            <td>outline</td>
+                            <td>컨덴츠와 패딩 및 보더를 포함한 포함한 외곽선입니다. 가로값의 영향을 받지 않습니다.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-warning"><a href="http://www.cssterm.com/uploads/images/box_model.gif" target="_blank"><i class="glyphicon glyphicon-link"></i>참고이미지</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="specFlex">
+                    <div class="spec">
+                        <h2>가로값(width)</h2>
+                        <p class="subDesc">요소의 가로값을 지정합니다.</p>
+                        <ul>
+                            <li>기본값 : auto</li>
+                            <li>상속성 : 없음</li>
+                            <li class="syntax">작성방법 : <code><span class="point">width:</span> <span class="point">length</span> | auto;</code></li>
+                        </ul>
+                        <ul class="childProperty flex">
+                            <li>
+                                <h3>min-width <a href="http://caniuse.com/#feat=minmaxwh" class="label label-warning caniuse"><i class="glyphicon glyphicon-link"></i></a></h3>
+                                <code>min-width: length | auto;</code>
+                            </li>
+                            <li>
+                                <h3>max-width <a href="http://caniuse.com/#feat=minmaxwh" class="label label-warning caniuse"><i class="glyphicon glyphicon-link"></i></a></h3>
+                                <code>max-width: length | auto;</code>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="spec">
+                        <h2>세로값(height)</h2>
+                        <p class="subDesc">요소의 세로값을 지정합니다.</p>
+                        <ul>
+                            <li>기본값 : auto</li>
+                            <li>상속성 : 없음</li>
+                            <li class="syntax">작성방법 : <code><span class="point">height:</span> <span class="point">length</span> | auto;</code></li>
+                        </ul>
+                        <ul class="childProperty flex">
+                            <li>
+                                <h3>min-height <a href="http://caniuse.com/#feat=minmaxwh" class="label label-warning caniuse"><i class="glyphicon glyphicon-link"></i></a></h3>
+                                <code>min-height: length | auto;</code>
+                            </li>
+                            <li>
+                                <h3>max-height <a href="http://caniuse.com/#feat=minmaxwh" class="label label-warning caniuse"><i class="glyphicon glyphicon-link"></i></a></h3>
+                                <code>max-height: length | auto;</code>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/pegQWY?editors=1100#0" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>패딩(padding)</h2>
+                    <p class="subDesc">요소와 컨덴츠 사이 간격을 지정힙니다.</p>
+                    <ul>
+                        <li>기본값 : 0</li>
+                        <li>상속성 : 없음</li>
+                        <li class="syntax">작성방법 : <code><span class="point">padding:</span> <span class="point">length</span> | <span class="point">top right bottom left</span>;</code></li>
+                    </ul>
+                    <ul class="childProperty flex">
+                        <li>
+                            <h3>padding-top</h3>
+                            <code>padding-top: length;</code>
+                        </li>
+                        <li>
+                            <h3>padding-left</h3>
+                            <code>padding-left: length;</code>
+                        </li>
+                        <li>
+                            <h3>padding-bottom</h3>
+                            <code>padding-bottom: length;</code>
+                        </li>
+                        <li>
+                            <h3>padding-right</h3>
+                            <code>padding-right: length;</code>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/VpeVRM" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>꿀팁!</h2>
+                    <p class="subDesc">padding과 margin의 단축속성 회전방향과 선언형식</p>
+                </div>
+                <div class="desc">
+                    <div class="image"><img src="https://www.smashingmagazine.com/images/clean-optimized-code/figureA.gif" alt=""></div>
+                </div>
+                <div class="desc">
+                    <ul class="noti">
+                        <li>회전방향은 "위" -> "오른쪽" -> "아래" -> "왼쪽" , 즉 시계방향으로 돌아갑니다.</li>
+                        <li>선언이 4개 이면 "위" "오른쪽" "아래" "왼쪽"</li>
+                        <li>선언이 3개 이면 "위" "오른쪽/왼쪽" "아래"</li>
+                        <li>선언이 2개 이면 "위/아래" "오른쪽/왼쪽"</li>
+                        <li>선언이 1개 이면 "위/오른쪽/아래/왼쪽"</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/vxXQdO?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>보더(border)</h2>
+                    <p class="subDesc">컨덴츠와 패딩을 포함한 영역의 내곽선입니다.</p>
+                    <ul>
+                        <li>기본값 : none</li>
+                        <li>자식상속 : 안함</li>
+                        <li class="syntax">작성방법 : <code><span class="point">border:</span> <span class="point">border-width border-style border-color</span>;</code></li>
+                    </ul>
+                    <ul class="childProperty flex">
+                        <li>
+                            <h3>border-top</h3>
+                            <code>border-top: border-width border-style border-color;</code>
+                        </li>
+                        <li>
+                            <h3>border-left</h3>
+                            <code>border-left: border-width border-style border-color;</code>
+                        </li>
+                        <li>
+                            <h3>border-bottom</h3>
+                            <code>border-bottom: border-width border-style border-color;</code>
+                        </li>
+                        <li>
+                            <h3>border-right</h3>
+                            <code>border-right: border-width border-style border-color;</code>
+                        </li>
+                        <li>
+                            <h3>border-width</h3>
+                            <code>border-width: medium | thin | thick | <span class="point">length</span>;</code>
+                        </li>
+                        <li>
+                            <h3>border-style</h3>
+                            <code>border-style:none | hidden | dotted | <span class="point">dashed</span> | <span class="point">solid</span> | double | groove | ridge | inset | outset;</code>
+                        </li>
+                        <li>
+                            <h3>border-color</h3>
+                            <code>border-color: <span class="point">color</span>|transparent;</code>
+                        </li>
+                        <li>
+                            <h3>border-radius <a href="http://caniuse.com/#search=border-radius" class="label label-warning caniuse"><i class="glyphicon glyphicon-link"></i></a></h3>
+                            <code>border-radius: <span class="point">1/4 length</span> | % / 1/4 length | %;</code>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/yMOXrd" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>박스사이징(Box Sizing)</h2>
+                    <p class="subDesc">사이즈 부분에 대한 포함범위를 설정합니다.</p>
+                    <ul>
+                        <li>기본값 : content-box</li>
+                        <li>상속성 : 없음</li>
+                        <li class="syntax">작성방법 : <code><span class="point">box-sizing:</span> content-box|<span class="point">border-box</span>;</code></li>
+                    </ul>
+                </div>
+                <div class="desc">
+                    <div class="image"><img src="https://www.smashingmagazine.com/wp-content/uploads/2012/06/box-model.png" alt=""></div>
+                </div>
+                <div class="desc">
+                    <table class="table table-hover table-bordered">
+                        <tr>
+                            <td>content-box</td>
+                            <td>컨덴츠 영역만 박스사이즈(가로값,세로값)로 인정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>border-box</td>
+                            <td>컨덴츠 및 패딩, 보더 영역까지 박스사이즈(가로값,세로값)로 인정합니다.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/xqVXEJ?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                    <span class="label label-warning"><a href="https://www.smashingmagazine.com/wp-content/uploads/2012/06/box-model.png" target="_blank"><i class="glyphicon glyphicon-link"></i>참고이미지</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>배경(background)</h2>
+                    <p class="subDesc">박스(Box)영역에 배경을 설정합니다.</p>
+                    <ul>
+                        <li>기본값 : none</li>
+                        <li>상속성 : 없음</li>
+                        <li class="syntax">작성방법 : <code><span class="point">background:</span> <span class="point">bg-color</span> <span class="point">bg-image</span> <span class="point">position</span>/bg-size <span class="point">bg-repeat</span> bg-origin bg-clip bg-attachment ;</code></li>
+                    </ul>
+                    <ul class="childProperty flex">
+                        <li>
+                            <h3>background-color</h3>
+                            <code>background-color: <span class="point">color</span>|<span class="point">transparent</span> ;</code>
+                        </li>
+                        <li>
+                            <h3>background-image</h3>
+                            <code>background-image: <span class="point">url</span>|none;</code>
+                        </li>
+                        <li>
+                            <h3>background-position</h3>
+                            <code>background-position: <span class="point">xpos ypos</span>;</code>
+                        </li>
+                        <li>
+                            <h3>background-size</h3>
+                            <code>background-size: auto|<span class="point">length</span>|<span class="point">cover</span>| contain;</code>
+                        </li>
+                        <li>
+                            <h3>background-repeat</h3>
+                            <code>background-repeat: repeat|<span class="point">repeat-x</span>|<span class="point">repeat-y</span>|<span class="point">no-repeat</span>;</code>
+                        </li>
+                        <li>
+                            <h3>background-origin</h3>
+                            <code>background-origin: padding-box|border-box|content-box;</code>
+                        </li>
+                        <li>
+                            <h3>background-clip</h3>
+                            <code>background-clip: border-box|padding-box|content-box;</code>
+                        </li>
+                        <li>
+                            <h3>background-attachment</h3>
+                            <code>background-attachment: scroll|<span class="point">fixed</span>|local;</code>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/ryedao?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/VpaXxP?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기2</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>오버플로우(overflow)</h2>
+                    <p class="subDesc">박스(Box)영역 밖의 으로 컨덴츠가 나갈경우의 처리방법을 설정합니다.</p>
+                    <ul>
+                        <li>기본값 : visible</li>
+                        <li>상속성 : 없음</li>
+                        <li class="syntax">작성방법 : <code><span class="point">overflow:</span> visible | <span class="point">hidden</span> | scroll | <span class="point">auto</span>;</code></li>
+                    </ul>
+                    <ul class="childProperty flex">
+                        <li>
+                            <h3>overflow-x</h3>
+                            <code>overflow-x: visible | <span class="point">hidden</span> | scroll | <span class="point">auto</span>;</code>
+                        </li>
+                        <li>
+                            <h3>overflow-y</h3>
+                            <code>overflow-y: visible | <span class="point">hidden</span> | scroll | <span class="point">auto</span>;</code>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/qrZYdr" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>실습</h2>
+                    <p class="subDesc">블럭 만들기.</p>
+                </div>
+                <div class="example">
+                    <iframe height='497' scrolling='no' title='[마봉아빠 CSS초급/블럭] 블럭만들기(예제)' src='//codepen.io/dstyle0210/embed/RpJoxg/?height=497&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/dstyle0210/pen/RpJoxg/'>[마봉아빠 CSS초급/블럭] 블럭만들기(예제)</a> by 원용봉 (<a href='http://codepen.io/dstyle0210'>@dstyle0210</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/MpXbKZ" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 연습하기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>마진(margin)</h2>
+                    <p class="subDesc">박스(Box)영역 밖의 간격을 설정합니다.</p>
+                    <ul>
+                        <li>기본값 : 0</li>
+                        <li>상속성 : 없음</li>
+                        <li class="syntax">작성방법 : <code><span class="point">margin:</span> <span class="point">length</span> | <span class="point">top right bottom left</span>;</code></li>
+                    </ul>
+                    <ul class="childProperty flex">
+                        <li>
+                            <h3>margin-top</h3>
+                            <code>margin-top: length;</code>
+                        </li>
+                        <li>
+                            <h3>margin-left</h3>
+                            <code>margin-left: length;</code>
+                        </li>
+                        <li>
+                            <h3>margin-bottom</h3>
+                            <code>margin-bottom: length;</code>
+                        </li>
+                        <li>
+                            <h3>margin-right</h3>
+                            <code>margin-right: length;</code>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/BWKZWm?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>꿀팁!</h2>
+                    <p class="subDesc">크롬 개발자모드로 박스 사이즈 알아내기</p>
+                </div>
+                <div class="desc">
+                    <div class="image"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2015/09/chrome-devtools.webp" alt=""></div>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>아웃라인(outline)</h2>
+                    <p class="subDesc">박스(Box)영역 밖의 외곽선을 설정합니다.</p>
+                    <ul>
+                        <li>기본값 : none</li>
+                        <li>상속성 : 없음</li>
+                        <li class="syntax">작성방법 : <code><span class="point">outline:</span> <span class="point">outline-width outline-style outline-color</span>;</code></li>
+                    </ul>
+                    <ul class="childProperty flex">
+                        <li>
+                            <h3>outline-top</h3>
+                            <code>outline-top: outline-width outline-style outline-color;</code>
+                        </li>
+                        <li>
+                            <h3>outline-left</h3>
+                            <code>outline-left: outline-width outline-style outline-color;</code>
+                        </li>
+                        <li>
+                            <h3>outline-bottom</h3>
+                            <code>outline-bottom: outline-width outline-style outline-color;</code>
+                        </li>
+                        <li>
+                            <h3>outline-right</h3>
+                            <code>outline-right: outline-width outline-style outline-color;</code>
+                        </li>
+                        <li>
+                            <h3>outline-width</h3>
+                            <code>outline-width: medium | thin | thick | <span class="point">length</span>;</code>
+                        </li>
+                        <li>
+                            <h3>outline-style</h3>
+                            <code>outline-style:none | hidden | dotted | <span class="point">dashed</span> | <span class="point">solid</span> | double | groove | ridge | inset | outset;</code>
+                        </li>
+                        <li>
+                            <h3>outline-color</h3>
+                            <code>outline-color: <span class="point">color</span>|transparent;</code>
+                        </li>
+                        <li>
+                            <h3>outline-offset</h3>
+                            <code>outline-offset: <span class="point">length</span>;</code>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/vxGRMe" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/jBqzoJ" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기2</a></span>
+                </div>
+            </article>
+        </section>
+    </section>
+    <section>
+        <article>
+            <h2>속성(Property) 정리</h2>
+            <div class="curriculumList">
+                <dl><dt>가로값(width)(min- , max-)</dt><dd><code><span class="point">width:</span> <span class="point">length</span> | auto;</code></dd></dl>
+                <dl><dt>세로값(height)(min- , max-)</dt><dd><code><span class="point">height:</span> <span class="point">length</span> | auto;</code></dd></dl>
+                <dl><dt>패딩(padding)</dt><dd><code><span class="point">padding:</span> <span class="point">length</span> | <span class="point">top right bottom left</span>;</code></dl>
+                <dl><dt>보더(border)</dt><dd><code><span class="point">border:</span> <span class="point">border-width border-style border-color</span>;</code></dd></dl>
+                <dl><dt>박스사이징(box-sizing)</dt><dd><code><span class="point">box-sizing:</span> content-box|<span class="point">border-box</span>;</code></dd></dl>
+                <dl><dt>배경(background)</dt><dd><code><span class="point">background:</span> <span class="point">bg-color</span> <span class="point">bg-image</span> <span class="point">position</span>/bg-size <span class="point">bg-repeat</span> bg-origin bg-clip bg-attachment ;</code></dd></dl>
+                <dl><dt>오버플로우(overflow)</dt><dd><code><span class="point">overflow:</span> visible | <span class="point">hidden</span> | scroll | <span class="point">auto</span>;</code></dd></dl>
+                <dl><dt>마진(margin)</dt><dd><span class="subPoint"><code><span class="point">margin:</span> <span class="point">length</span> | <span class="point">top right bottom left</span>;</code></dd></dl>
+                <dl><dt>아웃라인(outline)</dt><dd><code><span class="point">outline:</span> <span class="point">outline-width outline-style outline-color</span>;</code></dd></dl>
+            </div>
+        </article>
+    </section>
+    <section>
+        <article>
+            <div class="thx">
+                <img src="http://cfile228.uf.daum.net/image/273D4A42574D1C8A2F27B8" class="null" alt="">
+                <h2>감사합니다.</h2>
+            </div>
+        </article>
+    </section>
+</div>
+<script src="../../asset/slideshow.js"></script>
+</body>
+</html>
+<!-- section>article>h2 -->
