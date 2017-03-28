@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>마봉아빠의 CSS중급 : 시작</title>
+    <link href='https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../asset/main.css">
+</head>
+
+<body>
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div id="main">
+
+    <section>
+        <section>
+            <article class="index">
+                <h1>CSS중급 : 트랜지션(Transitions)</h1>
+                <h3 class="inverted">떠듦 by 마봉아빠 </h3>
+            </article>
+        </section>
+    </section>
+    <section>
+        <section>
+            <article>
+                <h2>CSS중급 : 트랜지션(Transitions) : 커리큘럼</h2>
+                <div class="curriculumList">
+                    <dl><dt>트랜지션(Transitions) 이란?</dt><dd></dd></dl>
+                    <dl><dt>transition</dt><dd></dd></dl>
+                    <dl><dt>transition-duration</dt><dd></dd></dl>
+                    <dl><dt>transition-property</dt><dd></dd></dl>
+                    <dl><dt>transition-timing-function</dt><dd></dd></dl>
+                    <dl><dt>transition-delay</dt><dd></dd></dl>
+                    <dl><dt>transition</dt><dd></dd></dl>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>트랜지션(Transitions) 이란?</h2>
+                    <p class="subDesc">요소의 CSS속성을 특정시간 동안 부드럽게 변경해줍니다.</p>
+                </div>
+                <div class="desc">
+                    <div class="image"><img src="https://www.kirupa.com/html5/images/transition_example2.png" alt=""></div>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>transition</h2>
+                    <p class="subDesc">트랜지션(Transitions) 관련 속성을 선언하는 단축속성입니다.</p>
+                    <ul>
+                        <li>기본값 : all 0s ease 0s</li>
+                        <li>상속성 : 없음</li>
+                        <li class="syntax">작성방법 : <code><span class="point">transition</span>: <span class="point">property duration timing-function delay</span>|initial|inherit;</code></li>
+                    </ul>
+                </div>
+                <div class="desc">
+                    <ul class="noti">
+                        <li>대부분의 트랜지션 선언은 본 단축속성을 이용하게 됩니다.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/evLxBr?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>transition-duration</h2>
+                    <p class="subDesc">트랜지션(Transitions)이 적용되는 시간을 지정합니다.</p>
+                    <ul>
+                        <li>기본값 : 0s</li>
+                        <li>상속성 : 없음</li>
+                        <li class="syntax">작성방법 : <code><span class="point">transition-duration</span>: <span class="point">time</span>|initial|inherit;</code></li>
+                    </ul>
+                </div>
+                <div class="desc">
+                    <ul class="noti">
+                        <li>시간(time)은 "s"(second)와 "ms"(millisecond)로 선언합니다.(1s == 1000ms)</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/vxzbZE?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>transition-property</h2>
+                    <p class="subDesc">트랜지션(Transitions) 될 CSS 속성(property)을 지정합니다.</p>
+                    <ul>
+                        <li>기본값 : all</li>
+                        <li>상속성 : 없음</li>
+                        <li class="syntax">작성방법 : <code><span class="point">transition-property</span>: none|<span class="point">all</span>|<span class="point">property</span>|initial|inherit;</code></li>
+                    </ul>
+                </div>
+                <div class="desc">
+                    <ul class="noti">
+                        <li>속성을 "none"으로 선언하면, 동작하지 않도록 합니다.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 애니매이션 가능 CSS속성</a></span>
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/vxzbZE?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>transition-timing-function</h2>
+                    <p class="subDesc">트랜지션(Transitions) 될 CSS 속성의 변화하는 과정을 설정합니다.</p>
+                    <ul>
+                        <li>기본값 : ease</li>
+                        <li>상속성 : 없음</li>
+                        <li class="syntax">작성방법 : <code><span class="point">transition-timing-function</span>: <span class="point">linear</span>|<span class="point">ease</span>|<span class="point">ease-in</span>|<span class="point">ease-out</span>|<span class="point">ease-in-out</span>|step-start|step-end|steps(int,start|end)|cubic-bezier(n,n,n,n)|initial|inherit;</code></li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://easings.net/ko" target="_blank"><i class="glyphicon glyphicon-pencil"></i> Easing Functions</a></span>
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/Ppdgro?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>transition-delay</h2>
+                    <p class="subDesc">트랜지션(Transitions)의 지연시간(딜레이)을 설정합니다.</p>
+                    <ul>
+                        <li>기본값 : 0s</li>
+                        <li>상속성 : 없음</li>
+                        <li class="syntax">작성방법 : <code><span class="point">transition-delay</span>: <span class="point">time</span>|initial|inherit;</code></li>
+                    </ul>
+                </div>
+                <div class="desc">
+                    <ul class="noti">
+                        <li>시간(time)은 "s"(second)와 "ms"(millisecond)로 선언합니다.(1s == 1000ms)</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/vxzbZE?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>transition</h2>
+                    <p class="subDesc">트랜지션(Transitions) 관련 속성을 선언하는 단축속성입니다.</p>
+                    <ul>
+                        <li>기본값 : all 0s ease 0s</li>
+                        <li>상속성 : 없음</li>
+                        <li class="syntax">작성방법 : <code><span class="point">transition</span>: <span class="point">property duration timing-function delay</span>|initial|inherit;</code></li>
+                    </ul>
+                </div>
+                <div class="desc">
+                    <ul class="noti">
+                        <li>대부분의 트랜지션 선언은 본 단축속성을 이용하게 됩니다.</li>
+                    </ul>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/evLxBr?editors=1100" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 예제보기</a></span>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <div class="spec">
+                    <h2>실습</h2>
+                    <p class="subDesc">트랜지션(Transitions) 이해하기</p>
+                </div>
+                <div class="example">
+                    <iframe height='470' scrolling='yes' title='[마봉아빠 CSS중급/트랜지션] Transition (예제)' src='//codepen.io/dstyle0210/embed/MpqdLq/?height=460&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/dstyle0210/pen/MpqdLq/'>[마봉아빠 CSS중급/트랜지션] Transition (예제)</a> by 원용봉 (<a href='http://codepen.io/dstyle0210'>@dstyle0210</a>) on <a href='http://codepen.io'>CodePen</a>. </iframe>
+                </div>
+                <div class="btnSec">
+                    <span class="label label-info"><a href="http://codepen.io/dstyle0210/pen/BWOeRL" target="_blank"><i class="glyphicon glyphicon-pencil"></i> 연습하기</a></span>
+                </div>
+            </article>
+        </section>
+    </section>
+    <section>
+        <article>
+            <h2>속성(Property) 정리</h2>
+            <div class="curriculumList">
+                <dl><dt><span class="point">컨테이너 : display:flex;</span></dt><dd><span class="subPoint">플랙스 레이아웃을 사용하겠다 라는 선언</span>에 대해 설명합니다.</dd></dl> <!-- display:flex; -->
+                <dl><dt><span class="point">컨테이너 : flex-direction</span></dt><dd><code><span class="point">flex-direction:</span> <span class="point">row</span>|row-reverse|<span class="point">column</span>|column-reverse|initial|inherit;</code></dd></dl>
+                <dl><dt><span class="point">컨테이너 : flex-wrap</span></dt><dd>컨테이너의 흐름방향(main axis)에 따른 <span class="subPoint">줄바꿈 여부</span>를 설정합니다.</dd></dl>
+                <dl><dt>컨테이너 : flex-flow</dt><dd>flex_direction와 flex_wrap을 단축 선언합니다.</dd></dl>
+                <dl><dt><span class="point">컨테이너 : justify-content</span></dt><dd>컨테이너의 흐름방향(main axis)에 따른 <span class="subPoint">아이템 배치방법</span>을 설정합니다.</dd></dl>
+                <dl><dt>컨테이너 : align-items</dt><dd>컨테이너의 <span class="subPoint">정렬방향(cross axis)에 따른 정렬(align)</span>를 설정합니다.</dd></dl>
+                <dl><dt>컨테이너 : align-content</dt><dd>컨테이너의 <span class="subPoint">정렬방향(cross axis)에 따른 줄바꿈시 정렬방식</span>을 설정합니다.</dd></dl>
+                <dl><dt>아이템 : flex_basis</dt><dd>흐름방향(main axis)에 대한 아이템의 <span class="subPoint">기본값(basis)</span>을 적용합니다.</dd></dl>
+                <dl><dt>아이템 : flex-grow</dt><dd><span class="subPoint">컨테이너에 아이템이 배치되고 <span class="subPoint">남은 공간을 아이템에 분배하는 비(ratio)</span>을 설정합니다.</dd></dl>
+                <dl><dt>아이템 : flex-shrink</dt><dd><span class="subPoint">컨테이너에 아이템이 배치되고 <span class="subPoint">넘쳐진 공간을 아이템에 분배하는 비(ratio)</span>을 설정합니다.</dd></dl>
+                <dl><dt><span class="point">아이템 : flex</span></dt><dd>flex-grow , flex_shrink , flex_basis을 단축선언합니다.</dd></dl>
+                <dl><dt>아이템 : align-self</dt><dd>아이템 개별의 <span class="subPoint">정렬방향(cross axis)</span>을 설정합니다.</dd></dl>
+                <dl><dt>아이템 : order</dt><dd>흐름방향(main axis)상 아이템의 <span class="subPoint">우선순위</span>를 지정합니다.</dd></dl>
+            </div>
+        </article>
+    </section>
+</div>
+<script src="../../asset/slideshow.js"></script>
+</body>
+</html>
