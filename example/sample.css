@@ -1,14 +1,10 @@
 /* 마봉아빠의 CSS초급 */
 
+
+@import "sample2.css";
 /* 레이아웃 */
 .wrap{background:#cccccc;}
+
 .wrap .vcard{border:5px solid red;}
 
-/* 내정보 영역 */
-.wrap .vcard .myInfoSec{border:5px solid black;}
 
-/* 내기술 영역 */
-.wrap .vcard .skillsSec{border:5px solid blue;}
-
-/* 내포트폴리오 영역 */
-.wrap .vcard .portfolioSec{border:5px solid orange;}
